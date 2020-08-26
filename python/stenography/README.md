@@ -1,6 +1,12 @@
 # This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
 
+# Requirements:
+from PIL import Image
+from PIL import ImageColor
+import binascii
+
+
 # Use:
 1. Run program
 2. Type E or Encrypt to add text to a picture OR Type D or Decrypt to pull text from a picture
