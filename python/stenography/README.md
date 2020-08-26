@@ -5,7 +5,7 @@
 1. Run program
 2. Type E or Encrypt to add text to a picture OR Type D or Decrypt to pull text from a picture
 3. Input options (ie. text to hide, output photo and/or input photo)
-4. Get Photo with hidden message when Encryopting or get hidden message from photo when Decrypting. 
+4. Get Photo with hidden message when Encryopting OR get hidden message from photo when Decrypting. 
 
 
 # To Do:
