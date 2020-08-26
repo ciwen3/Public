@@ -1,6 +1,11 @@
 # This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
 
+# Is Steganography Encryption?
+I know technically Steganography is not encryption but I couldn't think of a better word to use for the option to hide text or retrieve text at 3am. I am open to suggestions.
+For best protection all text to should be encrypted before entering it into this program. This program won't truly encrypt anything, it just hides the data from obvious viewing. 
+
+
 # Requirements:
 1. from PIL import Image
 2. from PIL import ImageColor
