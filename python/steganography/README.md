@@ -7,9 +7,8 @@ For best protection all text to should be encrypted before entering it into this
 
 
 # Requirements:
-1. from PIL import Image
-2. from PIL import ImageColor
-3. import binascii
+1. Pillow (PIL) for Python
+2. binascii
 
 
 # Use:
