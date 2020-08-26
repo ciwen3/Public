@@ -100,7 +100,7 @@ if ask == "E" or ask == "Encrypt":
                             # print(bits) 
                 # print(temppix)
                 pixels[wid, hei] = tuple(temppix)
-                print(pixels[wid, hei])
+                # print(pixels[wid, hei])
 
     # To save an image to file...
     image.save(output_picture)
@@ -133,7 +133,7 @@ elif ask == "D" or ask == "Decrypt":
                 # print(text_from_bits(bitstream))
 
     # convert bitstream to text
-    print(bitstream)
+    # print(bitstream)
     newtext = bits2a(bitstream)
     print(newtext)
 else:
