@@ -20,7 +20,7 @@ def bits2a(b):
 
 
 # take in original text and change it from ASCII to bits
-ask = input("Do you want to \(E\)ncrypt or \(D\)ecrypt?\n")
+ask = input("Do you want to (E)ncrypt or (D)ecrypt?\n")
 if ask == "E" or ask == "Encrypt":
     origtext = input("\nWhat text would you like to hide?\n")
     input_picture = input("\nWhat picture would you like to hide it in?\n")
