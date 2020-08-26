@@ -2,9 +2,9 @@
 
 
 # Requirements:
-from PIL import Image
-from PIL import ImageColor
-import binascii
+1. from PIL import Image
+2. from PIL import ImageColor
+3. import binascii
 
 
 # Use:
