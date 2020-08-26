@@ -14,6 +14,21 @@ import binascii
 4. Get Photo with hidden message when Encryopting OR get hidden message from photo when Decrypting. 
 
 
+# Example Encrypt:
+1. Run program
+2. Encrypt
+3. text input = Hello World!
+4. input image = ./resources/HelloWorldBlank.PNG
+5. output image = ./resources/HelloWorldEncrypted.PNG
+
+
+# Example Decrypt:
+1. Run program
+2. Decrypt
+3. ./resources/HelloWorldEncrypted.PNG
+4. prints out message: Hello World!
+
+
 # To Do:
 1. add check to make sure message will fit in the number of pixel found in the picture
 2. add begining and end notifiers for text
