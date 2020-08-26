@@ -1,4 +1,4 @@
-# This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using the projects.
+# This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
 
 # Use:
