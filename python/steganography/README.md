@@ -36,11 +36,12 @@ For best protection all text to should be encrypted before entering it into this
 # To Do:
 1. add help instructions
 2. change encrypt to encode and decrypt to decode
-2. add check to make sure message will fit in the number of pixel found in the picture
-3. add begining and end notifiers for text, only display the output from between the notifiers to clear up the output
-4. make graphical interface using Tkinter
-5. add encrpytion modules 
-6. add option to create picture from scratch (possible just a solid color)?? (still debating)
+3. remove case sensitivity in the options
+4. add check to make sure message will fit in the number of pixel found in the picture
+5. add begining and end notifiers for text, only display the output from between the notifiers to clear up the output
+6. make graphical interface using Tkinter
+7. add encrpytion modules 
+8. add option to create picture from scratch (possible just a solid color)?? (still debating)
 
 
 # Troubleshooting
