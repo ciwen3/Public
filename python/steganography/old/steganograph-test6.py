@@ -45,7 +45,7 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
     # print(text_to_bits(origtext))
     # create variable to hold message as bits
     bits = text_to_bits(origtext)
-    # print(bits)
+    print(bits)
     # To create an image from a file...
     image = Image.open(input_picture)
     # For easy and direct pixel editing...
@@ -55,81 +55,69 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
     pixels = image.load()
     # To get the width/height of an image...
     imgwidth, imgheight = image.size
-
-    # check to make sure that the message will fit in the picture
-    pixcheck = int(imgwidth * imgheight / 2)
-    bitcheck = len(bits)
-    if pixcheck < bitcheck:
-        print("")
-        print("*****************************************************")
-        print("*There are not enough pixels to encode your message.*")
-        print("*Try picking a bigger picture or a shorter message. *")
-        print("*****************************************************")
-        print("")
-    else:
-        # ======Steg=====
-        # this finally works don't touch it!!!
-        # For each pixel
-        for wid in range(imgwidth):            # loop through every width option
-            for hei in range(imgheight):    # loop through every height option
-                color = pixels[wid, hei]    # grab tuple for that pixel
-                # print(color)                # sanity check
-                temppix = []                # Empty List
-                # print(temppix)
-                if bits == "":
-                    break
-                else:
-                    for num in color[0:4]: # for each values in tuple
-                        # print(num)
-                        if (num % 2) == 0:          # check if number from pixel tuple is even
-                            # print("pixel is even: " + str(num))
-                            if (int(bits[0]) % 2) == 0:
-                                # print("bit[0] is even: " + str(bits[0]))
-                                # print("No change needed")
-                                temppix.append(num)
+    # ======Steg=====
+    # this finally works don't touch it!!!
+    # For each pixel
+    for wid in range(imgwidth):            # loop through every width option
+        for hei in range(imgheight):    # loop through every height option
+            color = pixels[wid, hei]    # grab tuple for that pixel
+            # print(color)                # sanity check
+            temppix = []                # Empty List
+            # print(temppix)
+            if bits == "":
+                break
+            else:
+                for num in color[0:4]: # for each values in tuple
+                    # print(num)
+                    if (num % 2) == 0:          # check if number from pixel tuple is even
+                        # print("pixel is even: " + str(num))
+                        if (int(bits[0]) % 2) == 0:
+                            # print("bit[0] is even: " + str(bits[0]))
+                            # print("No change needed")
+                            temppix.append(num)
+                            # print(temppix)
+                            # print(bits)
+                            bits = bits[1:len(bits)]    # if both even no change needed, shorten by 1 bit
+                            # print(bits)                 # sanity check
+                        else:                       # pixel and bit are not both even
+                            # print("bit[0] is odd: " + str(bits[0]))
+                            # print("Change needed adding one")
+                            temppix.append(num +1)
+                            # print(temppix)
+                            bits = bits[1:len(bits)]
+                            # print(bits)
+                    else:
+                        # print("pixel is odd: " + str(num))
+                        if (int(bits[0]) % 2) == 0:
+                            # print("bit[0] is even: " + str(bits[0]))
+                            # print("Change needed")
+                            if num == 255:
+                                # print("num is 255: " + str(num))
+                                # print("minus one")
+                                temppix.append(num -1)
                                 # print(temppix)
                                 # print(bits)
-                                bits = bits[1:len(bits)]    # if both even no change needed, shorten by 1 bit
-                                # print(bits)                 # sanity check
-                            else:                       # pixel and bit are not both even
-                                # print("bit[0] is odd: " + str(bits[0]))
-                                # print("Change needed adding one")
+                                bits = bits[1:len(bits)]  
+                                # print(bits)
+                            else:
+                                # print("num is less than 255: " + str(num))
+                                # print("add one")
                                 temppix.append(num +1)
                                 # print(temppix)
-                                bits = bits[1:len(bits)]
+                                # print(bits)
+                                bits = bits[1:len(bits)]  
                                 # print(bits)
                         else:
-                            # print("pixel is odd: " + str(num))
-                            if (int(bits[0]) % 2) == 0:
-                                # print("bit[0] is even: " + str(bits[0]))
-                                # print("Change needed")
-                                if num == 255:
-                                    # print("num is 255: " + str(num))
-                                    # print("minus one")
-                                    temppix.append(num -1)
-                                    # print(temppix)
-                                    # print(bits)
-                                    bits = bits[1:len(bits)]  
-                                    # print(bits)
-                                else:
-                                    # print("num is less than 255: " + str(num))
-                                    # print("add one")
-                                    temppix.append(num +1)
-                                    # print(temppix)
-                                    # print(bits)
-                                    bits = bits[1:len(bits)]  
-                                    # print(bits)
-                            else:
-                                # print("Both pixel and bit are odd")
-                                # print("no change needed")
-                                temppix.append(num)
-                                # print(temppix)
-                                # print(bits)
-                                bits = bits[1:len(bits)]
-                                # print(bits) 
-                    # print(temppix)
-                    pixels[wid, hei] = tuple(temppix)
-                    # print(pixels[wid, hei])
+                            # print("Both pixel and bit are odd")
+                            # print("no change needed")
+                            temppix.append(num)
+                            # print(temppix)
+                            # print(bits)
+                            bits = bits[1:len(bits)]
+                            # print(bits) 
+                # print(temppix)
+                pixels[wid, hei] = tuple(temppix)
+                # print(pixels[wid, hei])
 
     # To save an image to file...
     image.save(output_picture)
