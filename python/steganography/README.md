@@ -6,11 +6,21 @@
 2. Pillow (PIL) for Python
 
 ## Install Python:
-sudo apt install python3.8
+1. Debian based Linux: sudo apt install python3.8
+2. Fedora based Linux: sudo yum install python3.8
+3. Windows https://www.python.org/downloads/windows/
 
 ## Install pip3:
-Debian based Linux: open a new Terminal window and enter sudo apt-get install python3-pip . 
-Fedora based Linux: open a new Terminal window and enter sudo yum install python3-pip 
+1. Debian based Linux: sudo apt install python3-pip 
+2. Fedora based Linux: sudo yum install python3-pip 
+
+## Install Pillow with pip (all OS's): taken from https://pillow.readthedocs.io/en/stable/installation.html
+1. python3 -m pip install --upgrade pip
+2. python3 -m pip install --upgrade Pillow
+### or
+3. python -m pip install --upgrade pip
+4. python -m pip install --upgrade Pillow
+
 
 # Use:
 1. Run program
