@@ -35,6 +35,7 @@ For best protection all text to should be encrypted before entering it into this
 
 # To Do:
 1. add help instructions
+2. change encrypt to encode and decrypt to decode
 2. add check to make sure message will fit in the number of pixel found in the picture
 3. add begining and end notifiers for text, only display the output from between the notifiers to clear up the output
 4. make graphical interface using Tkinter
