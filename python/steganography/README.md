@@ -1,11 +1,6 @@
 # This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
 
-# Is Steganography Encryption?
-I know technically Steganography is not encryption but I couldn't think of a better word to use for the option to hide text or retrieve text at 3am. I am open to suggestions.
-For best protection all text to should be encrypted before entering it into this program. This program won't truly encrypt anything, it just obscures the data from obvious viewing. 
-
-
 # Requirements:
 1. Pillow (PIL) for Python
 2. binascii
@@ -13,35 +8,32 @@ For best protection all text to should be encrypted before entering it into this
 
 # Use:
 1. Run program
-2. Type E or Encrypt to add text to a picture OR Type D or Decrypt to pull text from a picture
+2. Type E or Encode to add text to a picture OR Type D or Decode to pull text from a picture
 3. Input options (ie. text to hide, output photo and/or input photo)
 4. Get Photo with hidden message when Encryopting OR get hidden message from photo when Decrypting. 
 
 
-# Example Encrypt:
+# Example Encode:
 1. Run program
-2. Encrypt
+2. Encode
 3. text input = Hello World!
 4. input image = ./resources/HelloWorldBlank.PNG
 5. output image = ./resources/HelloWorldEncrypted.PNG
 
 
-# Example Decrypt:
+# Example Decode:
 1. Run program
-2. Decrypt
+2. Decode
 3. ./resources/HelloWorldEncrypted.PNG
 4. prints out message: Hello World!
 
 
 # To Do:
-1. add help instructions
-2. change encrypt to encode and decrypt to decode
-3. remove case sensitivity in the options
-4. add check to make sure message will fit in the number of pixel found in the picture
-5. add begining and end notifiers for text, only display the output from between the notifiers to clear up the output
-6. make graphical interface using Tkinter
-7. add encrpytion modules 
-8. add option to create picture from scratch (possible just a solid color)?? (still debating)
+1. add check to make sure message will fit in the number of pixel found in the picture
+2. add begining and end notifiers for text, only display the output from between the notifiers to clear up the output
+3. make graphical interface using Tkinter
+4. add encrpytion modules 
+5. add option to create picture from scratch (possibly just a solid color)?? (still debating)
 
 
 # Troubleshooting
