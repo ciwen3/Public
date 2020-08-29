@@ -172,6 +172,7 @@ elif ask.upper() == "D" or ask.upper() == "DECODE":
     start = newtext.find(str1) + 7
     stop = newtext.find(str2)
     realtext = newtext[start:stop]
+    print("The hidden message is:")
     print(realtext)
 else:
     print("")
