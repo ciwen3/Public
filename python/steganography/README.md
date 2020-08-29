@@ -18,8 +18,8 @@
 1. python3 -m pip install --upgrade pip
 2. python3 -m pip install --upgrade Pillow
 ### or
-3. python -m pip install --upgrade pip
-4. python -m pip install --upgrade Pillow
+1. python -m pip install --upgrade pip
+2. python -m pip install --upgrade Pillow
 
 
 # Use:
@@ -32,23 +32,22 @@
 # Example Encode:
 1. Run program
 2. Encode
-3. text input = Hello World!
-4. input image = ./resources/HelloWorldBlank.PNG
-5. output image = ./resources/HelloWorldEncoded.PNG
+3. text input = Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+4. input image = ./resources/redheart.PNG
+5. output image = ./resources/redheart-loremipsum.PNG
 
 
 # Example Decode:
 1. Run program
 2. Decode
-3. ./resources/HelloWorldEncoded.PNG
-4. prints out message: Hello World!
+3. ./resources/redheart-loremipsum.PNG
+4. prints out message: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 
 
 # To Do:
-1. add begining and end notifiers for text, only display the output from between the notifiers to clear up the output
-2. make graphical interface using Tkinter
-3. add encryption modules 
-4. add option to create picture from scratch (possibly just a solid color)?? (still debating)
+1. make graphical interface using Tkinter
+2. add encryption modules 
+3. add option to create picture from scratch (possibly just a solid color)?? (still debating)
 
 
 # Troubleshooting

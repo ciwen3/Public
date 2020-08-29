@@ -42,11 +42,9 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
     origtext = input("\nWhat text would you like to hide?\n")
     input_picture = input("\nWhat picture would you like to hide it in?\n")
     output_picture = input("\nWhat would you like to save the new picture as?\n")
-    input_text = ("#start#" +  origtext + "#end#")
     # print(text_to_bits(origtext))
     # create variable to hold message as bits
-    # bits = text_to_bits(origtext)
-    bits = text_to_bits(input_text)
+    bits = text_to_bits(origtext)
     # print(bits)
     # To create an image from a file...
     image = Image.open(input_picture)
@@ -165,14 +163,8 @@ elif ask.upper() == "D" or ask.upper() == "DECODE":
 
     # convert bitstream to text
     # print(bitstream)
-    str1 = "#start#"
-    str2 = "#end#"
     newtext = bits2a(bitstream)
-    # print(newtext)
-    start = newtext.find(str1) + 7
-    stop = newtext.find(str2)
-    realtext = newtext[start:stop]
-    print(realtext)
+    print(newtext)
 else:
     print("")
     print("That was not an option, maybe you misspelled it.")
