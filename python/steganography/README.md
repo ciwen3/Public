@@ -3,7 +3,7 @@
 **The project is under development, any suggestion is welcome!**
 
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
-![Screenshot](https://img.shields.io/badge/Platform-Windows-green)
+![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen)
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
 # Requirements:
