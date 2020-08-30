@@ -2,9 +2,7 @@
 
 **The project is under development, any suggestion is welcome!**
 
-![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
-![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen)
-![Screenshot](https://img.shields.io/badge/Platform-Mac-brightgreen)
+![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen)
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
 # Requirements:
