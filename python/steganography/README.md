@@ -1,6 +1,6 @@
 # Steganography 
 
-This Steganography program was created to hide or encode a message in a picture by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
+This Steganography program was created to hide or encode a message in an image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
 
 ## This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
@@ -33,7 +33,7 @@ This Steganography program was created to hide or encode a message in a picture 
 # Use:
 1. Run program
 2. Type E or Encode to add text to an image OR Type D or Decode to pull text from an image
-3. Input options (ie. text to hide, output photo and/or input photo)
+3. Input options (ie. text to hide, output image and/or input image)
 4. Get image with hidden message when Encoding OR get hidden message from an image when Decoding. 
 
 
