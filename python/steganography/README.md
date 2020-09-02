@@ -48,7 +48,7 @@ This Steganography program was created to hide or encode a message in a picture 
 # Example Decode:
 1. Run program
 2. Decode
-3. ./resources/redheart-loremipsum.PNG
+3. input image = ./resources/redheart-loremipsum.PNG
 4. prints out message: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 
 
