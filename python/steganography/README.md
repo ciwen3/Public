@@ -32,9 +32,9 @@ This Steganography program was created to hide or encode a message in a picture 
 
 # Use:
 1. Run program
-2. Type E or Encode to add text to a picture OR Type D or Decode to pull text from a picture
+2. Type E or Encode to add text to an image OR Type D or Decode to pull text from an image
 3. Input options (ie. text to hide, output photo and/or input photo)
-4. Get Photo with hidden message when Encoding OR get hidden message from photo when Decoding. 
+4. Get image with hidden message when Encoding OR get hidden message from an image when Decoding. 
 
 
 # Example Encode:
@@ -55,7 +55,7 @@ This Steganography program was created to hide or encode a message in a picture 
 # To Do:
 1. make graphical interface using Tkinter
 2. add encryption modules 
-3. add option to create picture from scratch (possibly just a solid color)?? (still debating)
+3. add option to create image from scratch (possibly just a solid color)?? (still debating)
 
 
 # Troubleshooting
