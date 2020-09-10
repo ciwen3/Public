@@ -204,3 +204,6 @@ else:
     print("Wait for it to finish and check to the output. \nThe message will be at the begining of the output.")
     print("Everything else will likely be gibberish.")
     print("")
+
+print("")
+input("Press Enter to close window")
