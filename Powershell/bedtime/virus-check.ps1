@@ -1,1 +1,1 @@
-Start-Job -FilePath C:\users\c\bedtime.ps1
+Start-Job -FilePath C:\Windows\bedtime.ps1
