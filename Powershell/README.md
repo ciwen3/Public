@@ -1,4 +1,7 @@
 # My Powershell Scripts
+![Screenshot](https://img.shields.io/badge/Language-Powershell-blue)
+![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen)
+#
 Powershell is outside my normal comfort zone so don't expect much here. 
 Please feel free to offer constructive criticism.
 
