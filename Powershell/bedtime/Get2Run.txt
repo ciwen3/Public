@@ -1,0 +1,5 @@
+# Start-Job -FilePath C:\Windows\bedtime.ps1
+# Start-Process -NoNewWindow -FilePath C:\Windows\bedtime.ps1
+
+
+schtasks /create /tn bedtime /sc ONLOGON /ru System /tr "powershell -NoLogo -NoExit -WindowStyle hidden -file C:\Windows\bedtime.ps1"
