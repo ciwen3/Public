@@ -8,14 +8,14 @@ add-type -assemblyname presentationcore,presentationframework
 while ($x -eq 1) {
 
     # check to make sure things were working
-    [System.Windows.MessageBox]::Show("x = 1")
+    # [System.Windows.MessageBox]::Show("x = 1")
 
     # start small sleep timer (incase I need to stop it) 
     # Start-Sleep -s 150
 
     # grab the current hours in military time and set as a variable
     $time = get-date -Format "HH"
-    [System.Windows.MessageBox]::Show($time)
+    # [System.Windows.MessageBox]::Show($time)
 
     # another check to make sure it works
     # write-host($time)
@@ -45,6 +45,6 @@ while ($x -eq 1) {
         # Force shutdown the computer
         Stop-Computer -Force
     }
-    [System.Windows.MessageBox]::Show("sleep for 5 min before restarting the loop")
+    # [System.Windows.MessageBox]::Show("sleep for 5 min before restarting the loop")
     Start-Sleep -s 300
 }
