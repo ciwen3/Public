@@ -1,4 +1,7 @@
 # Bedtime Powershell Script
+![Screenshot](https://img.shields.io/badge/Language-Powershell-blue)
+![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen)
+#
 used to power down my kids computers at a set time. 
 
 
