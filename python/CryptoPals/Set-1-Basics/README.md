@@ -8,8 +8,7 @@
 This is the qualifying set. We picked the exercises in it to ramp developers up gradually into coding cryptography, but also to verify that we were working with people who were ready to write code. This set is relatively easy. With one exception, most of these exercises should take only a couple minutes. But don't beat yourself up if it takes longer than that. It took Alex two weeks to get through the set! If you've written any crypto code in the past, you're going to feel like skipping a lot of this. Don't skip them. At least two of them (we won't say which) are important stepping stones to later attacks.
 
 
-1. Convert hex to base64
-========================
+## Challenge 1: Convert hex to base64
 The string:
 49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d
 Should produce:
@@ -19,8 +18,7 @@ Cryptopals Rule
 Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty-printing.
 
 
-2. Fixed XOR
-============
+## Challenge 2: Fixed XOR
 Write a function that takes two equal-length buffers and produces their XOR combination.
 If your function works properly, then when you feed it the string:
 1c0111001f010100061a024b53535009181c
@@ -30,8 +28,7 @@ If your function works properly, then when you feed it the string:
 746865206b696420646f6e277420706c6179
 
 
-3. Single-byte XOR cipher
-=========================
+## Challenge 3: Single-byte XOR cipher
 The hex encoded string:
 1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
 ... has been XOR'd against a single character. Find the key, decrypt the message.
@@ -41,8 +38,7 @@ Achievement Unlocked
 You now have our permission to make "ETAOIN SHRDLU" jokes on Twitter.
 
 
-4. Detect single-character XOR
-==============================
+## Challenge 4: Detect single-character XOR
 One of the 60-character strings in this file has been encrypted by single-character XOR.
 Find it.
 (Your code from #3 should help.)
@@ -377,8 +373,7 @@ e03555453d1e31775f37331823164c341c09e310463438481019fb0b12fa
 32042f46431d2c44607934ed180c1028136a5f2b26092e3b2c4e2930585a
 
 
-5. Implement repeating-key XOR
-==============================
+## Challenge 5: Implement repeating-key XOR
 Here is the opening stanza of an important work of the English language:
 Burning 'em, if you ain't quick and nimble
 I go crazy when I hear a cymbal
@@ -393,8 +388,7 @@ Encrypt a bunch of stuff using your repeating-key XOR function. Encrypt your mai
 
 
 
-6. Break repeating-key XOR
-==========================
+## Challenge 6: Break repeating-key XOR
 It is officially on, now.
 This challenge isn't conceptually hard, but it involves actual error-prone coding. The other challenges in this set are there to bring you up to speed. This one is there to qualify you. If you can do this one, you're probably just fine up to Set 6.
 There's a file here https://cryptopals.com/static/challenge-data/6.txt. It's been base64'd after being encrypted with repeating-key XOR.
@@ -485,8 +479,7 @@ No, that's not a mistake.
 We get more tech support questions for this challenge than any of the other ones. We promise, there aren't any blatant errors in this text. In particular: the "wokka wokka!!!" edit distance really is 37.
 
 
-7. AES in ECB mode
-==================
+## Challenge 7: AES in ECB mode
 The Base64-encoded content in this file has been encrypted via AES-128 in ECB mode under the key
 "YELLOW SUBMARINE".
 (case-sensitive, without the quotes; exactly 16 characters; I like "YELLOW SUBMARINE" because it's exactly 16 bytes long, and now you do too).
@@ -498,8 +491,7 @@ Do this with code.
 You can obviously decrypt this using the OpenSSL command-line tool, but we're having you get ECB working in code for a reason. You'll need it a lot later on, and not just for attacking ECB.
 
 
-8. Detect AES in ECB mode
-=========================
+## Challenge 8: Detect AES in ECB mode
 In this file are a bunch of hex-encoded ciphertexts. https://cryptopals.com/static/challenge-data/8.txt
 One of them has been encrypted with ECB.
 Detect it.
