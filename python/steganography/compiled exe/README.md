@@ -10,7 +10,14 @@ This Steganography program was created to hide or encode a message in an image b
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
 # Requirements:
-1. ability to run executable
+1. Python 3 (check in a terminal by running: python --version)
+2. Ability to run executable
+
+
+## Install Python:
+1. Debian based Linux: sudo apt install python3.8
+2. Fedora based Linux: sudo yum install python3.8
+3. Windows https://www.python.org/downloads/windows/
 
 
 # Use:
