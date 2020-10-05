@@ -8,7 +8,7 @@ https://media.giphy.com/media/XErcue5rxXKBdbw6u6/giphy.gif "PCC Hardware Setup")
 
 
 
-![Chicken](https://i.imgur.com/Gneu509.png "Chicken")
+![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/1.jpg "Chicken")
 
 ![ChickenMan](https://i.imgur.com/qqIpGrU.png "ChickenMan")
 
