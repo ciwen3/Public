@@ -2,18 +2,18 @@
 
 ## Overview:
 I built this arcade for a friend years ago and just wanted to add pictures and information here for future reference. 
-Most of the wood used is 3/4" plywood (for the outer sheeting) or 2x4 (for the inner supports). There is one piece of solid wood used for the controllers ( because I wanted that part to be a little more solid). Unfortunately I can't remember the specific size or meassurements for everything (because I am writing this years after the fact and no longer live in the same state as the Arcade).
+Most of the wood used is 1/2" or 3/4" plywood (for the outer sheeting) or 2x4 (for the inner supports). There is one piece of solid wood used for the controllers ( because I wanted that part to be a little more solid). Unfortunately I can't remember the specific size or meassurements for everything (because I am writing this years after the fact and no longer live in the same state as the Arcade).
 
 ## How:
 I was unable to find any good plans to build an arcade from scratch, so I started with buying a flat screen TV. I then sized everything around the flat screen 32" TV. 
 First made the front panel and mounted the flatscreen to it with wood. Once I had that part, I just kind on tried to make everything look right using lots of pictures for reference online. Hardest part was making sure the contorols were centered and percisely alligned. I found a few control placement maps online and had my friend pretend to play video games on each until we found a layout she liked. I centered the templates on each half used paddle drill bits to make the holes. Next step was to paint the wood and add the controls and TV. 
 
-then I bought and soldered the Raspberry Pi Controlblock together. Connected it to the Raspberry Pi 2 B+. Loaded Retropie on SD card. Booted the Raspberry Pi and used a usb card to transfer the ROMs to the SD card. Tested the controller mapping and played a few games on different emulators. Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
+Then I bought and soldered the Raspberry Pi Controlblock together. Connected it to the Raspberry Pi 2 B+. Loaded Retropie on SD card. Booted the Raspberry Pi and used a usb card to transfer the ROMs to the SD card. Tested the controller mapping and played a few games on different emulators. Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
 
 The arcade is still in use today. Every now and then I get sent pictures of my friends kids playing it. 
 
 ## Parts:
-3/4" plywood for outter sheeting
+1/2" or 3/4" plywood for outter sheeting 
 
 2x4 wood for internal supports
 
