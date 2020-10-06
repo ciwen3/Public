@@ -6,9 +6,9 @@ Most of the wood used is 3/4" plywood (for the outer sheeting) or 2x4 (for the i
 
 ## How:
 I was unable to find any good plans to build an arcade from scratch, so I started with buying a flat screen TV. I then sized everything around the flat screen 32" TV. 
-first made the front panel and mounted the flatscreen to it with wood. once I had that part I just kid on tried to make everything look right using lots of pictures for reference online. 
+First made the front panel and mounted the flatscreen to it with wood. Once I had that part, I just kind on tried to make everything look right using lots of pictures for reference online. Hardest part was making sure the contorols were centered and percisely alligned. I found a few control placement maps online and had my friend pretend to play video games on each until we found a layout she liked. I centered the templates on each half used paddle drill bits to make the holes. Next step was to paint the wood and add in the guts. 
 
-Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
+Bought and soldered Raspberry Pi Controlblock together. Connected to the Raspberry Pi 2 B+. loaded Retropie on SD card. booted the Raspberry Pi and used a usb card to transfer the ROMs to the SD card.  Tested the controller mapping and played a few games on different emulators. Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
 
 The arcade is still in use today. Every now and then I get sent pictures of my friends kids playing it. 
 
@@ -26,15 +26,15 @@ The arcade is still in use today. Every now and then I get sent pictures of my f
 1 x Raspberry Pi 2 B+ (the best available at the time)
 
 Raspberry Pi control block from: https://www.storenvy.com/products/13969497-controlblock 
-1 x ControlBlock Kit for self assembly (soldering of through-hole parts)
+1. 1 x ControlBlock Kit for self assembly (soldering of through-hole parts)
 
 Controls ordered from: https://www.ultimarc.com/ 
-16 x Classic Pushbuttons from Happ Controls - Color: Red
-2 x Mag-Stik Plus - Color: Black
-1 x Start Logo Pushbuttons Black - Logo: Start 2
-1 x Start Logo Pushbuttons Black - Logo: Start 1
-2 x Classic Pushbuttons from Happ Controls - Color: black
-1 x Power Button switch 
+1. 16 x Classic Pushbuttons from Happ Controls - Color: Red
+2. 2 x Classic Pushbuttons from Happ Controls - Color: black
+3. 2 x Mag-Stik Plus - Color: Black
+4. 1 x Start Logo Pushbuttons Black - Logo: Start 2
+5. 1 x Start Logo Pushbuttons Black - Logo: Start 1 
+6. 1 x Power Button switch 
 
 ## Software:
 https://retropie.org.uk/download/
