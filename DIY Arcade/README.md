@@ -6,9 +6,9 @@ Most of the wood used is 3/4" plywood (for the outer sheeting) or 2x4 (for the i
 
 ## How:
 I was unable to find any good plans to build an arcade from scratch, so I started with buying a flat screen TV. I then sized everything around the flat screen 32" TV. 
-First made the front panel and mounted the flatscreen to it with wood. Once I had that part, I just kind on tried to make everything look right using lots of pictures for reference online. Hardest part was making sure the contorols were centered and percisely alligned. I found a few control placement maps online and had my friend pretend to play video games on each until we found a layout she liked. I centered the templates on each half used paddle drill bits to make the holes. Next step was to paint the wood and add in the guts. 
+First made the front panel and mounted the flatscreen to it with wood. Once I had that part, I just kind on tried to make everything look right using lots of pictures for reference online. Hardest part was making sure the contorols were centered and percisely alligned. I found a few control placement maps online and had my friend pretend to play video games on each until we found a layout she liked. I centered the templates on each half used paddle drill bits to make the holes. Next step was to paint the wood and add the controls and TV. 
 
-Bought and soldered Raspberry Pi Controlblock together. Connected to the Raspberry Pi 2 B+. loaded Retropie on SD card. booted the Raspberry Pi and used a usb card to transfer the ROMs to the SD card.  Tested the controller mapping and played a few games on different emulators. Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
+then I bought and soldered the Raspberry Pi Controlblock together. Connected it to the Raspberry Pi 2 B+. Loaded Retropie on SD card. Booted the Raspberry Pi and used a usb card to transfer the ROMs to the SD card. Tested the controller mapping and played a few games on different emulators. Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
 
 The arcade is still in use today. Every now and then I get sent pictures of my friends kids playing it. 
 
@@ -82,6 +82,7 @@ https://retropie.org.uk/download/
 ![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/20.jpg "Finished setup")
 
 ## References:
+### I haven't looked at any of these in a long time I just copied them from an old email I sent myself when doing research. I take no responibility if the matterial has changed or is NSFW. 
 http://www.mts.net/~coyne/images/050526_003.jpg
 http://nfgcontrols.com/grafx/HoriRAPV3.jpg
 http://www.herzberg.net/mame/images/Mamepanel.gif
