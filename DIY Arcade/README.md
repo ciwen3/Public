@@ -1,41 +1,93 @@
-DIY Hand Built Arcade
+# DIY Hand Built Arcade
+
 ## Overview:
 I built this arcade for a friend years ago and just wanted to add pictures and information here for future reference. 
+Most of the wood used is 3/4" plywood (for the outer sheeting) or 2x4 (for the inner supports). There is one piece of solid wood used for the controllers ( because I wanted that part to be a little more solid). Unfortunately I can't remember the specific size or meassurements for everything (because I am writing this years after the fact and no longer live in the same state as the Arcade).
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/1.jpg "Chicken")
+## How:
+I was unable to find any good plans to build an arcade from scratch, so I started with buying a flat screen TV. I then sized everything around the flat screen 32" TV. 
+first made the front panel and mounted the flatscreen to it with wood. once I had that part I just kid on tried to make everything look right using lots of pictures for reference online. 
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/2.jpg "Chicken")
+Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/3.jpg "Chicken")
+The arcade is still in use today. Every now and then I get sent pictures of my friends kids playing it. 
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/4.jpg "Chicken")
+## Parts:
+3/4" plywood for outter sheeting
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/5.jpg "Chicken")
+2x4 wood for internal supports
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/6.jpg "Chicken")
+32" Flat screen TV
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/7.jpg "Chicken")
+1 x Surge Protector to plug everything into and be able to power everything on with the flip of one switch. 
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/8.jpg "Chicken")
+1 x 128gb SD card for the OS and game roms
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/9.jpg "Chicken")
+1 x Raspberry Pi 2 B+ (the best available at the time)
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/10.jpg "Chicken")
+Raspberry Pi control block from: https://www.storenvy.com/products/13969497-controlblock 
+1 x ControlBlock Kit for self assembly (soldering of through-hole parts)
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/11.jpg "Chicken")
+Controls ordered from: https://www.ultimarc.com/ 
+16 x Classic Pushbuttons from Happ Controls - Color: Red
+2 x Mag-Stik Plus - Color: Black
+1 x Start Logo Pushbuttons Black - Logo: Start 2
+1 x Start Logo Pushbuttons Black - Logo: Start 1
+2 x Classic Pushbuttons from Happ Controls - Color: black
+1 x Power Button switch 
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/12.jpg "Chicken")
+## Software:
+https://retropie.org.uk/download/
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/13.jpg "Chicken")
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/14.jpg "Chicken")
+## Pictures: 
+![Drilled unpainted control panel ](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/1.jpg "Drilled unpainted control panel ")
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/15.jpg "Chicken")
+![Unpainted frame](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/2.jpg "Unpainted frame")
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/16.jpg "Chicken")
+![Unpainted frame](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/3.jpg "Unpainted frame")
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/17.jpg "Chicken")
+![Unpainted frame](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/4.jpg "Unpainted frame")
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/18.jpg "Chicken")
+![Top view of controls](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/5.jpg "Top view of controls")
 
-![Chicken](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/19.jpg "Chicken")
+![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/6.jpg "Wiring inside")
+
+![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/7.jpg "Wiring inside")
+
+![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/8.jpg "Wiring inside")
+
+![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/9.jpg "Wiring inside")
+
+![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/17.jpg "Wiring inside")
+
+![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/18.jpg "Wiring inside")
+
+![Front door and lock in stalled](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/10.jpg "Front door and lock in stalled")
+
+![Front door and lock in stalled](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/11.jpg "Front door and lock in stalled")
+
+![Finished in Garage](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/12.jpg "Finished in Garage")
+
+![Finished in Garage](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/13.jpg "Finished in Garage")
+
+![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/14.jpg "Finished setup")
+
+![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/15.jpg "Finished setup")
+
+![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/16.jpg "Finished setup")
+
+![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/19.jpg "Finished setup")
+
+![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/20.jpg "Finished setup")
+
+## References:
+http://www.mts.net/~coyne/images/050526_003.jpg
+http://nfgcontrols.com/grafx/HoriRAPV3.jpg
+http://www.herzberg.net/mame/images/Mamepanel.gif
+http://www.slagcoin.com/joystick/layout/cluster36_s.png
+http://blog.petrockblock.com/2014/12/29/controlblock-power-switch-and-io-for-the-raspberry-pi/
+http://www.mameroom.com/webstore.asp?productid=UAIIKIT&category=136
+http://www.mameroom.com/manuals/UAIIKit_Manual.pdf
+http://shop.xgaming.com/products/artwork-for-x-arcade-machine
+http://buildahomearcade.com/planning-and-design/planning-the-control-panel
