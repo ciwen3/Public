@@ -1,6 +1,8 @@
-# Python 3
+# All my current projects are written in Python 3
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen)
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
+
+# My older projects will specify that they are in Python 2
 
 ## All my projects are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project. use at your own risk. 
 
