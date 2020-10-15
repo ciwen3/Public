@@ -1,0 +1,26 @@
+DELAY 3500
+GUI r
+DELAY 3500
+STRING cmd
+ENTER
+DELAY 3500
+STRING powershell
+ENTER
+DELAY 3500
+STRING Start-Process "https://youtu.be/dQw4w9WgXcQ?t=43"
+ENTER
+DELAY 3500
+TAB
+TAB
+ENTER
+GUI r
+DELAY 3500
+STRING notepad.exe
+ENTER
+DELAY 100
+STRING You have been Rick Rolled!!!
+ENTER
+STRING This was a fun little script that only took about 10 min to write and test from scratch!
+ENTER
+STRING =P
+ENTER

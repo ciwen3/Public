@@ -1,0 +1,86 @@
+DELAY 3500
+GUI r
+DELAY 3500
+STRING cmd
+ENTER
+DELAY 3500
+STRING powershell
+ENTER
+DELAY 3500
+STRING Start-Process "https://youtu.be/dQw4w9WgXcQ?t=43"
+ENTER
+DELAY 3500
+TAB
+TAB
+ENTER
+DELAY 3500
+GUI r
+DELAY 3500
+STRING notepad.exe
+ENTER
+DELAY 100
+STRING You have been Rick Rolled!!!
+ENTER
+STRING This was a fun little script that only took about 10 min to write and test from scratch!
+ENTER
+STRING =P
+ENTER
+ENTER
+ENTER
+STRING ====================Beginning of the actual script====================
+ENTER
+STRING DELAY 3500
+ENTER
+STRING GUI r
+ENTER
+STRING DELAY 3500
+ENTER
+STRING STRING cmd
+ENTER
+STRING ENTER
+ENTER
+STRING DELAY 3500
+ENTER
+STRING STRING powershell
+ENTER
+STRING ENTER
+ENTER
+STRING DELAY 3500
+ENTER
+STRING STRING Start-Process "https://youtu.be/dQw4w9WgXcQ?t=43"
+ENTER
+STRING ENTER
+ENTER
+STRING DELAY 3500
+ENTER
+STRING TAB
+ENTER
+STRING TAB
+ENTER
+STRING ENTER
+ENTER
+STRING DELAY 3500
+ENTER
+STRING GUI r
+ENTER
+STRING DELAY 3500
+ENTER
+STRING STRING notepad.exe
+ENTER
+STRING ENTER
+ENTER
+STRING DELAY 3500
+ENTER
+STRING STRING You have been Rick Rolled!!!
+ENTER
+STRING ENTER
+ENTER
+STRING STRING This was a fun little script that only took about 10 min to write and test from scratch!
+ENTER
+STRING ENTER
+ENTER
+STRING STRING =P
+ENTER
+STRING ENTER
+ENTER
+STRING ====================End of the actual script====================

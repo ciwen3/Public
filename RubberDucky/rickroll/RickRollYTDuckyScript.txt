@@ -1,0 +1,13 @@
+DELAY 3500
+GUI r
+DELAY 200
+STRING cmd
+ENTER
+DELAY 500
+STRING powershell
+ENTER
+DELAY 300
+STRING Start-Process "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+ENTER
+DELAY 300
+ENTER
