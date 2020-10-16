@@ -3,7 +3,7 @@
 ## Overview:
 In my spare time I built a full size arcade from scratch for a friend years ago and just wanted to add pictures and information here for future reference. I designed, cut, assembled and painted the wood. I picked out all the components, soldered the retropie control board, and wired the arcade controls to it. Then I combined all the pieces and made sure everything was working. I had fun doing the whole thing from cutting the wood to trouble shooting the issues because it used a lot of my skills to make and challenged me the whole way through.
 
-Most of the wood used is 1/2" or 3/4" plywood (for the outer sheeting) or 2x4 (for the inner supports). There is one piece of solid wood used for the controllers ( because I wanted that part to be a little more solid). Unfortunately I can't remember the specific size or meassurements for everything (because I am writing this years after the fact and no longer live in the same state as the Arcade).
+Most of the wood used is 1/2" plywood (for the outer sheeting) or 2x4 (for the inner supports). There is one piece of solid wood used for the controllers ( because I wanted that part to be a little more solid). Unfortunately I can't remember the specific size or meassurements for everything (because I am writing this years after the fact and no longer live in the same state as the Arcade).
 
 ## How:
 I was unable to find any good plans to build an arcade from scratch, so I started with buying a flat screen TV. I then sized everything around the flat screen 32" TV. 
