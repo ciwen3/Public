@@ -14,7 +14,7 @@ Then I bought and soldered the Raspberry Pi Controlblock together. Connected it 
 The arcade is still in use today. Every now and then I get sent pictures of my friends kids playing it. 
 
 ## Parts:
-1/2" or 3/4" plywood for outter sheeting 
+1/2" or 1/4" plywood for outter sheeting 
 
 2x4 wood for internal supports
 
