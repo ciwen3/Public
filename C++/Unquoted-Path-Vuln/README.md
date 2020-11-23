@@ -1,4 +1,6 @@
 # Program.exe for Unquoted Path Vulnerability
+## **All of my Public projects, opinions and advice are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using any of my software or taking any of my advice.**
+This is my first ever C++ program and I threw it together late one night while doing other things. I am certain it can be done better, but I currently lack that knowledge. Feel free to let me know if there is a better or more secure way to do what this program does so that I can learn and improve this code. 
 
 ## C++ code:
 ```
@@ -11,7 +13,6 @@ using namespace std;
 int main()
 {
     // declaring variables:
-    string line;
     string  pid;
 
     // print information:
@@ -65,4 +66,3 @@ C:\Program Files (x86)\Some Program\run.exe
 ```
 By placing my program in C:\Program.exe the vulnerable program will cause my program to run and give you the name of the user it was run as, what privileges the user has, what command was used to start Program.exe, the Process ID for that Command, and the location of the application that ran the command. 
 
-# **All of my Public projects, opinions and advice are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using any of my software or taking any of my advice.**
