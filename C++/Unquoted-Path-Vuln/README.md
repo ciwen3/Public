@@ -44,6 +44,43 @@ int main()
 }
 ```
 
+## shorter version
+```
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+    // declaring variables:
+    string  pid;
+
+    // print information:
+    printf("This Program was created by Christopher Iwen AKA Strat0m\nto find unquoted path vulnerabilities in Windows programs\nyou can download the source code for this at https://github.com/ciwen3/Public\n\n");
+
+
+    // run commands:
+    printf("User this command was run as:\n");
+    system("whoami");
+    printf("\n");
+    system("whoami /priv");
+    printf("\nTo find the command that called Program.exe run:\nwmic process where name='program.exe' get commandline\n");
+    system("wmic process where name='program.exe' get commandline");
+    printf("\nTo find the process ID for the command that called Program.exe run:\nwmic process where name='program.exe' get parentprocessid\n");
+    system("wmic process where name='program.exe' get parentprocessid");
+    printf("\ntype the number that was returned by the last command: \n");
+    cin >> pid;
+    printf(("To find the location of the Program that called Program.exe run: \nwmic process where processid="+pid+" get commandline\n").c_str());
+    system(("wmic process where processid="+pid+" get commandline").c_str());
+    printf("\n");
+    system("pause");
+    return 0;
+}
+```
+
+
 ## To Compile C++ using Linux to make Program.exe
 Create 64-Bit Executable
 ```
