@@ -62,10 +62,6 @@ int main()
 
 
     // run commands:
-    printf("User this command was run as:\n");
-    system("whoami");
-    printf("\n");
-    system("whoami /priv");
     printf("\nTo find the command that called Program.exe run:\nwmic process where name='program.exe' get commandline\n");
     system("wmic process where name='program.exe' get commandline");
     printf("\nTo find the process ID for the command that called Program.exe run:\nwmic process where name='program.exe' get parentprocessid\n");
