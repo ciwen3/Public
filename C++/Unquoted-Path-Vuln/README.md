@@ -101,7 +101,7 @@ By placing my program in C:\Program.exe the vulnerable program will cause my pro
 
 ## Alternate Searchs:
 ```
-wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\"
+wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\" | findstr /i /v """
 wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | findstr /i /v "C:\Windows\\" | findstr /i /v """
 wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | findstr /i /v "C:\Windows\\" | findstr /i "<service-name>" | findstr /i /v """
 sc qc <service-name>
