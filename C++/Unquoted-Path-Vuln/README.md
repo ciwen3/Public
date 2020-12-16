@@ -107,4 +107,6 @@ wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | fi
 sc qc <service-name>
 ```
 
-
+## To Do:
+1. add loop to check for multiple pids
+2. other commands to check for installed unquoted path vulnerability
