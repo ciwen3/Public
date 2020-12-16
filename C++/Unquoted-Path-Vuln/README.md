@@ -99,3 +99,10 @@ C:\Program Files (x86)\Some Program\run.exe
 ```
 By placing my program in C:\Program.exe the vulnerable program will cause my program to run and give you the name of the user it was run as, what privileges the user has, what command was used to start Program.exe, the Process ID for that Command, and the location of the application that ran the command. 
 
+## Alternate Searchs:
+```
+wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | findstr /i /v "C:\Windows\\" | findstr /i "CodeMeter" | findstr /i /v """
+wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\"
+```
+
+
