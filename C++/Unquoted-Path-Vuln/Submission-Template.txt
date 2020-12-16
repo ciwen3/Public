@@ -1,0 +1,35 @@
+Found by: 
+Date: 
+Software Name: 
+Download Link: 
+Downloaded: 
+File size: 
+Tested on: 
+
+
+
+Validated: 
+Program.exe - will catch the issue when it calls program.exe, source code can be found at https://github.com/ciwen3/Public/tree/master/C++/Unquoted-Path-Vuln
+wmic process where name='program.exe' get commandline
+wmic process where name='program.exe' get parentprocessid
+wmic process where processid="<Parent-Process-ID>" get commandline
+
+Other CMDs - to show installed service path(s) 
+sc qc <service-name>
+wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\"
+wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | findstr /i /v "C:\Windows\\" | findstr /i /v """
+wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | findstr /i /v "C:\Windows\\" | findstr /i "<service-name>" | findstr /i /v """
+
+
+
+Conclusion: 
+This vulnerability means that an attacker could place a malicious file named program.exe in the C:\ folder and wait for this software to call it. This would initiate the malicious executable with the same permissions being used to run the software and could be used to do anything from installing malicious software to opening up a reverse shell.
+
+This flaw exists because of how Windows searches for programs that contain a space in the name. For instance when trying to call C:\Program Files (x86)\Some Program\run.exe without any quotes, Windows will do so in this order:
+
+C:\Program.exe
+C:\Program Files.exe
+C:\Program Files (x86)\Some.exe
+C:\Program Files (x86)\Some Program\run.exe 
+
+Fortunately the fix for this is very simple. The software in question just needs to have quotes put around each of those paths it is calling. So instead of calling C:\Program Files (x86)\Some Program\run.exe it should be calling "C:\Program Files (x86)\Some Program\run.exe". 
