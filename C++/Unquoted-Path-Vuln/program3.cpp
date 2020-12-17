@@ -64,15 +64,9 @@ int main()
     printf("To find Installed Programs that have un-quoted path vulnerabilites:\n");
     printf("wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\" | findstr /i /v """\n");
     system("wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\" | findstr /i /v """");
-    
-    
-    
+    printf("\n");
     
     system("pause");
-    
-    
-    
-    
     
     return 0;
 }
