@@ -55,7 +55,9 @@ This Steganography program was created to hide or encode a message in an image b
 # To Do:
 1. make graphical interface using Tkinter
 2. add encryption modules 
-3. add option to create image from scratch (possibly just a solid color)?? (still debating)
+3. add the ability to save the text output as a .txt file
+4. add the ability to read a message from a .txt file
+5. add option to create image from scratch (possibly just a solid color)?? (still debating)
 
 
 # Troubleshooting
