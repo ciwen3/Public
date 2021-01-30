@@ -2,8 +2,9 @@ Found by:
 Date: 
 Software Name: 
 Download Link: 
-Downloaded: 
+Downloaded From: (could be other software or website, etc.)
 File size: 
+File SHA256: 
 Tested on: 
 
 
