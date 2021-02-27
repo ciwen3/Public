@@ -20,6 +20,7 @@ do
     sleep 6h # Saturday sleep for 6 hours then check again
   elif [[ $HOUR -ge 22 ]]
   then 
+    exo-open --launch TerminalEmulator <<EOF
     secs=$((5 * 60)) # 5 min timer
     while [ $secs -gt 0 ]
     do
@@ -29,6 +30,8 @@ do
       sleep 1
       secs=$(($secs -1)) # Count down by 1 sec
     done
+    exit
+    EOF
     sudo shutdown -h now # shutdown the computer right now
   else
     sleep 5m # sleep for 5 min and then check again. 
