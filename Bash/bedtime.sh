@@ -1,6 +1,6 @@
 #!/bin/bash
 : '
-Wrote this script to close down m kids Linux Desktop computer at 10 PM on school nights
+Wrote this script to close down my kids Linux Desktop computer at 10 PM on school nights
 chmod 700 bedtime.sh # make bash script executable by root only
 sudo apt install cron # install cron jobs
 sudo systemctl enable cron # enable cron jobs service
