@@ -6,7 +6,7 @@
 
 ## Bug Hunting
 ### Find Unquoted Path Vulnerabilties
-https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln/exe/Program.exe
+![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln/exe/Program.exe
 
 
 ## Crypto
