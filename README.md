@@ -5,12 +5,12 @@
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime/bedtime.ps1
 
 
-## Bug Hunting
+## Bug Hunting:
 ### Find Unquoted Path Vulnerabilties
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln/exe/Program.exe
 
 
-## Crypto
+## Crypto:
 ### Steganography
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
 ### Ceaar Cypher 
@@ -18,7 +18,7 @@
 ### CyptoPal Challenges
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
 
-## Hacking
+## Hacking:
 ### Chickenman-Alt Instructions
 https://github.com/ciwen3/Public/blob/master/ChickenmanAltInstructions/README.md
 ### Chrome Book
@@ -27,7 +27,7 @@ https://github.com/ciwen3/Public/blob/master/Chromebook/README.md
 https://github.com/ciwen3/Public/tree/master/RubberDucky
 
 
-## FUN
+## FUN:
 ### DIY Arcade
 https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/README.md
 ### Old Art Projects
