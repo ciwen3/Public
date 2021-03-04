@@ -32,9 +32,8 @@ https://github.com/ciwen3/Public/tree/master/RubberDucky
 https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/README.md
 ### Old Art Projects
 https://github.com/ciwen3/Public/blob/master/Art.md
-
-
-
+## Other
+https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1
 
 
 
