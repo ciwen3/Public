@@ -26,6 +26,12 @@ https://github.com/ciwen3/Public/blob/master/Chromebook/README.md
 https://github.com/ciwen3/Public/tree/master/RubberDucky
 
 
+## FUN
+### DIY Arcade
+https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/README.md
+### Old Art Projects
+https://github.com/ciwen3/Public/blob/master/Art.md
+
 
 
 
