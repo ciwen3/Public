@@ -19,6 +19,8 @@ used to power down my kids Linux computers at a set time. the files can be insta
 ```
 sudo apt install cron
 sudo crontab -e 
+or 
+crontab -e -u root
 # add the following line
 @reboot sleep 300 && /path/to/bedtime.sh 
 sudo systemctl enable cron.service
