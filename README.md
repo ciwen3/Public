@@ -27,6 +27,11 @@ Implementation of a very old encryption cypher. It only works on letters of the 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
 
 ## Hacking:
+### OSCP Study and attack repo
+A collection of information I have gather to take the OSCP exam. 
+
+https://github.com/ciwen3/OSCP
+
 ### Chickenman-Alt Instructions
 Game to practice WiFi hacking. 
 
