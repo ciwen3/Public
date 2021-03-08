@@ -2,21 +2,21 @@
 ## Bedtime Scripts: 
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Bash/bedtime.sh
 
-![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime/bedtime.ps1
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime/bedtime.ps1
 
 
 ## Bug Hunting:
 ### Find Unquoted Path Vulnerabilties
-![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln/exe/Program.exe
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln/exe/Program.exe
 
 
 ## Crypto:
 ### Steganography
-![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
 ### Ceasar Cypher 
-![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/python/ceasar/ceasar2.py
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/python/ceasar/ceasar2.py
 ### CyptoPal Challenges
-![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
 
 ## Hacking:
 ### Chickenman-Alt Instructions
