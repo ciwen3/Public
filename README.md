@@ -27,7 +27,7 @@ Implementation of a very old encryption cypher. It only works on letters of the 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
 
 ## Hacking:
-### OSCP Study and attack repo
+### OSCP Study & Attack repo
 A collection of information I have gather to take the OSCP exam. 
 
 https://github.com/ciwen3/OSCP
@@ -37,7 +37,7 @@ Game to practice WiFi hacking.
 
 https://github.com/ciwen3/Public/blob/master/ChickenmanAltInstructions/README.md
 
-### Chrome Book
+### ChromeBook
 One of several Chromebook models I ahve turned into Linux Laptops. 
 
 https://github.com/ciwen3/Public/blob/master/Chromebook/README.md
