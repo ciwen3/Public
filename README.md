@@ -4,7 +4,7 @@ I wrote these script to close down my kids various computer at 10 PM on school n
 
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Bash/bedtime.sh
 
-![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime/bedtime.ps1
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime
 
 
 ## Bug Hunting:
