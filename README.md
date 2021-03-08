@@ -13,7 +13,7 @@
 ## Crypto:
 ### Steganography
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
-### Ceaar Cypher 
+### Ceasar Cypher 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/python/ceasar/ceasar2.py
 ### CyptoPal Challenges
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
