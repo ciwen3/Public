@@ -1,6 +1,6 @@
 # Index: 
 ## Bedtime Scripts: 
-![Screenshot](https://img.shields.io/badge/Platform-Linux-green) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Bash/bedtime.sh
+![Screenshot](https://img.shields.io/badge/Platform-Linux-huntergreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Bash/bedtime.sh
 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-brightgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime/bedtime.ps1
 
