@@ -5,27 +5,33 @@
 ### Notes:
 used to power down my kids Linux computers at a set time. the files can be installed anywhere so long as your kids don't have sudo access and you use the chattr command to make the scripts immutable. 
 
-1. save both files to the hard drive
-2. make sure bedtime.sh points to final-countdown.sh
-3. make bedtime.sh executable and setuid bit 
+1. install needed programs
+
+```
+sudo apt install exo-utils figlet -y
+```
+
+2. save both files to the hard drive
+3. make sure bedtime.sh points to final-countdown.sh
+4. make bedtime.sh executable and setuid bit 
 
 ```
 sudo chmod 4111 bedtime.sh
 ```
 
-4. make bedtime.sh immutable
+5. make bedtime.sh immutable
 
 ```
 sudo chattr -i bedtime.sh
 ```
 
-5. make final-countdown.sh executable and setuid bit 
+6. make final-countdown.sh executable and setuid bit 
 
 ```
 sudo chmod 4111 final-countdown.sh
 ```
 
-6. make final-countdown.sh immutable
+7. make final-countdown.sh immutable
 
 ```
 sudo chattr -i final-countdown.sh
