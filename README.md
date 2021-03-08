@@ -1,5 +1,7 @@
 # Index: 
 ## Bedtime Scripts: 
+I wrote these script to close down my kids various computer at 10 PM on school nights.
+
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Bash/bedtime.sh
 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime/bedtime.ps1
@@ -7,31 +9,49 @@
 
 ## Bug Hunting:
 ### Find Unquoted Path Vulnerabilties
-![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln/exe/Program.exe
+I created this to automate the process of finding unquoted path calls that could allow a malicious attacker to get persistance or elevate priviledges.
+
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln
 
 
 ## Crypto:
 ### Steganography
+Created to hide messages in pictures. Doesn't actually encyprt data, just encodes (hides) it in the pictures. 
+
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
 ### Ceasar Cypher 
+Implementation of a very old encryption cypher. It only works on letters of the alphabet. This means numbers and punctuation will not be encrypted. this is easy to add by changing the alphabet variables. 
+
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/python/ceasar/ceasar2.py
 ### CyptoPal Challenges
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
 
 ## Hacking:
 ### Chickenman-Alt Instructions
+Game to practice WiFi hacking. 
+
 https://github.com/ciwen3/Public/blob/master/ChickenmanAltInstructions/README.md
+
 ### Chrome Book
+One of several Chromebook models I ahve turned into Linux Laptops. 
+
 https://github.com/ciwen3/Public/blob/master/Chromebook/README.md
+
 ### Rubber Ducky / Attiny85 Scripts 
+Scripts to automatically attack a system by plugging in a usb devcice that mimics a keyboard and issues commands at lightnigh speed. 
+
 https://github.com/ciwen3/Public/tree/master/RubberDucky
 
 
 ## FUN:
 ### DIY Arcade
+Full size arcade cabinet that I made for a friend. 
+
 https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/README.md
-### Old Art Projects
+
+### Art Projects I have participated in
 https://github.com/ciwen3/Public/blob/master/Art.md
+
 ## Other
 https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1
 
