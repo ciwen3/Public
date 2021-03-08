@@ -10,7 +10,7 @@ used to power down my kids Linux computers at a set time. the files can be insta
 3. make bedtime.sh executable and setuid bit 
 
 ```
-chmod 4111 bedtime.sh
+sudo chmod 4111 bedtime.sh
 ```
 
 4. make bedtime.sh immutable
@@ -19,19 +19,19 @@ chmod 4111 bedtime.sh
 sudo chattr -i bedtime.sh
 ```
 
-6. make final-countdown.sh executable and setuid bit 
+5. make final-countdown.sh executable and setuid bit 
 
 ```
-chmod 4111 final-countdown.sh
+sudo chmod 4111 final-countdown.sh
 ```
 
 6. make final-countdown.sh immutable
 
 ```
-sudo chattr -i final-countdown.ch
+sudo chattr -i final-countdown.sh
 ```
 
-5. create cron job to start bedtime.sh at reboot
+7. create cron job to start bedtime.sh at reboot
 ```
 sudo apt install cron
 sudo crontab -e 
