@@ -9,14 +9,14 @@ I wrote these script to close down my kids various computer at 10 PM on school n
 
 ## Bug Hunting:
 ### Find Unquoted Path Vulnerabilties
-I created this to automate the process of finding unquoted path calls that could allow a malicious attacker to get persistance or elevate priviledges.
+Created to automate the process of finding unquoted path calls that could allow a  attacker to run malicious code for persistance or to elevate priviledges.
 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/C%2B%2B/Unquoted-Path-Vuln
 
 
 ## Crypto:
 ### Steganography
-Created to hide messages in pictures. Doesn't actually encyprt data, just encodes (hides) it in the pictures. 
+Created to hide ascii characters in pictures for retrieval by the same tool. Doesn't actually encyprt data, just encodes (hides) it in the pictures. 
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
 ### Ceasar Cypher 
