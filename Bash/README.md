@@ -7,8 +7,10 @@ used to power down my kids Linux computers at a set time. the files can be insta
 
 
 1. save both files to the hard drive
-2. make bedtime script executable ```chmod +x bedtime.sh```
-3. make final-countdown.sh executable and setuid bit ```chmod 4111 final-countdown.sh```
+2. make bedtime script executable 
+```chmod +x bedtime.sh```
+3. make final-countdown.sh executable and setuid bit 
+```chmod 4111 final-countdown.sh```
 4. create cron job to start bedtime.sh at reboot
 
 
