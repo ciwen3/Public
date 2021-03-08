@@ -54,6 +54,9 @@ Full size arcade cabinet that I made for a friend.
 
 https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/README.md
 
+### Joke Job Search Script
+https://github.com/ciwen3/Public/blob/master/Bash/job-search.sh
+
 ### Art Projects I have participated in
 https://github.com/ciwen3/Public/blob/master/Art.md
 
