@@ -38,19 +38,19 @@ Game to practice WiFi hacking.
 https://github.com/ciwen3/Public/blob/master/ChickenmanAltInstructions/README.md
 
 ### ChromeBook
-One of several Chromebook models I ahve turned into Linux Laptops. 
+One of several Chromebook models I have turned into Linux Laptops. 
 
 https://github.com/ciwen3/Public/blob/master/Chromebook/README.md
 
 ### Rubber Ducky / Attiny85 Scripts 
-Scripts to automatically attack a system by plugging in a usb devcice that mimics a keyboard and issues commands at lightnigh speed. 
+Scripts to automatically attack a system by plugging in a usb devcice that mimics a keyboard and issues commands at lightning speed. 
 
 https://github.com/ciwen3/Public/tree/master/RubberDucky
 
 
 ## FUN:
 ### DIY Arcade
-Full size arcade cabinet that I made for a friend. 
+Full size arcade and cabinet that I made for a friend. 
 
 https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/README.md
 
