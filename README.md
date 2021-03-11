@@ -2,7 +2,7 @@
 ## Bedtime Scripts: 
 I wrote these script to close down my kids various computer at 10 PM on school nights.
 
-![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Bash/bedtime.sh
+![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/tree/master/Bash/bedtime
 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Powershell-blue) https://github.com/ciwen3/Public/blob/master/Powershell/bedtime
 
