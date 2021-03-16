@@ -1,0 +1,13 @@
+no ip domain-lookup
+enable password class
+banner motd +Unauthorized Access is Prohibited!+
+line con 0
+password cisco
+login
+logging synch
+line vty 0 15
+password cisco
+login
+logging synch
+exit
+hostname 

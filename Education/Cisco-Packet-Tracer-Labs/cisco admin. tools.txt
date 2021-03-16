@@ -1,0 +1,39 @@
+http://www.networkworld.com/community/node/14708
+
+Arpwatch-ng
+backtrack linux
+Big Brother
+Cacti		apt-get install cacti
+Cisco Adaptive Security Device Manager (ASDM)
+Cisco-centric Open Source Community (COSI).
+Cisco Monitor Director
+Cisco Monitor Manager
+Cisco Network Assistant
+Cisco's Security Device Manager (SDM)
+CiscoWorks
+GNS3
+HP OpenView
+Hyperterminal
+Kiwi CatTools
+Kiwi Syslog Daemon
+minicom
+MRTG
+Nagios
+Nessus
+Netdisco
+NetMRI
+Paessler Router Traffic Grapher (PRTG)
+Putty
+RANCID with CVSweb
+SecureCRT
+SNMP
+SolarWinds Engineer's Toolkits
+ssh client eg TeraTerm
+Syslog-ng with phpsyslog-ng
+tftpd32
+tftp server eg Solarwinds
+TraffStats
+WhatsUp
+WinAgents IOS Config Editor
+Wireshark/Ethereal
+

@@ -1,0 +1,49 @@
+login or follow the lost password method
+
+defualt device
+
+assign host name to device
+ 
+Console password 
+ 
+Telnet password 
+ 
+Logon banner 
+ 
+*****************
+*NOTICE TO USERS*
+*****************
+This computer is for authorized use only. Users (authorized or unauthorized) have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted, monitored, recorded, copied, audited, inspected, and disclosed to the local admin, and law enforcement personnel, as well as authorized officials of other agencies, both domestic and foreign. By using this system, the user consents to such interception, monitoring, recording, copying, auditing, inspection, and disclosure at the discretion local admin.
+
+Unauthorized or improper use of this system may result in administrative disciplinary action and civil and criminal penalties. By continuing to use this system you indicate your awareness of and consent to these terms and conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions stated in this warning.
+
+Enable password 
+
+save configurations
+
+back up router config using ftp
+ 
+backing up the ios using ftp
+ 
+log changes made to the device
+
+draw new network layout
+
+look at log file
+
+
+LabRouter1
+fa0/0 192.168.1.1 255.255.255.0
+s0/0  192.168.0.1 255.255.255.0
+
+LabRouter2
+fa0/0 192.168.2.1 255.255.255.0
+s0    192.168.0.2 255.255.255.0
+
+FrameRelay
+s0    192.168.1.1 255.255.255.0
+s1    192.168.2.1 255.255.255.0
+
+

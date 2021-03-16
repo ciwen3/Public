@@ -1,0 +1,242 @@
+on video 13
+
+login or follow the lost password method
+
+defualt device
+ write erase 
+
+assign host name to device
+ Router#configure terminal
+ Router(config)#hostname *****
+ ROUTER(config)#ip domain-name ***** (description of device)
+
+Console password (from global config)
+ Router(config)#line console 0
+ Router(config)#password 7 ***** (7 means encrypted if not there it will be in plain text)
+ Router(config)#login		  (enables password checking)
+ Router(config)#logging synchronous (wont cut off your text with status updates) 
+
+Telnet password (from global config)
+ Router(config)#line vty ***** ***** (number of telnet lines you want open)
+ Router(config)#password *****
+ Router(config)#login
+
+Logon banner (from global config)
+ Router(config)#banner motd +*****+ (message of the day banner, plus signs required but wont show up)
++
+*****************
+*NOTICE TO USERS*
+*****************
+This computer is for authorized use only. Users (authorized or unauthorized) have no explicit or implicit expectation of privacy.
+
+Any or all uses of this system and all files on this system may be intercepted, monitored, recorded, copied, audited, inspected, and disclosed to the local admin, and law enforcement personnel, as well as authorized officials of other agencies, both domestic and foreign. By using this system, the user consents to such interception, monitoring, recording, copying, auditing, inspection, and disclosure at the discretion of the local admin.
+
+Unauthorized or improper use of this system may result in administrative disciplinary action and civil and criminal penalties. By continuing to use this system you indicate your awareness of and consent to these terms and conditions of use. LOG OFF IMMEDIATELY if you do not agree to the conditions stated in this warning or if you have not been authorized in writing from the admin to access this specific device.
++
+
+Enable password (from global config)
+ Router(config)#enable password ***** (un encrypted password, visible in #show running-config)
+ Router(config)#service password-encryption (will use a weak encryption on password)
+ OR 
+ Router(config)#enable secret ***** (encrypts password with md5 hashing)
+
+show ethernet ports 
+ show ip interface brief
+ show vlan 
+
+turn on and set ip on ethernet ports
+ Router#configure terminal
+ Router(config)#interface *****
+ Router(config-if)#no shutdown
+ Router(config-if)#ip address 192.168.1.254 255.255.255.0
+
+SSH (requires hostname already set up)
+ Switch(config)#ip domain-name ****** (make up website name)
+ Switch(config)#crypto key generate rsa 
+ how many bits in the modulus:  (choose 128 or 256, will take a while to generate)
+ Switch(config)#ip ssh version 2  (turns on ssh v2)
+ Switch(config)#username ***** secret *****  (create a user and set password)
+ Switch(config)#do show run   (to verify)
+ Switch(config)#line vty 0 15
+ Switch(config-line)#transport input *ssh* (use ? to see all options)
+ Switch(config-line)#login local  (use local user database, tacacs is a remote server for user id and password)
+Look up minicom ssh instructions
+ 
+Port security (protect will ignore bad mac adds, restrict will do the same but generate a syslog entry)
+ Switch#show ip int brief
+ Switch#conf t 
+ Switch(config)#interface *fa*0/14* (where *fa*0/14* is the interface we are admining)
+ Switch(config-if)#switchport mode access  (access is more secure than dynamic or trunk)
+ Switch(config-if)#switchport port-security maximun *****  (control # of mac add per port)
+ Switch(config-if)#switchport port-security violation *****  (shutdown will disable port till admin changes it, 	protect will ignore bad mac adds, restrict will do the same but generate a syslog entry)
+ Switch(config-if)#do show mac address-table or in windows at cmd#ipconfig /a (look up linux)
+ Switch(config-if)#switchport port-security mac-address ***** (specify what mac add can use which port)
+ or
+ Switch(config-if)#switchport port-security sticky (learns mac add currently on the int) 	
+ Switch(config-if)#do show run int *fa0/14*  (to verify youve done right, where *fa0/14* is the interface your on)
+ Switch(config-if)#switchport port-security
+ Switch# show port-security ***** (use ?)  
+
+If having issues with slow connection:
+ Switch#show interface *fastEthernet* *0/14* (will get packet information) 
+ (update several times to see if issue is on going)
+ crc (cyclical redundancy check: hash on end of packet that makes sure packet isnt corrupted)
+ crc= indicates bad cable or interference
+ late collision= duplex mismatch
+ 
+ open cmd ping both sides of of issue
+ #ping ***** (ip address of device with connection issue)
+ #arp -a     (get mac addresses)
+back at switch
+ switch#show mac address-table  (will show all mac addresses it knows, use "| i *****" to narrow search)
+ switch#show mac address-table | i *****  (a small protion of the mac address from arp -a)
+ Switch#show cdp neighbors  (to see what other devices are near you)
+ 
+Vlan: (802.1q trunking protocol)
+ Switch(config)#vtp mode transparent  (vtp is an old and out dated protocl and can cause network outage)
+ Switch#show ip interface brief
+ Switch#show vlan brief  (will show all currently set up vlans)
+ Switch(config)#vlan ***** (where **** is a number for the vlan you want to create)
+ Switch(config-vlan)#name ***** (give it any name that make it easier to recognise)
+ Switch(config-vlan)#exit (to update and get changes to take effect)
+ Switch(config)#interface *fa0/14*
+ Switch(config-if)#description ***** (so that you know what the port connects to)
+ Switch(config-if)#switchport access vlan *****  (where ***** is the vlan number you want this port to belong to)
+ Switch#show vlan brief  (will show all currently set up vlans)
+ Switch(config)#interface vlan ***** (where ***** is the vlan # you want to work with)
+ Switch(config-if)#ip address *ip-address* *subnet* (to assign an ip address and subnet to the vlan)
+ Switch(config-if)#switchport trunk encapsulation dot1q
+ Switch(config-if)#switchport mode trunkS
+
+rewatch video 18
+
+ 
+
+
+
+
+save configurations
+ Router# copy running-configuration startup-config
+ or
+ Write memory
+ wr (short version of write memory)
+
+back up router config 
+ Router# copy running-configuration tftp
+
+backing up the ios
+ Router# copy flash tftp
+
+
+
+look at log file
+draw network layout
+log changes made to the device
+
+
+
+1- Control Access to your router
+The first thing to do is apply some rules to restrict all external access to some ports of the 
+router. You can block all ports, but it is not always necessary. These commands bellow 
+will protect your router against some reconnaissance attacks and, obviously, will restrict 
+access to these ports: Where $yourRouterIP is your router IP and x0/0 is your external interface. We 
+Will always use this convention in this article.
+
+ access-list 110 deny tcp any host $yourRouterIP eq 7 
+ access-list 110 deny tcp any host $yourRouterIP eq 9 
+ access-list 110 deny tcp any host $yourRouterIP eq 13 access-list 110 deny tcp any host $yourRouterIP eq 19 
+ access-list 110 deny tcp any host $yourRouterIP eq 23 
+ access-list 110 deny tcp any host $yourRouterIP eq 79 
+ int x0/0 
+ access-group in 110 
+
+
+2- Restrict telnet access to it 
+Telnet is not a very safe protocol to use, but if you really need to use it (you should 
+always use ssh) you might want to restrict all access to it (remember that all your traffic 
+will be unencrypted). The best way to accomplish that is using a standard access-list and 
+the access-class command. (Where 192.168.1.1 is the IP address allowed to telnet the router)
+
+ access-list 50 permit 192.168.1.1 
+ access-list 50 deny any log 
+ line vty 0 4 
+ access-class 50 in 
+ exec-timeout 5 0 
+
+
+3- Block Spoof/Malicious packets 
+You must never allow loopback/reserved IP address from the Internet reach your external 
+interface and you can reject broadcast and multicast addresses too. 
+
+ access-list 111 deny ip 127.0.0.0 0.255.255.255 any 
+ access-list 111 deny ip 192.168.0.0 0.0.0.255 any 
+ access-list 111 deny ip 172.16.0.0 0.0.255.255 any 
+ access-list 111 deny ip 10.0.0.0 0.255.255.255 any 
+ access-list 111 deny ip host 0.0.0.0 any 
+ access-list 111 deny ip 224.0.0.0 31.255.255.255 any 
+ access-list 111 deny icmp any any redirect 
+ int x0/0 
+ access-group in 111 
+
+
+4- Restrict SNMP SNMP must always be restrict, unless you want some malicious person getting a lot of 
+information from your network ?
+
+ access-list 112 deny udp any any eq snmp 
+ access-list 112 permit ip any any 
+ interface x0/0 
+ access-group 112 in
+ 
+And if you are not going to use SNMP at all, disable it: 
+ no snmp-server 
+
+
+5- Encrypt all passwords
+A very important thing to do is protect all your passwords using the powerful algorithm 
+as possible. The password from exec mode, that grants privileged access to the IOS system, 
+Can be set using a MD5 hash, which is the strongest option available on the 
+Cisco IOS. 
+
+ enable secret $yourpassword 
+
+All other passwords, you can encrypt using the Vigenere cipher that is not 
+Very strong, but can help. To do that, you can use the service password-encryption
+Command that encrypts all passwords present in you system. 
+
+ service password-encryption 
+
+
+6- Disable all unused services
+ 6.1 - Disable Echo, Chargen and discard
+ 	no service tcp-small-servers 
+ 	no service udp-small-servers
+ 6.2 - Disable finger
+ 
+ 	no service finger 
+ 6.3 - Disable the httpd interface no ip http server 
+ 
+ 6.4 - Disable ntp (if you are not using it)
+ 	ntp disable 
+7- Add some security options
+ 7.1 - Disable source routing
+ 	no ip source-route 
+ 7.2 - Disable Proxy Arp
+ 
+ 	no ip proxy-arp 
+ 7.3 - Disable ICMP redirects
+ 	interface s0/0 (your external interface) 
+ 	no ip redirects 
+ 7.4 - Disable Multicast route Caching
+ 	interface s0/0 (your external interface) 
+ 	no ip mroute-cache
+ 7.5 - Disable CDP
+ 	no cdp run 
+ 7.6 - Disable direct broadcast (protect against Smurf attacks) 
+ 	no ip directed-broadcast 
+
+
+8- Log everything
+To finish, you must log everything on an outside Log Server. You must everything from 
+all your systems and always analyze the logs. where 192.168.1.10 is the ip of your log server (configured as a Syslog server) 
+ logging trap debugging 
+ logging 192.168.1.10 
