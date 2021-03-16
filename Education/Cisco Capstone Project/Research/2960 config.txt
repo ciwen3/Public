@@ -1,0 +1,40 @@
+
+
+en
+
+conf t
+
+
+no ip domain-lookup
+enable password class
+banner motd +Unauthorized Access is Prohibited!+
+line con 0
+password cisco
+login
+logging synch
+line vty 0 15
+password cisco
+login
+logging synch
+exit 
+
+interface range Fa0/1 - 5
+switchport trunk allowed vlan all
+switchport trunk native vlan 1
+switchport mode trunk
+no shutdown
+
+int f0/24
+spanning-tree bpduguard enable
+switchport port-security mac sticky
+switchport port-security violation protect
+no shutdown
+
+int range g0/1 - 2
+switchport trunk allowed vlan all
+switchport trunk native vlan 1
+switchport mode trunk
+no shutdown
+end
+
+

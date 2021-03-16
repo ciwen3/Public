@@ -1,0 +1,68 @@
+Hotron Hall:
+============
+100Mb connection for each of the 260 computers 
+100Mb connection for each of the 7 printers in the cubica farms
+1Gb connection for each of the 15 Pixar computers plus 1 printer
+1Gb connection for each of the 2 wifi connections
+1Gb connection for each of the 4 computers in the security room plus the 2 printers
+7 VLANs for the cubical farms
+1 VLAN for both wifi devices
+1 VLAN for the Pixar office
+1 VLAN for the Security Room
+need full throughput capabilities for the Pixar and Security Room
+Only need about half the overall bandwidth need for full through put in the cubical farms
+
+27Gb /2 (Only need about half the overall bandwidth for computers and printers)
+13GB
+--------------------------------
+24Gb for Pixar and Security room
+--------------------------------
+40Gb total for the building
+
+
+
+Laffin Hall:
+============
+100Mb for each of the 585 users 
+100Mb for each of the 36 printers
+1Gb for each of the 39 WiFi access points
+36 VLANs one for each seperate room
+1 VLAN for all the WiFi access points
+Only need about half the overall bandwidth need for full through put
+
+39Gb for WiFi
+62Gb for computers and printers
+
+100 Gb /2 (Only need about half the overall bandwidth)
+-------------------------------
+50Gb total for the building
+
+Nassau Residence:
+=================
+1GB for each of the 130 dorm spaces with 5 ports 1 for each of 4 bed rooms and 1 for each living room area. 
+1Gb for each of the 3 WiFi access points
+100Mb for each of the 6 printers 2 on each floor
+18 cameras
+1 VLAN for all WiFi access points
+3 VLANs for each floor
+5 1Gb ethernet ports for each dorm space but only 1Gb of throughput (allows the students to get upto 1Gb connection if no one else is using the internet in their dorm space but garantees 200Mb for each of the 5 ports of all are being used.)
+
+
+130 dorm connections
+520 bedroom connections
+-----------------------
+650 total ethernet connections
+
+217 per floor (VLAN) 
+45 Gb throughput need for each floor totalling 
+135 GB throughput possible for the building
+
+
+
+
+
+40Gb  Horton
+50Gb  Laffin
+140GB Nassau
+==========================
+230Gb total throughput for the entire CAN

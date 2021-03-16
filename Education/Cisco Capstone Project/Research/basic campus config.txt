@@ -1,0 +1,65 @@
+no ip domain-lookup
+enable password class
+banner motd +Unauthorized Access is Prohibited!+
+line con 0
+password cisco
+login
+logging synch
+line vty 0 15
+password cisco
+login
+logging synch
+exit
+
+
+
+router ospf 1
+router-id ?
+network 10.0.0.0 0.0.0.252 area 0
+network 192.168.0.0 0.0.0.255 area ?
+passive-interface f0/24
+
+
+
+interface range Fa0/1 - ?
+switchport trunk encapsulation dot1q
+switchport mode trunk
+ip ospf network broadcast
+ip ospf network point-to-multipoint
+no shutdown
+
+
+
+int f0/24
+spanning-tree bpduguard enable
+switchport port-security
+switchport port-security mac sticky
+switchport port-security violation protect
+no shutdown
+
+
+
+int g0/0
+ip add ? ?
+
+
+
+int g0/1
+ip add ? ?
+
+
+
+int range g0/0 - 1
+ip ospf 1 area 0
+ip ospf network broadcast
+ip ospf network point-to-multipoint
+ip ospf priority 0
+switchport trunk encapsulation dot1q
+switchport mode trunk
+no shutdown
+
+int g0/0
+ip add ? ?
+
+int range f0/? - 23
+shutdown
