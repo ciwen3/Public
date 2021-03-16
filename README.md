@@ -26,6 +26,16 @@ Implementation of a very old encryption cypher. It only works on letters of the 
 ### CyptoPal Challenges
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/python/CryptoPals
 
+## Education:
+### Documents (Certifications, Degree & GED)
+https://github.com/ciwen3/Public/tree/master/Education/Documents
+
+### Class Projects
+https://github.com/ciwen3/Public/tree/master/Education/Business%20Class%20Project
+https://github.com/ciwen3/Public/tree/master/Education/Cisco%20Capstone%20Project
+https://github.com/ciwen3/Public/tree/master/Education/Speech%20275
+https://github.com/ciwen3/Public/tree/master/Education/VB%20Scripts
+
 ## Hacking:
 ### OSCP Study & Attack repo
 A collection of information I have gather to take the OSCP exam. 
