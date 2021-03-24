@@ -5,7 +5,7 @@ chmod 700 bedtime.sh # make bash script executable by root only
 sudo apt install cron # install cron jobs
 sudo systemctl enable cron # enable cron jobs service
 sudo crontab -e # add the next line at the bottom
-5 * * * * bedtime.sh # “At minute 5” every hour run check
+5,10,15,20,25,30,35,40,45,50,55 * * * * /path/to/bedtime.sh # Check every 5 mins of every hour
 sudo crontab -l # to view the crontab
 sudo apt install exo-utils -y # this is required to pop a window for the count down. 
 '
