@@ -44,7 +44,7 @@ sudo crontab -e
 or 
 crontab -e -u root
 # add the following line
-@reboot sleep 300 && /path/to/bedtime.sh 
+5 * * * * /path/to/bedtime.sh 
 sudo systemctl enable cron.service
 sudo systemctl restart cron.service
 ```
