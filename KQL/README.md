@@ -42,10 +42,11 @@ EmailPostDeliveryEvents
 ```
 
 
-
+### Search for Chrome use
+```
 DeviceEvents
 | where InitiatingProcessCommandLine contains "chrome"
-
+```
 
 ### look for connection between two specific devices
 ```
