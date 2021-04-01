@@ -169,23 +169,6 @@ Syslog | where SyslogMessage contains "<IP-Address>"
 | project Facility, Computer, Protocol, SRC, SPRT, DST, DPRT, APP, VLAN, NAT, NPRT, DEST
 ```
 
-```
-Syslog | where SyslogMessage contains "RT_FLOW_SESSION_CREATE"
-| extend p = split(SyslogMessage, " ")
-| extend IP1 = tostring(p.[3])
-| extend IPsplit = split(IP1, "->")
-| extend Splitips1 = tostring(IPsplit.[0])
-| extend Splitips2 = tostring(IPsplit.[1])
-| extend SRC = split(Splitips1, "/")
-| extend SRCIP = tostring(SRC.[0])
-| extend SRCPRT = tostring(SRC.[1])
-| extend DST = split(Splitips2, "/")
-| extend DSTIP = tostring(DST.[0])
-| extend DSTPRT = tostring(DST.[1])
-| project SRCIP, SRCPRT, DSTIP, DSTPRT
-| summarize dcount(DSTIP), dcount(DSTPRT) by SRCIP
-| where dcount_DSTIP > 5 
-```
 
 ```
 Syslog | where SyslogMessage contains "<Syslog-Msg-Keyword>"
