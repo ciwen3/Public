@@ -1,4 +1,5 @@
 # Kusto Query Language Examples:
+I have either come across these or created these. I try to credit the source when I remember too. 
 
 ## searching multiple workspaces: 
 ```
