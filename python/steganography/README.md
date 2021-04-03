@@ -59,7 +59,7 @@ This Steganography program was created to hide or encode a message in an image b
 4. add the ability to read a message from a .txt file
 5. add option to copy the exif data from original photo to new photo
 6. add option to create image from scratch (possibly just a solid color)?? (still debating)
-
+7. add file upload option that copies bits instead of text (test on .txt, .exe, etc.)
 
 # Troubleshooting
 if you get an error about indentation use untabify to change all tabs to 4 spaces. 
