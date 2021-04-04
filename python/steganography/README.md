@@ -28,6 +28,8 @@ This Steganography program was created to hide or encode a message in an image b
 ### or
 1. python -m pip install --upgrade pip
 2. python -m pip install --upgrade Pillow
+## Install Bitstring
+1. python3 -m pip install --upgrade bitstring
 
 
 # Use:
