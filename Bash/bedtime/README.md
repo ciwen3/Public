@@ -44,7 +44,8 @@ sudo crontab -e
 or 
 crontab -e -u root
 # add the following line
-5,10,15,20,25,30,35,40,45,50,55 * * * * /path/to/bedtime.sh 
+@reboot root bash /bedtime.sh
+5,10,15,20,25,30,35,40,45,50,55 * * * * root /path/to/bedtime.sh 
 sudo systemctl enable cron.service
 sudo systemctl restart cron.service
 ```
