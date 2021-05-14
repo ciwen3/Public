@@ -11,6 +11,8 @@ First made the front panel and mounted the flatscreen to it with wood. Once I ha
 
 Then I bought and soldered the Raspberry Pi Controlblock together. Connected it to the Raspberry Pi 2 B+. Loaded Retropie on SD card. Booted the Raspberry Pi and used a usb card to transfer the ROMs to the SD card. Tested the controller mapping and played a few games on different emulators. Roms were downloaded from various sites online. The system seemed to work fine on everything up to PSP games. PSP games were to laggy to consider worth playing on this setup. Other games had some lag and problems depending on the emulator and rom being played but were still worth playing. 
 
+Note: I did have to make a notch in the TV mount (bottom left corner) so that the remote control would work to turn the TV on. Modern TVs often have display modes that keep the TV always on. This would have been a better option so that everything could be turned on by flipping the power switch on the surge protector. 
+
 The arcade is still in use today. Every now and then I get sent pictures of my friends kids playing it. 
 
 ## Parts:
