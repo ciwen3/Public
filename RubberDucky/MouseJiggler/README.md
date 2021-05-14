@@ -20,6 +20,14 @@ Device: 0083
 
 
 ## Simple Mouse Jiggler: https://ericdraken.com/usb-mouse-jiggler/
+
+1. Install arduino IDE software
+2. Edit > Preferences > Additional Board Managers URL: ```http://digistump.com/package_digistump_index.json```
+3. Tools > Boards Manager > Digispark > Digistump AVR boards
+4. Tools > Programmer > ???
+
+
+
 ```
 #include <DigiMouse.h>
 void setup(){
