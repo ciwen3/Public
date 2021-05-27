@@ -6,8 +6,7 @@
 # This software should never be sold.
 # You are alloud to make any modifications you see fit. 
 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY
+# This program is distributed in the hope that it will be useful WITHOUT ANY WARRANTY
 
 from PIL import Image
 from PIL import ImageColor
@@ -171,8 +170,7 @@ print("")
 print("Usage: To Retrieve Message from digital image")
 print("Type Decode to get hidden text from a digital image")
 print("Then type the file path and name of the image you want to extract the message from.")
-print("Wait for it to finish and check to the output. \nThe message will be at the begining of the output.")
-print("Everything else will likely be gibberish.")
+print("Wait for it to finish and check the output. \n")
 print("")
 
 ask = input("Do you want to (E)ncode or (D)ecode?\n")
@@ -201,8 +199,7 @@ else:
     print("Usage: To Retrieve Message from digital image")
     print("Type Decode to get hidden text from a digital image")
     print("Then type the file path and name of the image you want to extract the message from.")
-    print("Wait for it to finish and check to the output. \nThe message will be at the begining of the output.")
-    print("Everything else will likely be gibberish.")
+    print("Wait for it to finish and check the output. \n")
     print("")
 
 print("")
