@@ -3,13 +3,13 @@
 I created these programs to test my theory that all prime numbers will have a modulus of 1 or 5 when divided by 6 (except 2 or 3, which are part of the equation). 
 
 ## Prime-Test.py 
-  - will check to see if any prime number in the prime_list fits my theory. 
+  - Will check to see if any prime number in the prime_list fits my theory. 
 
 ## Prime-Counter.py 
-  - will count out prime numbers. currently limited by the amount of memory on my computer. 
+  - Will count out prime numbers. Currently this program is limited by the amount of memory on my computer. 
 
 ### How it works:
-  - At this point the program starts with a counting variable set to 0. Then times the counting variable by 6, then does a plus 1 or plus 5 and checks if both numbers are prime. the check continues until we have gone through 1/3 of the prime numbers below our possible prime. Then we add 1 to the counting variable and start the loop over. 
+  - The program starts with a counting variable set to 0. Then times the counting variable by 6, then does a plus 1 or plus 5 and checks if both numbers are prime. the check continues until we have gone through 1/3 of the prime numbers below our possible prime. Then we add 1 to the counting variable and start the loop over. 
 
 ### 1. How I figured it out:
   - It was some time around the year 2012 in Houston Texas, and I was hanging out with Erika and David. These two friends of mine had gone to college for Math degrees and enjoyed playing with numbers. They told me how much time in college was spent trying to determine if a number was prime. I thought this was a cool challenge and thought about it all night and the next day. On my way home from work the next day I was stuck in traffic and decided to start finding a solution to determine if a number is prime. After a while I started thinking of ways to rule out multiple primes at once. I started with 2 and 3. I started thinking about dividing numbers by 6. If the remainder is 0 then it is not prime becasue it is divisible by 6 and an even number. If the remainder is a 2 or 4 then it is divisible by 2 and an even number. If the remainder is 3 then it is divisible by 3. This leaves 1 and 5 left. And every Prime number I have checked when divided by 6 will have a remainder of 1 or 5. 
