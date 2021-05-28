@@ -4,8 +4,7 @@
 
 I created these programs to test my theory that all prime numbers will have a modulus of 1 or 5 when divided by 6 (except 2 or 3, which are part of the equation). 
 
-# Highest Prime Number it has counted to so far:
-# 59,999,999
+# Highest Prime Number it has counted to so far: **59,999,999**
 
 ## Prime-Test.py 
   - Will check to see if any prime number in the prime_list fits my theory. 
