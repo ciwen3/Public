@@ -4,6 +4,9 @@
 
 I created these programs to test my theory that all prime numbers will have a modulus of 1 or 5 when divided by 6 (except 2 or 3, which are part of the equation). 
 
+# Highest Prime Number it has counted to so far:
+# 59,999,999
+
 ## Prime-Test.py 
   - Will check to see if any prime number in the prime_list fits my theory. 
 
@@ -23,3 +26,4 @@ I created these programs to test my theory that all prime numbers will have a mo
   - Basically I lacked the skill until now. I have tried to write these programs many times. I always got stuck at the check where you must divide the possible prime by every number below it. if it is divisible by any of those then it is not prime. While considering this problem I realized I don't actually have to go through every number. In reality you only have to go half way to the possible prime. In my case I only need to go 1/3 of the way up the possible prime because 2 and 3 are already part of the equation. And because of my theory I would only need to check if it is factorable by prime numbers. This greatly reduced the amount of processing need to calculate prime numbers based on my theory. The other major change has been my programming skills improved a lot over the years. I didn't even know the basics of programming when I had the original theory. While I am proud that my skills have grown a lot I realize I am not an amazing programmer. Feel free to offer constructive criticism and tips on improving my code. I would also like to port this to C or C++ if anyone would like to help with that task. 
 ## Disclaimer: 
   - I have no clue if this theory is correct or if it would be of any help to any one ever. I will continue to test it in my spare time and think about it when I am bored. If you see a flaw in my theory or the math please let me know so that I can correct it or I can stop wasting my time. 
+
