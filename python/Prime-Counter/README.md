@@ -1,4 +1,6 @@
 # Prime Number Counter
+![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen)
+![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
 I created these programs to test my theory that all prime numbers will have a modulus of 1 or 5 when divided by 6 (except 2 or 3, which are part of the equation). 
 
