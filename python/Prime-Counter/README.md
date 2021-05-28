@@ -1,0 +1,8 @@
+1. How I figured it out
+  - The year was ___ in Houston Texas, and I was hanging out with Erika and David. These two friends of mine had gone to college for Math degrees and enjoyed playing with numbers. They told me how much time in college was spent trying to determine if a number was prime. I thought this was a cool challenge and thought about it all night and the next day. On my way home from work the next day I was stuck in traffic and decided to start finding a solution to determine if a number is prime. After a while I started thinking of ways to rule out multiple primes at once. I started with 2 and 3. I started thinking about dividing numbers by 6. If the remainder is 0 then it is not prime becasue it is divisible by 6 and an even number. If the remainder is a 2 or 4 then it is divisible by 2 and an even number. If the remainder is 3 then it is divisible by 3. This leaves 1 and 5 left. And every Prime number I have checked when divided by 6 will have a remainder of 1 or 5. 
+3. how I realized it was not correct
+  - my friends helped me checking prime numbers. Then we decided to test it in reverse. so we started multipling numbers by 6 and adding 1 or 5 to it and checking if it was a prime number. pretty quickly we realized that both 25 and 49 fit the theory but are obviously not prime numbers. 
+4. prime factor theory
+  - I noticed a pattern forming with 25 and 49. the square root of both are prime numbers. This led me to believe that the only numbers break this rule are factors of prime numbers. 
+6. why it took so long to make this program
+  - Basically I lacked the skill until now. 
