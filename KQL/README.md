@@ -41,7 +41,270 @@ EmailAttachmentInfo
 EmailUrlInfo
 EmailPostDeliveryEvents
 ```
+### Velocloud Syslog
+```
+Syslog
+| where SyslogMessage contains "SPT" and SyslogMessage contains "APPLICATION"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work = tostring(n.[9])
+| extend Application = replace(@'DURATION_SECS', @' ', work)
+| extend work2 = tostring(n.[13])
+| extend Reason = replace(@'DEST_NAME', @' ', work2)
+| extend work3 = tostring(n.[14])
+| extend DEST = replace(@'DEST_DOMAIN', @' ', work3)
+| extend Domain = tostring(n.[15])
+| project Firewall, Protocol, Status, Reason, SRC, SPRT, DST, DPRT, VLAN, Application, DEST, Domain, SyslogMessage
+```
 
+```
+Syslog
+| where SyslogMessage !contains "SPT" and SyslogMessage contains "APPLICATION"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work = tostring(n.[7])
+| extend Application = replace(@'DURATION_SECS', @' ', work)
+| extend work2 = tostring(n.[11])
+| extend Reason = replace(@'DEST_NAME', @' ', work2)
+| extend DEST = tostring(n.[12])
+| project Firewall, Protocol, Status, Reason, SRC, DST, VLAN, Application, DEST, SyslogMessage
+```
+
+```
+Syslog
+| where SyslogMessage contains "SPT" and SyslogMessage !contains "APPLICATION" and SyslogMessage contains "REASON"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work2 = tostring(n.[9])
+| extend Reason = replace(@'DEST_NAME', @' ', work2)
+| extend work3 = tostring(n.[10])
+| extend DEST = replace(@'DEST_DOMAIN', @' ', work3)
+| extend Domain = tostring(n.[11])
+| project Firewall, Protocol, Status, Reason, SRC, SPRT, DST, DPRT, VLAN, DEST, Domain, SyslogMessage
+```
+
+```
+Syslog
+| where SyslogMessage contains "SPT" and SyslogMessage !contains "APPLICATION" and SyslogMessage !contains "REASON"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work3 = tostring(n.[9])
+| extend DEST = replace(@'DEST_DOMAIN', @' ', work3)
+| extend Domain = tostring(n.[10])
+| project Firewall, Protocol, Status, SRC, SPRT, DST, DPRT, VLAN, DEST, Domain, SyslogMessage
+```
+
+```
+let Query1 = view () {
+Syslog
+| where SyslogMessage contains "SPT" and SyslogMessage contains "APPLICATION"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work = tostring(n.[9])
+| extend Application = replace(@'DURATION_SECS', @' ', work)
+| extend work2 = tostring(n.[13])
+| extend Reason = replace(@'DEST_NAME', @' ', work2)
+| extend work3 = tostring(n.[14])
+| extend DEST = replace(@'DEST_DOMAIN', @' ', work3)
+| extend Domain = tostring(n.[15])
+| project Firewall, Protocol, Status, Reason, SRC, SPRT, DST, DPRT, VLAN, Application, DEST, Domain, SyslogMessage
+};
+let Query2 = view () {
+Syslog
+| where SyslogMessage !contains "SPT" and SyslogMessage contains "APPLICATION"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work = tostring(n.[7])
+| extend Application = replace(@'DURATION_SECS', @' ', work)
+| extend work2 = tostring(n.[11])
+| extend Reason = replace(@'DEST_NAME', @' ', work2)
+| extend DEST = tostring(n.[12])
+| project Firewall, Protocol, Status, Reason, SRC, DST, VLAN, Application, DEST, SyslogMessage
+};
+let Query3 = view () {
+Syslog
+| where SyslogMessage contains "SPT" and SyslogMessage !contains "APPLICATION" and SyslogMessage contains "REASON"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work2 = tostring(n.[9])
+| extend Reason = replace(@'DEST_NAME', @' ', work2)
+| extend work3 = tostring(n.[10])
+| extend DEST = replace(@'DEST_DOMAIN', @' ', work3)
+| extend Domain = tostring(n.[11])
+| project Firewall, Protocol, Status, Reason, SRC, SPRT, DST, DPRT, VLAN, DEST, Domain, SyslogMessage
+};
+let Query4 = view () {
+Syslog
+| where SyslogMessage contains "SPT" and SyslogMessage !contains "APPLICATION" and SyslogMessage !contains "REASON"
+| extend Firewall = Computer
+| extend p = split(SyslogMessage, " ")
+| extend n = split(SyslogMessage, "=")
+| extend Status = tostring(p.[1])
+| extend Protocol1 = tostring(p.[6])
+| extend p1 = split(Protocol1, "=")
+| extend Protocol = tostring(p1.[1])
+| extend SRC1 = tostring(p.[7])
+| extend p2 = split(SRC1, "=")
+| extend SRC = tostring(p2.[1])
+| extend DST1 = tostring(p.[8])
+| extend p4 = split(DST1, "=")
+| extend DST = tostring(p4.[1])
+| extend VLAN1 = tostring(p.[5])
+| extend p7 = split(VLAN1, "=")
+| extend VLAN = tostring(p7.[1])
+| extend SPRT1 = tostring(p.[9])
+| extend p3 = split(SPRT1, "=")
+| extend SPRT = tostring(p3.[1])
+| extend DPRT1 = tostring(p.[10])
+| extend p5 = split(DPRT1, "=")
+| extend DPRT = tostring(p5.[1])
+| extend work3 = tostring(n.[9])
+| extend DEST = replace(@'DEST_DOMAIN', @' ', work3)
+| extend Domain = tostring(n.[10])
+| project Firewall, Protocol, Status, SRC, SPRT, DST, DPRT, VLAN, DEST, Domain, SyslogMessage
+};
+union withsource="Velocloud" Query1, Query2, Query3, Query4
+```
 
 ### Search for Chrome use
 ```
