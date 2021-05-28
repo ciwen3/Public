@@ -28,6 +28,21 @@ def bits2a(b):
 # def save():
 #     image.save(output_picture)
 
+def usage():
+    print("")
+    print("Usage: To Hide Message in digital image")
+    print("Type Encode to add hidden text to a digital image")
+    print("Then type in your message. \nIf you want it to be truly secure then enter an already encrypted message.")
+    print("Then type the file path and name of the image you want to add the message to.")
+    print("Then type the file path and name that you want the new image to be saved as.")
+    print("Wait for it to finish and check to see if the new image was created.")
+    print("")
+    print("Usage: To Retrieve Message from digital image")
+    print("Type Decode to get hidden text from a digital image")
+    print("Then type the file path and name of the image you want to extract the message from.")
+    print("Wait for it to finish and check the output. \n")
+    print("")
+
 
 def encode(pixe):
     # print(text_to_bits(origtext))
@@ -164,18 +179,7 @@ def decode(pixd):
 
 
     # take in original text and change it from ASCII to bits
-print("Usage: To Hide Message in digital image")
-print("Type Encode to add hidden text to a digital image")
-print("Then type in your message. \nIf you want it to be truly secure then enter an already encrypted message.")
-print("Then type the file path and name of the image you want to add the message to.")
-print("Then type the file path and name that you want the new image to be saved as.")
-print("Wait for it to finish and check to see if the new image was created.")
-print("")
-print("Usage: To Retrieve Message from digital image")
-print("Type Decode to get hidden text from a digital image")
-print("Then type the file path and name of the image you want to extract the message from.")
-print("Wait for it to finish and check the output. \n")
-print("")
+usage()
 
 ask = input("Do you want to (E)ncode or (D)ecode?\n")
 if ask.upper() == "E" or ask.upper() == "ENCODE":
@@ -204,19 +208,7 @@ else:
     print("")
     print("That was not an option, maybe you misspelled it.")
     print("You should try again.")
-    print("")
-    print("Usage: To Hide Message in digital image")
-    print("Type Encode to add hidden text to a digital image")
-    print("Then type in your message. \nIf you want it to be truly secure then enter an already encrypted message.")
-    print("Then type the file path and name of the image you want to add the message to.")
-    print("Then type the file path and name that you want the new image to be saved as.")
-    print("Wait for it to finish and check to see if the new image was created.")
-    print("")
-    print("Usage: To Retrieve Message from digital image")
-    print("Type Decode to get hidden text from a digital image")
-    print("Then type the file path and name of the image you want to extract the message from.")
-    print("Wait for it to finish and check the output. \n")
-    print("")
+    usage()
 
 print("")
 input("Press Enter to close window")
