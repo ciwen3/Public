@@ -3,7 +3,7 @@
 I created these programs to test my theory that all prime numbers will have a modulus of 1 or 5 when divided by 6 (except 2 or 3, which are part of the equation). 
 
 ## Prime-Test.py 
-  - will check to see if any prime number in the prime_list fit my theory. 
+  - will check to see if any prime number in the prime_list fits my theory. 
 
 ## Prime-Counter.py 
   - will count out prime numbers. currently limited by the amount of memory on my computer. 
