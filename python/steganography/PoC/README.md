@@ -1,11 +1,3 @@
-# PoC:
-
-Use this Proof of Concept to decode a picture and run its text in a terminal. 
-
-## Usage: 
-Steganography-Poc.py /path/to file
-
-
 # Steganography Decode and Run Proof of Concept
 
 This Steganography program was created to retrieve or decode the message from an image made with this program and run it in a terminal. 
