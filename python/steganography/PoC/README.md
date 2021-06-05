@@ -33,18 +33,18 @@ This Steganography program was created to retrieve or decode the message from an
 
 # Use:
 1. Run program followed by the name of the picture you want to decode and run commands from. 
-```Steganography-Poc.py /path/to/picture/to/decode```
-2. wait for program to run. 
+2. ``` Steganography-Poc.py /path/to/picture/to/decode ```
+3. wait for program to run. 
 
 # Example Decode Linux:
 1. chmod +x Steganography-Poc.py
-2. ```Steganography-Poc.py redheart-firefox.PNG``
-3. if firefox is install it should open. 
+2. ``` Steganography-Poc.py redheart-firefox.PNG ```
+3. if firefox is installed it should open. 
 
 # Example Decode Windows:
 1. chmod +x Steganography-Poc.py
-2. ```Steganography-Poc.py redheart-calc.PNG``
-3. if Caclulator is install it should open. 
+2. ``` Steganography-Poc.py redheart-calc.PNG ```
+3. Caclulator should open. 
 
 # Troubleshooting
 if you get an error about indentation use untabify to change all tabs to 4 spaces. 
