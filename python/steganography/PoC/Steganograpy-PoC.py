@@ -4,7 +4,7 @@
 # This program is free and open source software.
 # You can redistribute it free of charge. 
 # This software should never be sold.
-# You are alloud to make any modifications you see fit. 
+# You are allowed to make any modifications you see fit. 
 
 # This program is distributed in the hope that it will be useful WITHOUT ANY WARRANTY
 
