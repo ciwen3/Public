@@ -13,6 +13,10 @@ This Steganography program was created to retrieve or decode the message from an
 1. pip install pyinstaller
 2. pyinstaller Steganograpy-PoC.py
 
+# Requirements to run:
+1. Python 3 (check in a terminal by running: python --version)
+2. Pillow (PIL) for Python
+
 # Use:
 1. Run program followed by the name of the picture you want to decode and run commands from. 
 2. ``` Steganograpy-PoC.cpython-39.pyc /path/to/picture/to/decode ```
