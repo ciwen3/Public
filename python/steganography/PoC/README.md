@@ -36,12 +36,12 @@ This Steganography program was created to retrieve or decode the message from an
 2. ``` Steganography-Poc.py /path/to/picture/to/decode ```
 3. wait for program to run. 
 
-# Example Decode Linux:
+# Example Decode and Run on Linux:
 1. chmod +x Steganography-Poc.py
 2. ``` Steganography-Poc.py redheart-firefox.PNG ```
 3. if firefox is installed it should open. 
 
-# Example Decode Windows:
+# Example Decode and Run on Windows:
 1. chmod +x Steganography-Poc.py
 2. ``` Steganography-Poc.py redheart-calc.PNG ```
 3. Caclulator should open. 
