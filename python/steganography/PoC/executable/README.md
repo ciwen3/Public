@@ -23,5 +23,6 @@ This Steganography program was created to retrieve or decode the message from an
 3. wait for program to run. 
 
 # Example Decode and Run on Windows:
-1. ``` Steganograpy-PoC.cpython-39.pyc redheart-calc.PNG ```
-2. Caclulator should open. 
+1. open CMD
+2. run: ``` Steganograpy-PoC.cpython-39.pyc redheart-calc.PNG ```
+3. Caclulator should open. 
