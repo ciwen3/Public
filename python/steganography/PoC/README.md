@@ -42,9 +42,8 @@ This Steganography program was created to retrieve or decode the message from an
 3. if firefox is installed it should open. 
 
 # Example Decode and Run on Windows:
-1. chmod +x Steganography-Poc.py
-2. ``` Steganography-Poc.py redheart-calc.PNG ```
-3. Caclulator should open. 
+1. ``` python Steganography-Poc.py redheart-calc.PNG ```
+2. Caclulator should open. 
 
 # Troubleshooting
 if you get an error about indentation use untabify to change all tabs to 4 spaces. 
