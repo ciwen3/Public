@@ -90,6 +90,9 @@ This is just if you want to make the python program into an exe for windows mach
 1. drag and drop redheart-calc.PNG onto Steganography-Poc.exe
 2. Caclulator should open. 
 
+## To Do:
+1. make popup windows ask for a file if none is given. 
+
 ## Troubleshooting
 if you get an error about indentation use untabify to change all tabs to 4 spaces. 
 (I am bad about mixing spaces and tabs, and have to run untabify to fix problems occationally.)
