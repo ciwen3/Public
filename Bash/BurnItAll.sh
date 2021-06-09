@@ -50,7 +50,7 @@ for h in $(ls); do if [[ $(cat ../SHA256-Check.txt | grep $(sha256sum $h | awk '
 
 
 # create text file to track virus total uploads
-touch VirusTotal-Uploads.txt
+# touch VirusTotal-Uploads.txt
 # upload files to virus total
 for u in $(ls); do 
 curl --request POST \ 
