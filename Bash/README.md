@@ -19,3 +19,5 @@ I helped a company with an infection, we figured out it was known as XCSSET. In 
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 
 https://github.com/ciwen3/Public/blob/master/Bash/job-search.sh
+
+A fake script I wrote as a job when looking for jobs. 
