@@ -32,3 +32,7 @@ I created these programs to test my theory that all prime numbers will have a re
 4. graph both false positives and actual primes. 
 5. do correlation test looking at frequency of primes and false positives in my theory. 
 6. find way to run this program forever. 
+
+
+##### helpful site: 
+https://planetcalc.com/8326/
