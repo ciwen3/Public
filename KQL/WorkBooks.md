@@ -1,52 +1,45 @@
+# Helpful for creating Sentinel WorkBooks
+### Find tables in Sentinel Logs that you can pull data from
+```
 union withsource=_TableName *
 | summarize Count=count() by _TableName
 
+// Pull all table Names showing up in Sentinel
+union withsource=_TableName *
+| summarize Count=count() by _TableName
+| render barchart
+```
 
-
+### Combined Search
+```
 search in (SecurityEvent,SecurityAlert,A*) "err"
+```
 
-
-
-
+### Combine Workspaces
+```
 union workspace('name1-SOC').OfficeActivity, workspace('name2-SOC').OfficeActivity
+```
 
 
 
-
-Visualization: 
-==============
+### Visualization: 
+```
 areachart
 barchart
 columnchart
 piechart
 scatterchart
 timechart
+```
 
+#### Example:
+```
 SecurityEvent 
 | summarize count() by Account
 | render barchart
+```
 
-
-AccountEnabled	AppDisplayName	AppId	AppOwnerTenantId	AppRoleAssignmentRequired	DisplayName	LogoutUrl	ObjectId	ObjectType	Odata.type	Publisher	Name	ServicePrincipalType	SignInAudience	Homepage
-
-TRUE	OCaaS Client Interaction Service	c2ada927-a9e2-4564-aae2-70775a2fa0af	f8cdef31-a31e-4b4a-93e4-5f571e91255a	FALSE	OCaaS Client Interaction Service	https://clients.config.office.net/logout	f6e26db3-f59c-4bef-9069-6dc6b6737f3d	ServicePrincipal	Microsoft.DirectoryServices.ServicePrincipal	Microsoft	Services	Application	AzureADMultipleOrgs	
-
-
-
-
-
-count open\closed in the last 24 hours
-
-
-Account usage to look out for:
-==============================
-root
-nt authority	
-
-
-
-
-
+```
 alerts??
 incidents??
 AuditLogs
@@ -74,36 +67,21 @@ SecurityIncident
 SigninLogs
 Syslog
 Usage
+```
 
 
-
-
-
-
-
-Generic:
-========
-// Pull all table Names showing up in Sentinel
-union withsource=_TableName *
-| summarize Count=count() by _TableName
-| render barchart
-
-
-
-Okta: 
-=====
-
+### Okta: 
+```
 // Okta logins by Region
 Okta_CL
 | where isnotempty(client_geographicalContext_state_s)
 | summarize Count=count() by client_geographicalContext_state_s
 | render barchart
+```
 
 
-
-Syslog:
-=======
-
+### Syslog:
+```
 // Log Collector Syslog 
 Syslog
 | where Computer contains "LC"
@@ -164,12 +142,11 @@ Syslog
 | extend LogType = Facility
 | project EventTime, Collector, SeverityLevel, LogType, ProcessName, SyslogMessage
 | order by EventTime desc 
+```
 
 
-
-Sentinel:
-=========
-
+### Sentinel:
+```
 // Sentinel Incident Title piechart
 SecurityIncident
 | summarize arg_max(LastModifiedTime, *) by IncidentNumber
@@ -214,13 +191,12 @@ SecurityIncident
 // Sentinel Data Usage
 Usage
 | summarize count() by DataType
+```
 
 
 
-
-VeloCloud:
-==========
-
+### VeloCloud:
+```
 // VeloCloud Syslog for the last hour
 let Query1 = view () {
 Syslog
@@ -1442,5 +1418,5 @@ union withsource="Velocloud" Query1, Query2, Query3, Query4
 | where Status == "Deny"
 | where isnotempty(Reason)
 | summarize Count=count() by Reason
-
+```
 
