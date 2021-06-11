@@ -8,6 +8,11 @@ I wrote these script to close down my kids various computer at 10 PM on school n
 
 
 ## Bug Hunting:
+### KQL 
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) 
+  - https://github.com/ciwen3/Public/blob/master/KQL/README.md
+  - https://github.com/ciwen3/Public/blob/master/KQL/WorkBooks.md
+
 ### Find Unquoted Path Vulnerabilties
 Created to automate the process of finding unquoted path calls that could allow a  attacker to run malicious code for persistance or to elevate priviledges.
 
