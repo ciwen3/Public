@@ -55,7 +55,7 @@ for u in $(ls); do curl --request POST  --url https://www.virustotal.com/api/v3/
 
 
 # clean up Virus total txt
-for i in $(ls VirusTotal-*.txt); do cat $i >> VirusTotal.txt; done 
+for i in $(ls VirusTotal-*.txt); do cat $i >> VirusTotal.txt; rm -f $i; done 
 
 # go back to the folder we started from
 cd ..
