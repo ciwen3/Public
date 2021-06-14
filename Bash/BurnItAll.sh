@@ -49,6 +49,8 @@ for b in ${test2_array[@]}; do curl -k -o $b https://$s/agent/scripts/$b; sleep 
 for r in $(ls); do if [[ $(ls -lh $r | awk '{print $5}') == 162 ]]; then rm $r; fi; done  
 
 
+echo "\n" >> ../../SHA256-Check.txt 
+echo $(date) >> ../../SHA256-Check.txt 
 # check if SHA256 hash has been seen before
 # if so delete the file? or at least don't upload to virus total
 # else append to SHA256-Check.txt
