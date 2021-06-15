@@ -1,3 +1,4 @@
+```
 REGEX:
 ======
 ^ symbol: indicate the search pattern should consider a match only if it appears at the start of a line. 
@@ -58,3 +59,4 @@ X+?	Repeats X one or more times (non-greedy)
 
 special characters:
 {} [] () ^ $ . | * + ? \
+```
