@@ -30,11 +30,22 @@ This Steganography program was created to hide or encode a message in an image b
 2. python -m pip install --upgrade Pillow
 ## Install Bitstring
 1. python3 -m pip install --upgrade bitstring
-## Install auto-py-to-exe
+~~## Install auto-py-to-exe
 This is just if you want to make the python program into an exe for windows machines. 
-1. python3 -m pip install --upgrade auto-py-to-exe
+~~1. ~~python3 -m pip install --upgrade auto-py-to-exe~~
+~~### or
+~~1. ~~pip install auto-py-to-exe~~
+
+## Install pyinstaller
+1. python3 -m pip install --upgrade pyinstaller
 ### or
-1. pip install auto-py-to-exe
+1. python -m pip install --upgrade pyinstaller
+
+### to compile with pyinstaller
+pyinstaller --onefile /path/to/pythonpton/script
+
+## if pyinstaller is not working as a command
+export $PATH=$PATH:~/.local/bin
 
 ## Use:
 1. Run program
