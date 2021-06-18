@@ -38,7 +38,7 @@ This Steganography program was created to hide or encode a message in an image b
 ### to compile with pyinstaller
 pyinstaller --onefile /path/to/pythonpton/script
 ## if pyinstaller is not working as a command
-export $PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/bin
 
 ## Use:
 1. Run program
