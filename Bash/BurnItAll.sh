@@ -15,7 +15,8 @@ echo "" >> ../SHA256-Check.txt
 echo $(date) >> ../SHA256-Check.txt 
 
 # Servers Array 
-server_array=( revokecert.ru icloudserv.ru nodeline.xyz linebrand.xyz mantrucks.xyz sidelink.xyz monotel.xyz atecasec.com atecasec.info icloudserv.com titiez.com adobestats.com flixprice.com statsmag.xyz statsmag.com adoberelations.com findmymacs.com trendmicronano.com findmymacs.com Titian.com 46.101.126.33 82.148.30.108 94.130.27.189 95.179.160.42 marriageclose.orangeanswer.com 180.136.102.34.bc.googleusercontent.com pandminc.com)
+server_array=( revokecert.ru icloudserv.ru nodeline.xyz linebrand.xyz mantrucks.xyz sidelink.xyz monotel.xyz atecasec.com atecasec.info icloudserv.com titiez.com adobestats.com flixprice.com statsmag.xyz statsmag.com adoberelations.com findmymacs.com trendmicronano.com findmymacs.com Titian.com pandminc.com)
+#46.101.126.33 82.148.30.108 94.130.27.189 95.179.160.42 marriageclose.orangeanswer.com 180.136.102.34.bc.googleusercontent.com 
 
 down_array=()
 up_array=()
