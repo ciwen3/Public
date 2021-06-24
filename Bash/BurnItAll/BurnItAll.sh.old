@@ -63,7 +63,7 @@ for r in $(ls); do if [[ $(ls -lh $r | awk '{print $5}') == 162 ]]; then rm $r; 
 for h in $(ls); do if [[ $(cat ../../SHA256-Check.txt | grep $(sha256sum $h | awk '{print $1}')) == "" ]]; then sha256sum $h >> ../../SHA256-Check.txt; else rm $h; fi; done
 
 # upload files to virus total
-for u in $(ls); do curl --request POST  --url https://www.virustotal.com/api/v3/files --header 'x-apikey: d1d6c5a461bd1a72f81d3388d9e25442fc87adbb581ebe942df2bfd7da18f3a4' --form file=@$u -o VirusTotal-$u-upload.txt; done
+for u in $(ls); do curl --request POST  --url https://www.virustotal.com/api/v3/files --header 'x-apikey: <API-KEY>' --form file=@$u -o VirusTotal-$u-upload.txt; done
 
 # clean up Virus total txt
 for i in $(ls VirusTotal-*.txt); do cat $i >> VirusTotal.txt; done 
