@@ -62,7 +62,7 @@ for h in $(ls); do if [[ $(cat ../../SHA256-Check.txt | grep $(sha256sum $h | aw
 # create text file to track virus total uploads
 #touch VirusTotal-Uploads.txt
 # upload files to virus total
-for u in $(ls); do curl --request POST  --url https://www.virustotal.com/api/v3/files --header 'x-apikey: d1d6c5a461bd1a72f81d3388d9e25442fc87adbb581ebe942df2bfd7da18f3a4' --form file=@$u -o VirusTotal-$u-upload.txt; done
+for u in $(ls); do curl --request POST  --url https://www.virustotal.com/api/v3/files --header 'x-apikey: <API-KEY>' --form file=@$u -o VirusTotal-$u-upload.txt; done
 
 
 # clean up Virus total txt
