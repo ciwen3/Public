@@ -1,6 +1,6 @@
 # Steganography 
 
-This Steganography program was created to hide or encode a message in an image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
+This Steganography program was created to hide or encode a message in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
 
 ## This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
