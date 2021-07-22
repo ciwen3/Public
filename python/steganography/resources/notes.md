@@ -19,7 +19,7 @@ print("Image 0 and Image 1 have these members in common:")
 print(f"{common_members_sorted}")
 ```
 
-
+https://stackoverflow.com/questions/8770121/copying-and-writing-exif-information-from-one-image-to-another-using-pyexiv2
 ## copy exif from one picture to another
 ```
 def get_exif(file):
@@ -52,3 +52,58 @@ def write_exif(originFile, destinationFile, **kwargs):
     else:
         return True
 ```
+
+```
+m1 = pyexiv2.ImageMetadata( source_filename )
+m1.read()
+# modify tags ...
+# m1['Exif.Image.Key'] = pyexiv2.ExifTag('Exif.Image.Key', 'value')
+m1.modified = True # not sure what this is good for
+m2 = pyexiv2.metadata.ImageMetadata( destination_filename )
+m2.read() # yes, we need to read the old stuff before we can overwrite it
+m1.copy( m2 )
+m2.write()
+```
+
+```
+import pyexiv2
+metadata = pyexiv2.ImageMetadata(image_name)
+metadata.read() 
+metadata.modified = True
+metadata.writable = os.access(image_name ,os.W_OK)
+metadata['Exif.Image.Copyright']  = pyexiv2.ExifTag('Exif.Image.Copyright', 'copyright@youtext') 
+metadata.write()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://stackoverflow.com/questions/400788/resize-image-in-python-without-losing-exif-data
+
+```
+import jpeg
+jpeg.setExif(jpeg.getExif('foo.jpg'), 'foo-resized.jpg') 
+```
+
+```
+image = Image.open('test.jpg')
+exif = image.info['exif']
+# Your picture process here
+image = image.rotate(90)
+image.save('test_rotated.jpg', 'JPEG', exif=exif)
+```
+
+
+
+
