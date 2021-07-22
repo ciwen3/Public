@@ -25,10 +25,6 @@ def bits2a(b):
     return ''.join(chr(int(''.join(x), 2)) for x in zip(*[iter(b)]*8))
 
 
-# might not need
-# def save():
-#     image.save(output_picture)
-
 def usage():
     print("")
     print("Usage: To Hide Message in digital image")
