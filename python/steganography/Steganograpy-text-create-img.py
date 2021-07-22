@@ -197,8 +197,6 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
             input_text = ("#start#" +  origtext + "#end#")
             # (check length of message)x2 plus start and stop buffer
             newpix = len(input_text)
-            # square root message length, round up to nearest integer 
-            # picpix = int(math.sqrt(newpix)) + 2
             # create image based on the length of the message
             input_picture = Image.new('RGBA', (newpix, newpix), color = pic_color)
             encode(input_picture)
@@ -215,8 +213,6 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
             input_text = ("#start#" +  origtext + "#end#")
             # (check length of message)x2 plus start and stop buffer
             newpix = len(input_text)
-            # square root message length, round up to nearest integer 
-            # picpix = int(math.sqrt(newpix)) + 2
             # create image based on the length of the message
             input_pic = Image.new('RGBA', (newpix, newpix), color = pic_color)
             input_pic.save("tmp.PNG")
