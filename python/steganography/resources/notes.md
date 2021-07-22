@@ -20,4 +20,35 @@ print(f"{common_members_sorted}")
 ```
 
 
+## copy exif from one picture to another
+```
+def get_exif(file):
+    """
+    Retrieves EXIF information from a image
+    """
+    ret = {}
+    metadata = pyexiv2.ImageMetadata(str(file))
+    metadata.read()
+    info = metadata.exif_keys
+    for key in info:
+        data = metadata[key]
+        ret[key] = data.raw_value
+    return ret
 
+def write_exif(originFile, destinationFile, **kwargs):
+    """
+    This function would write an exif information of an image file to another image file
+    """
+
+    exifInformation = get_exif(originFile)
+    metadata = pyexiv2.ImageMetadata(str(destinationFile))
+    for key, value in exifInformation.iteritems():
+        metadata[key] = value
+
+    try:
+        metadata.write()
+    except:
+        return False
+    else:
+        return True
+```
