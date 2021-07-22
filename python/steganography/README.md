@@ -73,7 +73,7 @@ export PATH=$PATH:~/.local/bin
 
 
 ## Executable
-### Warning: I have also made an Executable .exe for the Steganography program however Microsoft Defender Flags that as Malicious. 
+### Warning: I have also made an Executable .exe for the Steganography program however Microsoft Defender Flags that as Malicious because it is not signed. 
 
 # Steganogrphy Decode and Run PoC:
 ## Use:
