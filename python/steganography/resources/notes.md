@@ -1,3 +1,61 @@
+## create image from scratch 
+https://code-maven.com/create-images-with-python-pil-pillow
+```
+from PIL import Image, ImageDraw
+img = Image.new(mode, size, color)
+img.save(filename)
+```
+## 60x30 pixel size
+```
+from PIL import Image
+ 
+img = Image.new('RGB', (60, 30), color = 'red')
+img.save('pil_red.png')
+```
+```
+from PIL import Image
+ 
+img = Image.new('RGB', (60, 30), color = (73, 109, 137))
+img.save('pil_color.png')
+```
+## create image from scratch and add text
+```
+from PIL import Image, ImageDraw
+ 
+img = Image.new('RGB', (100, 30), color = (73, 109, 137))
+ 
+d = ImageDraw.Draw(img)
+d.text((10,10), "Hello World", fill=(255,255,0))
+ 
+img.save('pil_text.png')
+```
+```
+from PIL import Image, ImageDraw, ImageFont
+ 
+img = Image.new('RGB', (100, 30), color = (73, 109, 137))
+ 
+fnt = ImageFont.truetype('/Library/Fonts/Arial.ttf', 15)
+d = ImageDraw.Draw(img)
+d.text((10,10), "Hello world", font=fnt, fill=(255, 255, 0))
+ 
+img.save('pil_text_font.png')
+```
+
+
+
+
+
+
+
+```
+img = Image.new('RGB', (width,height), "red")
+```
+```
+from PIL import Image
+
+img = Image.new('RGB', (300, 200), (228, 150, 150))
+img.show()
+```
 
 
 https://auth0.com/blog/read-edit-exif-metadata-in-photos-with-python/
