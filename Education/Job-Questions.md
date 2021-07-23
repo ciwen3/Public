@@ -31,7 +31,6 @@ How many leaves can I expect?
 
 Do you provide me with development opportunities for leadership?
 
-
 What are the tasks I would do on a usual day?
 
 What’s the onboarding process?
