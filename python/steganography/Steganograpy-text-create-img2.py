@@ -188,7 +188,7 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
         origtext = open_file.read()
         open_file.close()
         if ask3.upper() == "C" or ask.upper() == "CREATE":
-            pic_color = input("\nWhat color would you like the image to be? \nMust be a Python PIL recognised color. \nie. black, blue, cyan, green, magenta, purple, red, white, yellow, etc.\n")
+            pic_color = input("\nWhat color would you like the image to be? \nMust be a Python PIL recognized color. \nie. black, blue, cyan, green, magenta, purple, red, white, yellow, etc.\n")
             output_picture = input("\nWhat would you like to save the new picture as?\n")
             input_text = ("#start#" +  origtext + "#end#")
             newpix = len(input_text)
@@ -205,7 +205,7 @@ if ask.upper() == "E" or ask.upper() == "ENCODE":
     else:
         origtext = input("\nWhat text would you like to hide?\n")
         if ask3.upper() == "C" or ask.upper() == "CREATE":
-            pic_color = input("\nWhat color would you like the image to be? \nMust be a Python PIL recognised color. \nie. black, blue, cyan, green, magenta, purple, red, white, yellow, etc.\n")
+            pic_color = input("\nWhat color would you like the image to be? \nMust be a Python PIL recognized color. \nie. black, blue, cyan, green, magenta, purple, red, white, yellow, etc.\n")
             output_picture = input("\nWhat would you like to save the new picture as?\n")
             input_text = ("#start#" +  origtext + "#end#")
             newpix = len(input_text)
