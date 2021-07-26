@@ -67,7 +67,7 @@ export PATH=$PATH:~/.local/bin
 2. add encryption modules 
 3. ~~add the ability to save the text output as a .txt file~~
 4. ~~add the ability to read a message from a .txt file~~
-5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files.)
+5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode.)
 6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
 7. add file upload option that copies bits instead of text (test on .txt, .exe, etc.)
 
