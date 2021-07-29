@@ -1,5 +1,11 @@
 # Find tables in Sentinel Logs that you can pull data from
 ```
+search "*" | summarize count() by $table | sort by count_ desc
+```
+```
+search * | summarize count() by $table |sort by count_ 
+```
+```
 union withsource=_TableName *
 | summarize Count=count() by _TableName
 ```
@@ -9,12 +15,7 @@ union withsource=_TableName *
 | summarize Count=count() by _TableName
 | render barchart
 ```
-```
-search "*" | summarize count() by $table | sort by count_ desc
-```
-```
-search * | summarize count() by $table |sort by count_ 
-```
+
 ```
 .show database [DB] cslschema
 ```
