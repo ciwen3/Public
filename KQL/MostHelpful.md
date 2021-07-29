@@ -16,6 +16,7 @@ union withsource=_TableName *
 | render barchart
 ```
 
+# Found these online but haven't gotten them to work yet 
 ```
 .show database [DB] cslschema
 ```
