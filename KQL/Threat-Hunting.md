@@ -182,9 +182,23 @@ PotentialPhishingLinks // parsed sysmon events
 
 
 
+## Password in FTP Command Line
+https://twitter.com/16yashpatel/status/1403779222225653760/photo/1
+```
+DeviceNetworkEvents
+| where RemotePort == 21
+| where InitiatingProcessCommandLine contains "@ftp"
+```
 
-
-
+## detect if WD Real Time Protection is Off on Windows 10 
+https://twitter.com/SecGuru_OTX/status/1401941560917381121/photo/1
+```
+DeviceTvmSecureConfigurationAssessment
+| where ConfigurationId == 'scid-2012' and OSPlatform contains "Windows10"
+| extend IsRealTimeProtection-iif(ConfigurationId == "scid-2012" and IsCompliant==1, 1, 0)
+| summarize DeviceName=any(DeviceName), RealTimeProtectionEnabled=iif(max(IsRealTimeProtection) == 1, "On", "Off") by DeviceId
+| where RealTimeProtectionEnabled == "Off"
+```
 
 
 
