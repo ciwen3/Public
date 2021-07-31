@@ -6,22 +6,23 @@
 
 ## threat hunting 
 https://twitter.com/rpargman/status/1406017062359560193
+
+reference:
+1. https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4742
 ```
+//4720: A user account was created
+//4741: A computer account was created
+//4742: A computer account was changed
+//4722: A user account was enabled
+//4724: An attempt was made to reset an accounts password
+//4728: A member was added to a security-enabled global group
+//4732: A member was added to a security-enabled local group
+//4799: A security-enabled local group membership was enumerated
 SecurityEvent
 | where EventID in (4720, 4741, 4742, 4722, 4724, 4728, 4732, 4799)
 | project TimeGenerated, EventID, Activity, CallerProcessName, EventData
 | extend EventDetail = parse_xml(EventData)["EventData"]["Data"]
 ```
-
-
-
-
-
-
-
-
-
-
 
 ## PrintNightmare KQL
 https://gist.github.com/olafhartong/af523adcd7df7706bae527af8fee1700
@@ -199,17 +200,3 @@ DeviceTvmSecureConfigurationAssessment
 | summarize DeviceName=any(DeviceName), RealTimeProtectionEnabled=iif(max(IsRealTimeProtection) == 1, "On", "Off") by DeviceId
 | where RealTimeProtectionEnabled == "Off"
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
