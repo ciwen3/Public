@@ -1,5 +1,6 @@
-# online practice:
+# Online Practice:
 requires a free Microsoft email address
+
 https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade
 
 # Kusto Query Language Examples:
