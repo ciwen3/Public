@@ -78,7 +78,7 @@ https://github.com/ciwen3/Public/tree/master/RubberDucky
 ## Prime Numbers: 
 I created these programs to test my theory that all prime numbers will have a remainder of 1 or 5 when divided by 6 (except 2 or 3, which are used derive the value of 6 in the equation).
 
-![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/tree/master/python/Prime-Counter
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue) https://github.com/ciwen3/Public/tree/master/python/Prime-Counter
 
 ### DIY Arcade
 Full size arcade and cabinet that I made for a friend. 
