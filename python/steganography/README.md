@@ -70,6 +70,8 @@ export PATH=$PATH:~/.local/bin
 5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode.)
 6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
 7. add file upload option that copies bits instead of text (test on .txt, .exe, etc.)
+8. make pop-up windows ask for a file if none is given
+
 
 
 ## Executable
@@ -94,8 +96,6 @@ export PATH=$PATH:~/.local/bin
 1. drag and drop redheart-calc.PNG onto Steganography-Poc.exe
 2. Caclulator should open. 
 
-## To Do:
-1. make popup windows ask for a file if none is given. 
 
 ## Troubleshooting
 if you get an error about indentation use untabify to change all tabs to 4 spaces. 
