@@ -10,12 +10,12 @@ $ symbol: indicate the search pattern should consider a match only if it appears
 a-z: should consider a match if any character matchs the lowercase alphabet
 . : wildcard for any single character
 .* : wildcard for any character and any length of characters
+```
 
 
 
-
-
-
+## Examples: 
+```
 g[eao]t = get gat got
 g[a-e]t = gat get 
 g.t = g*(any one character)t gat get git got 
