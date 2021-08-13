@@ -1,9 +1,9 @@
 # Regex Practice:
 https://regexone.com/
 
+
+# REGEX:
 ```
-REGEX:
-======
 ^ symbol: indicate the search pattern should consider a match only if it appears at the start of a line. 
 $ symbol: indicate the search pattern should consider a match only if it appears at the end of a line.
 []: should consider a match if any character in here matches
@@ -20,6 +20,7 @@ g[eao]t = get gat got
 g[a-e]t = gat get 
 g.t = g*(any one character)t gat get git got 
 g.*t = g*(any character any length)t gat get git got great goat etc...
+```
 
 
 
@@ -27,8 +28,8 @@ g.*t = g*(any character any length)t gat get git got great goat etc...
 
 
 
-
-Regex	Definition	
+# Regex	Definition	
+```
 ^	Matches the beginning of a line	
 $	Matches the end of the line	
 .	Matches any character	
@@ -57,9 +58,10 @@ X+?	Repeats X one or more times (non-greedy)
 	space	
 \b	word boundaries (defined as any edge between a \w and a \W)	\bcat\b finds a match in "the cat in the hat" but not in "locate"
  X | Y	disjunction X or Y	\b(cat|dog)s\b matches cats and dogs
-		
+```	
 
 
-special characters:
+# Special Characters:
+```
 {} [] () ^ $ . | * + ? \
 ```
