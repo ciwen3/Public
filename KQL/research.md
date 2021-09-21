@@ -74,3 +74,4 @@ https://github.com/hugsy/gef
 
 # Other
 1. https://github.com/rshipp/awesome-malware-analysis
+2. https://dfirdiva.com/
