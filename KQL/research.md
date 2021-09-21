@@ -1,6 +1,10 @@
 # Sentinel Queries
 1. https://github.com/reprise99/Sentinel-Queries
 
+# AChoir
+Windows Live Artifacts Acquisition Scripting Framework
+1. https://github.com/OMENScan/AChoir
+
 # Examine Malicious Files
 1. https://github.com/fireeye/capa
 2. https://github.com/tomchop/malcom
@@ -52,14 +56,21 @@ Web-based multi-AV scanners, and malware sandboxes for automated analysis.
 39. Zeltser's List - Free automated sandboxes and services, compiled by Lenny Zeltser. https://zeltser.com/automated-malware-analysis/
 
 
+# Linux Forensics Distos
+https://www.andreafortuna.org/2017/08/28/linux-distributions-for-forensics-investigation-my-own-list/
+1. https://www.sans.org/tools/sift-workstation/
+2. https://securityonionsolutions.com/software
+3. https://www.networksecuritytoolkit.org/nst/index.html
 
 
 
 
 
 
+# GDB
+https://github.com/hugsy/gef
 
 
 
-
-
+# Other
+1. https://github.com/rshipp/awesome-malware-analysis
