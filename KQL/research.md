@@ -1,3 +1,6 @@
+# Playbooks
+1. http://incidentresponse.com/playbooks/
+
 # Sentinel Queries
 1. https://github.com/reprise99/Sentinel-Queries
 
