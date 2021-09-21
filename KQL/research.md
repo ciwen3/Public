@@ -1,5 +1,6 @@
 # Playbooks
 1. http://incidentresponse.com/playbooks/
+2. https://github.com/ciwen3/Public/tree/master/Microsoft%20Based%20Playbook
 
 # Sentinel Queries
 1. https://github.com/reprise99/Sentinel-Queries
