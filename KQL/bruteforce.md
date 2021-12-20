@@ -18,7 +18,7 @@ let PasswordChanges = SecurityEvent
 let FailedLogins = SecurityEvent
 | where TimeGenerated > ago(10m)
 | where EventID == 4625
-| where TargetUserName !in (PasswordChanges)
+//| where TargetUserName !in (PasswordChanges) //this line doesn't seem to be needed. 
 | where AccountType =~ "User"
 // SubStatus '0xc0000064' signifies 'Account name does not exist'
 | where SubStatus !='0xc0000064' and Account !in ('\\', '-\\-')
@@ -54,7 +54,7 @@ let PasswordChanges = SecurityEvent
 let FailedLogins = SecurityEvent
 | where TimeGenerated > ago(10m)
 | where EventID == 4625
-| where TargetUserName !in (PasswordChanges)
+//| where TargetUserName !in (PasswordChanges) //this line doesn't seem to be needed. 
 | where AccountType =~ "User"
 // SubStatus '0xc0000064' signifies 'Account name does not exist'
 | where SubStatus !='0xc0000064' and Account !in ('\\', '-\\-')
