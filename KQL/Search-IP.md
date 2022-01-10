@@ -2,6 +2,10 @@
 In Sentinel Logs search for all Log Types that contain a certain IP Address. 
 
 ```
+search "<IP-Address>"
+```
+
+```
 find "<IP-Address>"
 ```
 
