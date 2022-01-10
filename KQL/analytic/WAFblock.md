@@ -37,7 +37,9 @@ let Math = Baseline | join LastHour on MyKey
 //If ( Difference <= count_ ) != TRUE then no data should be returned. 
 //this will be a list of the IPs and number of WAF blocks from IPcount in descending order.  
 IPcount 
-| sort by count_ desc 
 | join kind=fullouter Math on Boo 
+| where Boo == true
+| where Boo1 == true
+| sort by count_ desc 
 | project clientIp_s, count_
 ```
