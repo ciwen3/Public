@@ -11,5 +11,10 @@ find "<IP-Address>"
 
 ```
 find "<IP-Address>"
+| distinct $table
+```
+
+```
+find "<IP-Address>"
 | distinct source_
 ```
