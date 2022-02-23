@@ -54,7 +54,7 @@ https://github.com/ciwen3/Public/blob/master/Bash/BurnItAll/BurnItAll.sh
 I helped with an infection known as XCSSET. In my research of the Malware found and the information online, I put together a script to systematically download each version of the Malware from each server they have check its SHA256 hash against a list of already downloaded malware and if it is unique (to me) upload it to virus total. 
 
 ### PNPT Study & Attack repo
-A collection of information I have gather to take the PNPT exam. 
+A collection of information I have gathered to take the PNPT exam. 
 
 https://github.com/ciwen3/PNPT
 
