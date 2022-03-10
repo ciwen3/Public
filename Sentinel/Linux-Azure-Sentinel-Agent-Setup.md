@@ -79,11 +79,11 @@ Exit nano (ctrl + x) and save the file
 9. sudo ufw status
 
 # Client: 
-1. sudo nano /etc/rsyslog.conf8.* @148.59.164.7
+1. sudo nano /etc/rsyslog.conf8.* @192.168.164.7
 
 Add these lines to the bottom of the config:
 ```
-*.* @10.100.100.48:514 	# this is pointing it to our current SyslogRelay Server. Change IP as needed
+*.* @192.168.100.48:514 	# this is pointing it to our current SyslogRelay Server. Change IP as needed
 $ActionQueueFileName queue
 $ActionQueueMaxDiskSpace 1g
 $ActionQueueSaveOnShutdown on
