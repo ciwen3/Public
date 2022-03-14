@@ -47,7 +47,7 @@ unhash the lines:
 Module(load=”imudp”)	                # tells rsyslog we will be receiving data by UDP
 Input(type=”imudp” port=”514”)   	# tells rsyslog we will be receiving data on port 514
 Module(load=”imtcp”)	                # tells rsyslog we will be receiving data by TCP
-Input(type=”imudp” port=”514”)   	# tells rsyslog we will be receiving data on port 514
+Input(type=”imtcp” port=”514”)   	# tells rsyslog we will be receiving data on port 514
 ```
 
 2. Add these lines to the bottom of the config:
