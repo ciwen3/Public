@@ -51,6 +51,7 @@ Input(type=”imtcp” port=”514”)   	# tells rsyslog we will be receiving d
 ```
 
 2. Add these lines to the bottom of the config:
+
 **NOTE: the quotes used on the $template line cause errors when copy and pasted into a terminal. make sure to retype out the quotes.**
 ```
 *.* @127.0.0.1:514 	
