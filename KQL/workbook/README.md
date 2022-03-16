@@ -1,3 +1,6 @@
+1. Analyst Analytics: https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Workbooks/SecurityOperationsEfficiency.json
+2. KQL Cheatsheet: https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Workbooks/AdvancedKQL.json
+
 # Example
 ```
 {
