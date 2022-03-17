@@ -3,6 +3,15 @@
 1. test networking ability before starting the install
 2. Install Ubuntu 18 (it comes preinstalled with a version of Python3 that will work). At the time of this writing the Sentinel Agent will only work with python versions before 3.8. In 3.8 they changed a function or its name for returning Linux distro information and Sentinel has not updated the Agent to reflect that. 
 
+## DNS setup
+1. list the interface information
+```
+nmcli connection show
+nmcli connection modify <interface-uuid> ipv4.dns "8.8.8.8,8.8.4.4,1.1.1.1,1.1.0.0"
+nmcli
+```
+
+
 ## Update Ubuntu: 
 1. sudo apt update && sudo apt upgrade -y && sudo apt install curl wget git net-tools gnutls-bin -y
 
