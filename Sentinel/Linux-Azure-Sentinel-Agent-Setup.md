@@ -9,6 +9,7 @@
 nmcli connection show
 nmcli connection modify <interface-uuid> ipv4.dns "8.8.8.8,8.8.4.4,1.1.1.1,1.1.0.0"
 nmcli
+nmcli conn show <interface-uuid> | grep dns:
 ```
 
 
