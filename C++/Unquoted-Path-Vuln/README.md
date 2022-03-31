@@ -3,7 +3,7 @@
 This is my first ever C++ program and I threw it together late one night while doing other things. I am certain it can be done better, but I currently lack that knowledge. Feel free to let me know if there is a better or more secure way to do what this program does so that I can learn and improve this code. 
 
 ## C++ code:
-```
+```CPP
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -45,7 +45,7 @@ int main()
 ```
 
 ## shorter version
-```
+```CPP
 #include <iostream>
 #include <string>
 #include <cstdlib>
