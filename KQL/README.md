@@ -1,11 +1,9 @@
 # Online Practice:
 requires a free Microsoft email address
-
-https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade
-
-https://docs.microsoft.com/en-us/azure/logic-apps/workflow-definition-language-functions-reference
-
-https://docs.microsoft.com/en-us/learn/browse/?products=azure-logic-apps
+1. https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade
+2. https://docs.microsoft.com/en-us/azure/logic-apps/workflow-definition-language-functions-reference
+3. https://docs.microsoft.com/en-us/learn/browse/?products=azure-logic-apps
+4. https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference
 
 # Kusto Query Language Examples:
 I have either come across these or created these. I try to credit the source when I remember too. 
