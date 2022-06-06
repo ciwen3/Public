@@ -1,0 +1,4 @@
+```
+AzureActivity
+| where isnotempty(Time)
+```
