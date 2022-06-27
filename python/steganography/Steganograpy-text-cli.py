@@ -12,43 +12,37 @@ from PIL import Image
 from PIL import ImageColor
 import binascii
 
-# the following definitions are from 
-# https://stackoverflow.com/questions/7396849/convert-binary-to-ascii-and-vice-versa
-def text_to_bits(text, encoding='utf-8', errors='surrogatepass'):
-    bits = bin(int(binascii.hexlify(text.encode(encoding, errors)), 16))[2:]
+
+def file_to_bits(path1):
+    file1=open(path1,"rb")
+    number=file1.read()
+    file1.close()
+    bits = bin(int(binascii.hexlify(number), 16))[2:]
     return bits.zfill(8 * ((len(bits) + 7) // 8))
 
-# the following definitions are from 
-# https://stackoverflow.com/questions/9916334/bits-to-string-python
-def bits2a(b):
-    return ''.join(chr(int(''.join(x), 2)) for x in zip(*[iter(b)]*8))
 
+def bitstring_to_bytes(s):
+    return int(s, 2).to_bytes((len(s) + 7) // 8, byteorder='big')
 
-# might not need
-# def save():
-#     image.save(output_picture)
 
 def usage():
     print("")
-    print("Usage: To Hide Message in digital image")
-    print("Type Encode to add hidden text to a digital image")
-    print("Then type in your message. \nIf you want it to be truly secure then enter an already encrypted message.")
+    print("Usage: To Hide File in digital image")
+    print("Type Encode to add hidden file to a digital image")
+    print("Then type in your File to encode. \nIf you want it to be truly secure then enter an already encrypted File/Message.")
     print("Then type the file path and name of the image you want to add the message to.")
     print("Then type the file path and name that you want the new image to be saved as.")
     print("Wait for it to finish and check to see if the new image was created.")
     print("")
-    print("Usage: To Retrieve Message from digital image")
-    print("Type Decode to get hidden text from a digital image")
-    print("Then type the file path and name of the image you want to extract the message from.")
+    print("Usage: To Retrieve File from digital image")
+    print("Type Decode to get hidden File from a digital image")
+    print("Then type the file path and name of the image you want to extract the File from.")
     print("Wait for it to finish and check the output. \n")
     print("")
 
 
 def encode(pixe):
-    # print(text_to_bits(origtext))
-    # create variable to hold message as bits
-    bits = text_to_bits(input_text)
-    # print(bits)
+    bits = ("00100011011100110111010001100001011100100111010000100011" +  file_to_bits(path) + "0010001101100101011011100110010000100011")
     # To create an image from a file...
     image = Image.open(pixe)
     # For easy and direct pixel editing...
@@ -159,50 +153,32 @@ def decode(pixd):
                     bitstream += '0' 
                 else:  
                     bitstream += '1'
-                # convert bitstream to text
-                # print(text_from_bits(bitstream))
-    # convert bitstream to text
-    # print(bitstream)
-    str1 = "#start#"
-    str2 = "#end#"
-    newtext = bits2a(bitstream)
-    # print(newtext)
-    start = newtext.find(str1) + 7
-    stop = newtext.find(str2)
-    realtext = newtext[start:stop]
-    print("The hidden message is:")
-    print(realtext)
-    new_path = './Decoded-Message.txt'
-    write_file = open(new_path, 'w')
-    write_file.write(realtext)
-    write_file.close()
+    str1 = "00100011 01110011 01110100 01100001 01110010 01110100 00100011"
+    str2 = "0010001101100101011011100110010000100011"
+    start = bitstream.find(str1) + 56
+    stop = bitstream.find(str2)
+    realtext = bitstream[start:stop]
+    file2=open(output_file,"wb")
+    array=bitstring_to_bytes(realtext)
+    file2.write(array)
+    file2.close()
 
 
-    # take in original text and change it from ASCII to bits
 usage()
 
 ask = input("Do you want to (E)ncode or (D)ecode?\n")
 if ask.upper() == "E" or ask.upper() == "ENCODE":
-    ask2 = input("Do you want to upload text from a file? (Yes/No)\n")
+    ask2 = input("Do you want to upload a file? (Yes/No)\n")
     if ask2.upper() == "Y" or ask2.upper() == "YES":
-        path = input("\nWhat text file would you like to upload from?\n")
-        open_file = open(path, 'r')
-        origtext = open_file.read()
-        open_file.close()
+        path = input("\nWhat file would you like to upload?\n")
         input_picture = input("\nWhat picture would you like to hide it in?\n")
         output_picture = input("\nWhat would you like to save the new picture as?\n")
-        input_text = ("#start#" +  origtext + "#end#")
-        encode(input_picture)
-    else:
-        origtext = input("\nWhat text would you like to hide?\n")
-        input_picture = input("\nWhat picture would you like to hide it in?\n")
-        output_picture = input("\nWhat would you like to save the new picture as?\n")
-        input_text = ("#start#" +  origtext + "#end#")
         encode(input_picture)
 elif ask.upper() == "D" or ask.upper() == "DECODE":
-    print("Decoding will create a file named Decoded-Message.txt in the current folder.")
-    print("If there is already a file named Decoded-Message.txt in the current folder it will be overwritten.")
-    input_picture = input("\nWhat picture would you like to get text from?\n")
+    print("Decoding will create a file named Decoded in the current folder.")
+    print("If there is already a file named Decoded in the current folder it will be overwritten.")
+    input_picture = input("\nWhat picture would you like to get a file from?\n")
+    output_file = input("\nWhat would you like to name the decoded file?\n")
     decode(input_picture)
 else:
     print("")
