@@ -1,6 +1,7 @@
 # Steganography 
 
-This Steganography program was created to hide or encode a message in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
+- This Steganography program was created to hide or encode a message/file in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
+- the PoC is a Proof-of-Concept on how this could be weaponized to get a harmless seeming PNG past EDR and Anti virus that contains hidden commands. the PoC program will decode the hidden commands and run them in a terminal with whatever access it has. 
 
 ## This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
@@ -9,7 +10,18 @@ This Steganography program was created to hide or encode a message in a PNG imag
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen)
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
-## Requirements:
+## To Do:
+1. make graphical interface using Tkinter
+2. add encryption modules 
+3. ~~add the ability to save the text output as a .txt file~~
+4. ~~add the ability to read a message from a .txt file~~
+5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode "CMYK".) https://guides.lib.umich.edu/c.php?g=282942&p=1885348
+6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
+7. add file upload option that copies bits instead of text (test on .txt, .exe, etc.)
+8. make pop-up windows ask for a file if none is given
+
+## Requirements to run python code:
+***doesn't apply to compiled binaries***
 1. Python 3 (check in a terminal by running: python --version)
 2. Pillow (PIL) for Python
 
@@ -60,18 +72,6 @@ export PATH=$PATH:~/.local/bin
 2. Decode
 3. input image = ./resources/redheart-loremipsum.PNG
 4. prints out message: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-
-
-## To Do:
-1. make graphical interface using Tkinter
-2. add encryption modules 
-3. ~~add the ability to save the text output as a .txt file~~
-4. ~~add the ability to read a message from a .txt file~~
-5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode "CMYK".) https://guides.lib.umich.edu/c.php?g=282942&p=1885348
-6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
-7. add file upload option that copies bits instead of text (test on .txt, .exe, etc.)
-8. make pop-up windows ask for a file if none is given
-
 
 
 ## Executable
