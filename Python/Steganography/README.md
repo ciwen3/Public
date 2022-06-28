@@ -1,7 +1,10 @@
 # Steganography 
 
-- This Steganography program was created to hide or encode a message/file in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
-- the PoC is a Proof-of-Concept on how this could be weaponized to get a harmless seeming PNG past EDR and Anti virus that contains hidden commands. the PoC program will decode the hidden commands and run them in a terminal with whatever access it has. 
+## Versions: 
+1. Text - This Steganography program was created to hide or encode a Message in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
+2. Create Image - This Steganography program was created to hide or encode a Message in a PNG image that i can create on the fly. 
+3. File - This Steganography program was created to hide or encode a File in a PNG image by manipulating the pixel data. 
+4. PoC - Proof-of-Concept on how this could be weaponized to get a harmless seeming PNG past EDR and Anti virus that contains hidden commands. the PoC program will decode the hidden commands and run them in a terminal with whatever access it has. 
 
 ## This project is offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project.
 
@@ -18,7 +21,8 @@
 5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode "CMYK".) https://guides.lib.umich.edu/c.php?g=282942&p=1885348
 6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
 7. ~~add file upload option that copies bits instead of text (test on .pdf, .txt, .exe, .docx, .odt, etc.)~~
-8. make pop-up windows ask for a file if none is given
+8. add a file name option so that the file name is automatically set based on its original name or name given at image encoding time. 
+9. make pop-up windows ask for a file if none is given
 
 ## Requirements to run python code:
 ***doesn't apply to compiled binaries***
