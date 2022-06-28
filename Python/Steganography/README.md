@@ -17,7 +17,7 @@
 4. ~~add the ability to read a message from a .txt file~~
 5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode "CMYK".) https://guides.lib.umich.edu/c.php?g=282942&p=1885348
 6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
-7. ~~add file upload option that copies bits instead of text (test on .txt, .exe, etc.)~~
+7. ~~add file upload option that copies bits instead of text (test on .pdf, .txt, .exe, .docx, .odt, etc.)~~
 8. make pop-up windows ask for a file if none is given
 
 ## Requirements to run python code:
