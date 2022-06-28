@@ -73,30 +73,6 @@ export PATH=$PATH:~/.local/bin
 8. make pop-up windows ask for a file if none is given
 
 
-
-## Executable
-### Warning: I have also made an Executable .exe for the Steganography program however Microsoft Defender Flags that as Malicious because it is not signed. 
-
-# Steganogrphy Decode and Run PoC:
-## Use:
-1. Run program followed by the name of the picture you want to decode and run commands from. 
-2. ``` Steganography-Poc.py /path/to/picture/to/decode ```
-3. wait for program to run. 
-
-## Example Decode and Run on Linux:
-1. chmod +x Steganography-Poc.py
-2. ``` Steganography-Poc.py redheart-firefox.PNG ```
-3. if firefox is installed it should open. 
-
-## Example Decode and Run on Windows option 1:
-1. ``` python Steganography-Poc.py redheart-calc.PNG ```
-2. Caclulator should open.  
-
-## Example Decode and Run on Windows option 2:
-1. drag and drop redheart-calc.PNG onto Steganography-Poc.exe
-2. Caclulator should open. 
-
-
 ## Troubleshooting
 if you get an error about indentation use untabify to change all tabs to 4 spaces. 
 (I am bad about mixing spaces and tabs, and have to run untabify to fix problems occationally.)
