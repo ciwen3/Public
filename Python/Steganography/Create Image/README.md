@@ -1,4 +1,5 @@
 # Steganography 
+## This version of the program is capable of creating a PNG Image big enough to fit the Text in. It is hard coded to one color. 
 
 This Steganography program was created to hide or encode a message in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
 
@@ -60,41 +61,6 @@ export PATH=$PATH:~/.local/bin
 2. Decode
 3. input image = ./resources/redheart-loremipsum.PNG
 4. prints out message: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-
-
-## To Do:
-1. make graphical interface using Tkinter
-2. add encryption modules 
-3. ~~add the ability to save the text output as a .txt file~~
-4. ~~add the ability to read a message from a .txt file~~
-5. add option to copy the exif data from original photo to new photo (need to make a version that works with JPEG instead of PNG files which uses a different color mode "CMYK".) https://guides.lib.umich.edu/c.php?g=282942&p=1885348
-6. ~~add option to create image from scratch (possibly just a solid color)?? (still debating)~~
-7. add file upload option that copies bits instead of text (test on .txt, .exe, etc.)
-8. make pop-up windows ask for a file if none is given
-
-
-
-## Executable
-### Warning: I have also made an Executable .exe for the Steganography program however Microsoft Defender Flags that as Malicious because it is not signed. 
-
-# Steganogrphy Decode and Run PoC:
-## Use:
-1. Run program followed by the name of the picture you want to decode and run commands from. 
-2. ``` Steganography-Poc.py /path/to/picture/to/decode ```
-3. wait for program to run. 
-
-## Example Decode and Run on Linux:
-1. chmod +x Steganography-Poc.py
-2. ``` Steganography-Poc.py redheart-firefox.PNG ```
-3. if firefox is installed it should open. 
-
-## Example Decode and Run on Windows option 1:
-1. ``` python Steganography-Poc.py redheart-calc.PNG ```
-2. Caclulator should open.  
-
-## Example Decode and Run on Windows option 2:
-1. drag and drop redheart-calc.PNG onto Steganography-Poc.exe
-2. Caclulator should open. 
 
 
 ## Troubleshooting
