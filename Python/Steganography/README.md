@@ -2,7 +2,7 @@
 
 ## Versions: 
 1. Text - This Steganography program was created to hide or encode a Message in a PNG image by manipulating the pixel data and to retrieve or decode the message from an image made with this program. 
-2. Create Image - This Steganography program was created to hide or encode a Message in a PNG image that i can create on the fly. 
+2. Create Image - This Steganography program was created to hide or encode a Message in a PNG image that it can create on the fly. 
 3. File - This Steganography program was created to hide or encode a File in a PNG image by manipulating the pixel data. 
 4. PoC - Proof-of-Concept on how this could be weaponized to get a harmless seeming PNG past EDR and Anti virus that contains hidden commands. the PoC program will decode the hidden commands and run them in a terminal with whatever access it has. 
 
