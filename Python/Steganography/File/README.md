@@ -21,6 +21,8 @@ This Steganography program was created to hide or encode a message in a PNG imag
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen)
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
+![Screenshot](https://github.com/ciwen3/Public/blob/master/Python/Steganography/Resources/file.JPG)
+
 ## Requirements:
 1. Python 3 (check in a terminal by running: python --version)
 2. Pillow (PIL) for Python
