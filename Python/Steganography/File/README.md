@@ -21,38 +21,11 @@ This Steganography program was created to hide or encode a message in a PNG imag
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-brightgreen)
 ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)
 
-![Screenshot](https://github.com/ciwen3/Public/blob/master/Python/Steganography/Resources/file.JPG)
-
 ## Requirements:
 1. Python 3 (check in a terminal by running: python --version)
 2. Pillow (PIL) for Python
 
-## Install Python:
-1. Debian based Linux: sudo apt install python3.8
-2. Fedora based Linux: sudo yum install python3.8
-3. Windows https://www.python.org/downloads/windows/
-
-## Install pip3:
-1. Debian based Linux: sudo apt install python3-pip 
-2. Fedora based Linux: sudo yum install python3-pip 
-
-## Install Pillow with pip (all OS's): taken from https://pillow.readthedocs.io/en/stable/installation.html
-1. python3 -m pip install --upgrade pip
-2. python3 -m pip install --upgrade Pillow
-### or
-1. python -m pip install --upgrade pip
-2. python -m pip install --upgrade Pillow
-## Install Bitstring
-1. python3 -m pip install --upgrade bitstring
-
-## Install pyinstaller
-1. python3 -m pip install --upgrade pyinstaller
-### or
-1. python -m pip install --upgrade pyinstaller
-### to compile with pyinstaller
-pyinstaller --onefile /path/to/pythonpton/script
-## if pyinstaller is not working as a command
-export PATH=$PATH:~/.local/bin
+![Screenshot](https://github.com/ciwen3/Public/blob/master/Python/Steganography/Resources/file.JPG)
 
 ## Use:
 1. Run program
