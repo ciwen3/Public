@@ -5,6 +5,16 @@ requires a free Microsoft email address
 3. https://docs.microsoft.com/en-us/learn/browse/?products=azure-logic-apps
 4. https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference
 
+# References:
+## Sentinel Community Addon:
+1. https://github.com/BlueTeamLabs/sentinel-attack
+
+## KQL:
+1. https://github.com/reprise99/Sentinel-Queries
+2. https://github.com/rod-trent/SentinelKQL
+3. https://github.com/reprise99/awesome-kql-sentinel
+4. https://github.com/FalconForceTeam/FalconFriday
+
 # Kusto Query Language Examples:
 I have either come across these or created these. I try to credit the source when I remember too. 
 
