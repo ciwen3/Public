@@ -4,6 +4,7 @@ requires a free Microsoft email address
 2. https://docs.microsoft.com/en-us/azure/logic-apps/workflow-definition-language-functions-reference
 3. https://docs.microsoft.com/en-us/learn/browse/?products=azure-logic-apps
 4. https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference
+https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/make-seriesoperator
 
 # References:
 ## Sentinel Community Addon:
