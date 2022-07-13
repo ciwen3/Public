@@ -38,3 +38,10 @@ Remove-Item * -recurse -force
 
 Get-Volume
 ```
+```Powershell
+Get-ChildItem -Path C:\temp -File | Remove-Item -Verbose
+Get-ChildItem -Path C:\temp -File -Recurse | Remove-Item -Verbose
+Remove-Item -Path $env:TEMP -Recurse -Force -ErrorAction SilentlyContinue
+
+
+```
