@@ -14,6 +14,8 @@ Remove-Item “.\*\Appdata\Local\Temp\*” -recurse -force
 ```
 # Powershell: 
 ```Powershell
+Get-Volume
+
 Set-Location $env:WinDir\temp
 Remove-Item * -recurse -force
 
@@ -34,4 +36,5 @@ Remove-Item *.gid -recurse -force
 Set-Location $env:Temp
 Remove-Item * -recurse -force
 
+Get-Volume
 ```
