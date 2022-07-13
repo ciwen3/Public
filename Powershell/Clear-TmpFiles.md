@@ -12,3 +12,26 @@ Remove-Item “.\*\Local Settings\temp\*” -recurse -force
 Set-Location “C:\Users”
 Remove-Item “.\*\Appdata\Local\Temp\*” -recurse -force
 ```
+# Powershell: 
+```Powershell
+Set-Location $env:WinDir\temp\
+Remove-Item * -recurse -force
+
+Set-Location $env:WinDir\Prefetch
+Remove-Item * -recurse -force
+
+Set-Location "$env:SystemDrive\Documents and Settings"
+Remove-Item “.\*\Local Settings\temp\*” -recurse -force
+
+Set-Location "$env:SystemDrive\Users”
+Remove-Item “.\*\Appdata\Local\Temp\*” -recurse -force
+
+Set-Location $env:SystemDrive
+Remove-Item *.log -recurse -force
+Remove-Item *.bak -recurse -force
+Remove-Item *.gid -recurse -force
+
+Set-Location "$env:Temp"
+Remove-Item * -recurse -force
+
+```
