@@ -65,3 +65,44 @@ X+?	Repeats X one or more times (non-greedy)
 ```
 {} [] () ^ $ . | * + ? \
 ```
+
+# Usage example	Match any email address from the domains yahoo.com, hotmail.com, and gmail.com.
+## Regex example:
+```
+(\W|^)[\w.\-]{0,25}@(yahoo|hotmail|gmail)\.com(\W|$)
+```
+# Usage example	Match any IP address within the range 192.168.1.0 to 192.168.1.255.
+## Regex examples:	
+1.   192\.168\.1\.
+2.   192\.168\.1\.\d{1,3}
+
+# Usage example	Match any word or phrase in the following list:
+```
+baloney
+darn
+drat
+fooey
+gosh darnit
+heck
+```
+## Regex example:
+```
+(?i)(\W|^)(baloney|darn|drat|fooey|gosh\sdarnit|heck)(\W|$)
+```
+
+# EMAIL 
+## Regex example:
+```
+/\A[a-z0-9\+\-_\.]+@[a-z\d\-.]+\.[a-z]+\z/i
+```
+```
+/\A[a-zA-Z0-9.!\#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+\z/
+```
+
+
+
+
+
+# References:
+1. https://support.google.com/a/answer/1371417?hl=en#Match-Any-Email-Address-from-a-Spec
+2. 
