@@ -23,7 +23,7 @@ Created to automate the process of finding unquoted path calls that could allow 
 ### Steganography
 Created to hide ascii characters in pictures for retrieval by the same tool. Doesn't actually encyprt data, just encodes (hides) it in the pictures. 
 
-![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/python/steganography
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/Python/Steganography
 ### Ceasar Cypher 
 Implementation of a very old encryption cypher. It only works on letters of the alphabet. This means numbers and punctuation will not be encrypted. this is easy to add by changing the alphabet variables. 
 
