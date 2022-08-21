@@ -58,6 +58,13 @@ pyinstaller --onefile /path/to/pythonpton/script
 ## if pyinstaller is not working as a command
 export PATH=$PATH:~/.local/bin
 
+```
+[root@root ~]$ which pyinstaller
+which: no pyinstaller in (/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl)
+[root@root ~]$ export PATH=$PATH:~/.local/bin
+[root@root ~]$ which pyinstaller
+/root/.local/bin/pyinstaller
+```
 ## Use:
 1. Run program
 2. Type E or Encode to add text to an image OR Type D or Decode to pull text from an image
