@@ -53,7 +53,7 @@ def encode(bits, pixe, output_path):
                                 temppix.append(num)
                                 bits = bits[1:len(bits)]
                     temppix.append(color[3])
-                    pixels[wid, hei] = tuple(temppix)
+                    pixels[wid, hei] = tuple(temppix[0:4])
         image.save(output_path)
 
 def decode(pixe):
