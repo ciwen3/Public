@@ -1,4 +1,4 @@
-# Pinbook Pro
+# Pinebook Pro
 ## Hardware Compatibility
 - https://wiki.pine64.org/wiki/Pinebook_Pro_Hardware_Accessory_Compatibility
 
