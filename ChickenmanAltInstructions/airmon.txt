@@ -1,4 +1,6 @@
-https://www.aircrack-ng.org/doku.php?id=airmon-ng
+# References: 
+- https://www.aircrack-ng.org/doku.php?id=airmon-ng
+- https://linuxhint.com/how_to_aircrack_ng/
 
 # Verify that airmon-ng has no issues:
 sudo airmon-ng check 
