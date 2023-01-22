@@ -27,6 +27,16 @@ sudo airmon-ng stop wlp1s0mon
 # Start Network Manager so you can get back online:
 sudo service network-manager start
 
+# alternative method https://unix.stackexchange.com/questions/223625/cannot-connect-to-internet-after-using-airmon-ng-check-kill
+# sudo service NetworkManager restart
+# wireless adapter is doing:
+# iwconfig
+# if its still in monitor mode, let's turn the normal mode back on:
+# sudo airmon-ng start wlp1s0 
+# sudo airmon-ng stop wlp1s0mon
+# sudo ifconfig wlp1s0 up
+
+
 # Use aircrack and passwordlist of your choice:
 # sudo aircrack-ng -w [Password list] [Name of CAP file] 
 sudo aircrack-ng -w ~/github/ChickenManGame/ChickenDay/passwords/darkweb2017-top10000.txt New-01.cap 
