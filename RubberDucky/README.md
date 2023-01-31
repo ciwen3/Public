@@ -4,3 +4,4 @@
 ## All my projects are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project. use at your own risk. 
 
 https://infosecwriteups.com/make-usb-rubber-ducky-with-less-than-3-fa72dac9e4de
+https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
