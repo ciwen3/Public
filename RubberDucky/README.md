@@ -7,6 +7,7 @@
 - https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz
 - https://debian.pkgs.org/sid/debian-main-arm64/arduino_1.8.19+dfsg1-1_arm64.deb.html
 - https://ubuntu.pkgs.org/22.04/ubuntu-universe-amd64/arduino_1.8.19+dfsg1-1_amd64.deb.html
+- http://digistump.com/package_digistump_index.json
 
 
 
