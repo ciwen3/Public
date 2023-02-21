@@ -1,5 +1,20 @@
 # Find tables in Sentinel Logs that you can pull data from
 ```
+SecurityEvents
+| summarize count() by Computer, Data = bin(TimeGenerated, 1d)
+| render timechart
+```
+```
+//looking for data table by cost
+let StartofMonth = startofmonth(datetime(now), -3);
+let EndofMonth = endofmonth(datetime(now), -1);
+union withsource= table *
+| where TimeGenerated between(StartofMonth ..(EndofMonth))
+| where IsBillable == True
+| summarize TotalGBytes =todecimal(round(sum(_BilledSize/(1024*1024*1024)),2)) by table, Date = bin(TimeGenerated, 1d)
+```
+
+```
 search "*" | summarize count() by $table | sort by count_ desc
 ```
 ```
