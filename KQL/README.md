@@ -1,3 +1,10 @@
+# remove duplicates
+```
+AzureActivity 
+| where OperationName == 'Delete website' and ActivityStatus == 'Succeeded' and ResourceProvider == 'Azure Web Sites' 
+| summarize arg_max(TimeGenerated, *) by CorrelationId
+```
+
 # Online Practice:
 requires a free Microsoft email address
 1. https://portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade
