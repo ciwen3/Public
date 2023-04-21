@@ -1,3 +1,10 @@
+# remove duplicates
+```
+AzureActivity 
+| where OperationName == 'Delete website' and ActivityStatus == 'Succeeded' and ResourceProvider == 'Azure Web Sites' 
+| summarize arg_max(TimeGenerated, *) by CorrelationId
+```
+
 # Find tables in Sentinel Logs that you can pull data from
 ```
 SecurityEvents
