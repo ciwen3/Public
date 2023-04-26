@@ -1,8 +1,24 @@
 # remove duplicates
-```
+```kql
 AzureActivity 
 | where OperationName == 'Delete website' and ActivityStatus == 'Succeeded' and ResourceProvider == 'Azure Web Sites' 
 | summarize arg_max(TimeGenerated, *) by CorrelationId
+```
+
+# billable size per table, change timeframes as needed.
+```kql
+let StartofMonth = startofmonth(datetime(now), -1);
+let EndofMonth = endofmonth(datetime(now), -1);
+union withsource= table *
+| where TimeGenerated between(StartofMonth ..(EndofMonth))
+| where _IsBillable == True
+| summarize TotalGBytes =todecimal(round(sum(_BilledSize/(1024*1024*1024)),2)) by table, Date = bin(TimeGenerated, 1d)
+| render timechart
+```
+```kql
+Event
+| summarize count() by Computer, Data = bin(TimeGenerated, 1d)
+| render timechart
 ```
 
 # Online Practice:
