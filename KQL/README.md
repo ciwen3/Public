@@ -1,3 +1,5 @@
+https://learn.microsoft.com/en-us/training/cloud-games
+
 # unpack entitiies
 ```kql
 | extend Entities = iff(isempty(Entities), todynamic('[{"dummy" : ""}]'), todynamic(Entities)) 
