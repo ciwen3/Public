@@ -1,3 +1,10 @@
+# unpack entitiies
+```kql
+| extend Entities = iff(isempty(Entities), todynamic('[{"dummy" : ""}]'), todynamic(Entities)) 
+| mvexpand Entities
+| evaluate bag_unpack(Entities)
+```
+
 # remove duplicates
 ```kql
 AzureActivity 
