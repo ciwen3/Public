@@ -4,7 +4,14 @@
 | mvexpand Entities
 | evaluate bag_unpack(Entities)
 ```
-
+### example: 
+```kql
+SecurityAlert
+| project-away DisplayName, Type
+| extend Entities = iff(isempty(Entities), todynamic('[{"dummy" : ""}]'), todynamic(Entities)) 
+| mvexpand Entities
+| evaluate bag_unpack(Entities)
+```
 # remove duplicates
 ```kql
 AzureActivity 
