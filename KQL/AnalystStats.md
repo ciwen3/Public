@@ -19,12 +19,12 @@ SecurityIncident
 ### Improved version: 
 ```kql
 SecurityIncident
-//| where TimeGenerated >= ago(24h)
+| where TimeGenerated >= ago(30d)
 | where Status == "Closed"
-| extend analyst = todynamic(Owner.assignedTo) 
-| where analyst != "null"
-| where analyst != ""
-| summarize Count=count() by analyst
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner != "null"
+| where Owner != ""
+| summarize Count=count() by Owner
 | sort by Count desc 
 ```
 
