@@ -82,7 +82,16 @@ SecurityIncident
 | render timechart 
 ```
 
-
+```kql
+SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner !in("null", "")
+| where Owner !contains "onmicrosoft.com"
+| summarize event_count = count() by Owner, bin(TimeGenerated, 1d)
+| render timechart 
+```
 
 
 
