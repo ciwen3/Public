@@ -28,11 +28,6 @@ SecurityIncident
 | sort by Count desc 
 ```
 
-
-
-
-
-
 ```kql
 // Check across All workspaces
 // This consumes a lot of resources and should be done with caution and only for short periods of time. 
@@ -52,12 +47,40 @@ union workspace('WorkspaceName').SecurityIncident, workspace('WorkspaceName').Se
 | sort by Count desc 
 ```
 
+### Analyst/Owner by severity over 30 days
+```kql
+SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner != "null"
+| where Owner != ""
+| summarize Count=count() by Owner, Severity
+| sort by Owner desc
+```
 
+### Analyst/Owner by severity over 30 days bin by day
+```kql
+SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner != "null"
+| where Owner != ""
+| summarize event_count = count() by Owner, bin(TimeGenerated, 1d)
+```
 
-
-
-
-
+### Time chart Analyst/Owner by severity over 30 days
+```kql
+SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner != "null"
+| where Owner != ""
+| summarize event_count = count() by Owner, bin(TimeGenerated, 1d)
+| render timechart 
+```
 
 
 
