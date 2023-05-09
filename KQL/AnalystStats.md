@@ -92,7 +92,61 @@ SecurityIncident
 | summarize event_count = count() by Owner, bin(TimeGenerated, 1d)
 | render timechart 
 ```
-
+### breakdown by hour
+```kql
+let High = SecurityIncident
+| where TimeGenerated >= ago(7d)
+| where Severity == "High"
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner contains "Analyst Name Here"
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize AnalystHigh = count() by Severity, bin(TimeGenerated, 1h)
+| project-away Severity
+; 
+let Low = SecurityIncident
+| where TimeGenerated >= ago(7d)
+| where Severity == "Low"
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner contains "Analyst Name Here"
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize AnalystLow = count() by Severity, bin(TimeGenerated, 1h)
+| project-away Severity
+; 
+let Medium = SecurityIncident
+| where TimeGenerated >= ago(7d)
+| where Severity == "Medium"
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner contains "Analyst Name Here"
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize AnalystMedium = count() by Severity, bin(TimeGenerated, 1h)
+| project-away Severity
+; 
+let AnalystTotal = SecurityIncident
+| where TimeGenerated >= ago(7d)
+| where Status == "Closed"
+| extend Owner = tostring(todynamic(Owner.assignedTo))
+| where Owner contains "Analyst Name Here"
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize AnalystTotal = count() by Status, bin(TimeGenerated, 1h)
+| project-away Status
+; 
+let Total = SecurityIncident
+| where TimeGenerated >= ago(7d)
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize Total = count() by Type, bin(TimeGenerated, 1h)
+| project-away Type
+;
+Total 
+| join kind=leftouter Low on TimeGenerated
+| join kind=leftouter Medium on TimeGenerated
+| join kind=leftouter High on TimeGenerated
+| join kind=leftouter AnalystTotal on TimeGenerated
+| extend Hour = TimeGenerated
+| project Hour, Total, AnalystTotal, AnalystHigh, AnalystMedium, AnalystLow
+```
 
 
 
