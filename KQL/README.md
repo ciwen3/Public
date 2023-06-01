@@ -21,6 +21,30 @@ AzureActivity
 | summarize arg_max(TimeGenerated, *) by CorrelationId
 ```
 
+# use variables
+```kql
+let f = (a:int){
+	case(
+	a==1,"January", 
+	a==2,"February", 
+	a==3,"March",
+	a==4,"April",
+	a==5,"May",
+	a==6,"June"
+	a==7,"July"
+	a==8,"August"
+	a==9,"September"
+	a==10,"October"
+	a==11,"November"
+	a==12,"December"
+	)
+};
+search *
+| extend month = f(getmonth(startofmonth(datetime(now),-1)))
+| summarize arg_min(TimeGenerated, *) by month
+| project month
+```
+
 # billable size per table, change timeframes as needed.
 ```kql
 let StartofMonth = startofmonth(datetime(now), -1);
