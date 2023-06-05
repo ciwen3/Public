@@ -44,6 +44,15 @@ search *
 | summarize arg_min(TimeGenerated, *) by month
 | project month
 ```
+### look into user activity in log tables to indicate malicious activity
+```kql
+search "username"
+| where TimeGenerated <= ago(10d)
+| summarize count() by $table, Data = bin(TimeGenerated, 1d)
+| render timechart
+```
+
+
 
 # billable size per table, change timeframes as needed.
 ```kql
