@@ -46,6 +46,43 @@ AvgTime
 | join HighCount on Analyst
 ```
 ```kql
+//High count and average response time and average closure time
+let AvgTime = SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| where Severity == "High"
+| extend ResponseTime = (FirstModifiedTime - CreatedTime)
+| extend Analyst = Owner.assignedTo
+| where Analyst !in ("")
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize AvgResponseTime = avg(ResponseTime) by tostring(Analyst)
+;
+let HighCount = SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| where Severity == "High"
+| extend Analyst = Owner.assignedTo
+| where Analyst !in ("")
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize Count = count() by tostring(Analyst)
+;
+let CloseTime = SecurityIncident
+| where TimeGenerated >= ago(30d)
+| where Status == "Closed"
+| where Severity == "High"
+| extend CloseTime = (ClosedTime - FirstModifiedTime)
+| extend Analyst = Owner.assignedTo
+| where Analyst !in ("")
+| summarize arg_max(TimeGenerated, *) by IncidentName
+| summarize AvgCloseTime = avg(CloseTime) by tostring(Analyst)
+;
+AvgTime
+| join CloseTime on Analyst
+| join HighCount on Analyst
+| project-away Analyst1, Analyst2
+```
+
+```kql
 // Count by analyst and severity
 SecurityIncident
 | where TimeGenerated >= ago(30d)
