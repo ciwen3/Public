@@ -1,4 +1,21 @@
 https://learn.microsoft.com/en-us/training/cloud-games
+# Multiple summaries on one line example
+```kql
+DeviceLogonEvents
+| where TimeGenerated >= ago(180d)
+| where RemoteIPType == "Public"
+| summarize 
+  LOGONFAILED=countif(ActionType =="LogonFailed"),
+  LOGONSUCCESS=countif(ActionType =="LogonSuccess")
+ by RemoteIP, DeviceName
+| where LOGONSUCCESS > 0
+| where LOGONFAILED >= 300
+| join kind=innerunique 
+(DeviceLogonEvents
+| where ActionType == "LogonSuccess")
+on RemoteIP
+| project TimeGenerated, RemoteIP, AccountName, LOGONFAILED, LOGONSUCCESS, Protocol, MachineGroup, LogonType, DeviceName 
+```
 
 # unpack entitiies
 ```kql
