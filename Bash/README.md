@@ -22,6 +22,10 @@ https://github.com/ciwen3/Public/blob/master/Bash/job-search.sh
 
 A fake script I wrote as a joke when looking for jobs. 
 
+# NoiseMaker
+## !!!DANGER!!! for educational purposes only! do not run ever. 
+https://github.com/ciwen3/Public/tree/master/Bash/NoiseMaker
+
 
 # Tools
 ![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
