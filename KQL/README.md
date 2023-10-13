@@ -47,13 +47,14 @@ let f = (a:int){
 	a==3,"March",
 	a==4,"April",
 	a==5,"May",
-	a==6,"June"
-	a==7,"July"
-	a==8,"August"
-	a==9,"September"
-	a==10,"October"
-	a==11,"November"
-	a==12,"December"
+	a==6,"June",
+	a==7,"July",
+	a==8,"August",
+	a==9,"September",
+	a==10,"October",
+	a==11,"November",
+	a==12,"December",
+    "ERROR"
 	)
 };
 search *
