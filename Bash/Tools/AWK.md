@@ -116,13 +116,18 @@ awk '/#/' filename
 awk '{print $0} (NR==11){exit}' filename 
 ```
 
+### less filename:
+```
+awk '{ array[NR]=$0 } END { for (i=NR-10; i<=NR; i++) print array[i] }' filename 
+```
+
 ### sed s/"string to remove"/"string to input"/g > /path/to/save/file
 ```
-awk '{ gsub("string to remove","string to input"); print $0}' /path/to/file > /path/to/save/file
+awk '{ gsub("string to remove","string to input"); print $0}' /path/to/filename > /path/to/save/filename
 ```
 
 ### sed s/"string to remove"/""/g > /path/to/save/file
 ```
-awk '{ gsub("string to remove",""); print $0}' /path/to/file > /path/to/save/file
+awk '{ gsub("string to remove",""); print $0}' /path/to/filename > /path/to/save/filename
 ```
 
