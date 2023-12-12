@@ -1,3 +1,4 @@
+https://medium.com/reversinglabs-integrations/malware-family-kql-queries-week-of-2023-07-24-56517379542d
 # description: smoke loader has been seen exploiting cve-2017–11882
 ```kql
 DeviceProcessEvents
@@ -12,6 +13,42 @@ DeviceProcessEvents
 | where EventID == 4688
 | where ParentProcessName contains "EQNEDT32.EXE"
 | where CommandLine matches regex @"(?i)C:\\Users\\.*\\AppData\\Local\\Temp\\.*.exe")
+```
+
+# description: identifies new scheduled tasks created in an unusual location
+```kql
+let SmokeLoaderRegex = @"(?i)C:\\Users\\.*\\AppData\\Local\\(Temp|[0–9a-z-]{1,}).*";
+DeviceProcessEvents
+| where FileName == "schtasks.exe"
+| where InitiatingProcessFolderPath matches regex SmokeLoaderRegex
+| where ProcessCommandLine contains "/Create /SC"
+| extend TaskRun = tolower(extract(@'/TR "(.*?)" /F', 1, ProcessCommandLine))
+| where TaskRun == InitiatingProcessFolderPath
+| union
+(SysmonParser
+| where EventID == 1
+| where CommandLine contains "schtasks.exe"
+| where ParentImage matches regex SmokeLoaderRegex
+| extend TaskRun = extract(@'/TR "(.*?)" /F', 1, CommandLine)
+| where TaskRun == ParentImage),
+(SecurityEvent
+| where EventID == 4688
+| where Process == "schtasks.exe"
+| where ParentProcessName matches regex SmokeLoaderRegex
+| extend TaskRun = extract(@'/TR "(.*?)" /F', 1, CommandLine)
+| where TaskRun == ParentProcessName)
+```
+
+# description: 20230724 - Smoke Loader file creation events
+```kql
+let SmokeLoaderRegex = @"C:\\Users\\.*\\AppData\\Local\\(Temp|[0–9a-z\-]{1,})\\.*\.exe";
+DeviceFileEvents
+| where ActionType == "FileCreated"
+| where InitiatingProcessFolderPath matches regex SmokeLoaderRegex or FolderPath matches regex SmokeLoaderRegex
+| union
+(SysmonParser
+| where EventID == 11
+| where TargetFilename matches regex SmokeLoaderRegex)
 ```
 
 # coalesce
