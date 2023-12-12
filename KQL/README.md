@@ -191,6 +191,7 @@ requires a free Microsoft email address
 3. https://docs.microsoft.com/en-us/learn/browse/?products=azure-logic-apps
 4. https://docs.microsoft.com/en-us/azure/data-explorer/kql-quick-reference
 https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/make-seriesoperator
+5. https://detective.kusto.io/
 
 # References:
 ## Sentinel Community Addon:
