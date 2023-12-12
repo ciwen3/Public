@@ -1,3 +1,46 @@
+# coalesce
+```kql
+let DisableWinRe = @'(?i)(.*)((bcdedit.*\/set.*recoveryenabled no)|(reagentc.*\/disable))(.*)'
+; 
+let SEvent = SecurityEvent
+| where TimeGenerated >= ago(90d)
+| where CommandLine matches regex DisableWinRe
+;
+let DEvent = DeviceEvents
+| where TimeGenerated >= ago(90d)
+| where InitiatingProcessCommandLine matches regex DisableWinRe or ProcessCommandLine matches regex DisableWinRe 
+;
+let DPEvent = DeviceProcessEvents
+| where TimeGenerated >= ago(90d)
+| where InitiatingProcessCommandLine matches regex DisableWinRe or ProcessCommandLine matches regex DisableWinRe 
+;
+let DFEvent = DeviceFileEvents
+| where TimeGenerated >= ago(90d)
+| where InitiatingProcessCommandLine matches regex DisableWinRe 
+;
+let DREvent = DeviceRegistryEvents
+| where TimeGenerated >= ago(90d)
+| where InitiatingProcessCommandLine matches regex DisableWinRe 
+;
+let SLog = Syslog
+| where TimeGenerated >= ago(90d)
+| where SyslogMessage matches regex DisableWinRe
+; 
+SEvent
+| join kind=fullouter (SLog) on TimeGenerated
+| join kind=fullouter (DPEvent) on TimeGenerated
+| join kind=fullouter (DFEvent) on TimeGenerated
+| join kind=fullouter (DREvent) on TimeGenerated
+| join kind=fullouter (DEvent) on TimeGenerated
+| extend InitiatingProcessCommandLine = coalesce(InitiatingProcessCommandLine, InitiatingProcessCommandLine1, InitiatingProcessCommandLine2, InitiatingProcessCommandLine3)
+| extend ProcessCommandLine = coalesce(ProcessCommandLine, ProcessCommandLine1)
+| extend TimeGenerated = coalesce(TimeGenerated, TimeGenerated1, TimeGenerated2, TimeGenerated3, TimeGenerated4, TimeGenerated5)
+| extend DeviceName = coalesce(DeviceName, DeviceName1, DeviceName2, DeviceName3, Computer, Computer1)
+| extend AccountName = coalesce(AccountName, AccountName1, AccountName2)
+| extend InitiatingProcessAccountName = coalesce(InitiatingProcessAccountName, InitiatingProcessAccountName1, InitiatingProcessAccountName2)
+| extend InitiatingProcessAccountUpn = coalesce(InitiatingProcessAccountUpn, InitiatingProcessAccountUpn1, InitiatingProcessAccountUpn2)
+```
+
 https://learn.microsoft.com/en-us/training/cloud-games
 # Multiple summaries on one line example
 ```kql
