@@ -1,6 +1,10 @@
 https://www.rust-lang.org/learn/get-started
 
 # Cargo: the Rust build tool and package manager
+## Install
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 When you install Rustup you’ll also get the latest stable version of the Rust build tool and package manager, also known as Cargo. Cargo does lots of things:
 
 build your project with 
