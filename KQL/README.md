@@ -1,3 +1,6 @@
+https://learn.microsoft.com/en-us/azure/data-explorer/kusto/query/kql-quick-reference
+
+
 https://medium.com/reversinglabs-integrations/malware-family-kql-queries-week-of-2023-07-24-56517379542d
 # description: smoke loader has been seen exploiting cve-2017–11882
 ```kql
