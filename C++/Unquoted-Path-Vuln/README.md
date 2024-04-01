@@ -111,3 +111,4 @@ sc qc <service-name>
 1. add loop to check for multiple pids
 2. other commands to check for installed unquoted path vulnerability
 3. add timestamp
+4. write all information to a log file 
