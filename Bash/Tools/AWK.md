@@ -131,3 +131,9 @@ awk '{ gsub("string to remove","string to input"); print $0}' /path/to/filename 
 awk '{ gsub("string to remove",""); print $0}' /path/to/filename > /path/to/save/filename
 ```
 
+### for loop to rename all mp4 files to just the first 11 characters (1, 11) 
+```bash
+for i in $(ls *.mp4); do mv $i $(echo $i | awk '{print substr($i, 1, 11)}').mp4 ; done
+```
+1. https://www.gnu.org/software/gawk/manual/html_node/String-Functions.html
+2. https://thomas-cokelaer.info/blog/2011/05/awk-the-substr-command-to-select-a-substring/
