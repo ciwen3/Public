@@ -41,7 +41,7 @@ https://github.com/ciwen3/Public/tree/master/Programming/RubberDucky
 ### Job Search Script
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Programming/Bash/job-search.sh
 
-## Prime Numbers: 
+### Prime Numbers: 
 I created these programs to test my theory that all prime numbers will have a remainder of 1 or 5 when divided by 6 (except 2 or 3, which are used derive the value of 6 in the equation).
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue) https://github.com/ciwen3/Public/tree/master/Programming/Python/Prime-Counter
