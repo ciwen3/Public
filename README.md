@@ -23,10 +23,6 @@ Game to practice WiFi hacking.
 
 https://github.com/ciwen3/Public/blob/master/Technical/ChickenmanAltInstructions/README.md
 
-### DIY Arcade
-Full size arcade and cabinet that I made for a friend. 
-
-https://github.com/ciwen3/Public/blob/master/Technical/DIY%20Arcade/README.md
 
 # Education:
 ### Documents (Certifications, Degree & GED)
@@ -53,6 +49,7 @@ I wrote these script to close down my kids various computer at 10 PM on school n
 Created to hide ascii characters in pictures for retrieval by the same tool. Doesn't actually encyprt data, just encodes (hides) it in the pictures. 
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/Programming/Python/Steganography
+
 ### Ceasar Cypher 
 Implementation of a very old encryption cypher. It only works on letters of the alphabet. This means numbers and punctuation will not be encrypted. this is easy to add by changing the alphabet variables. 
 
@@ -94,6 +91,10 @@ One of several Chromebook models I have turned into Linux Laptops.
 
 https://github.com/ciwen3/Public/blob/master/Technical/Chromebook/README.md
 
+### DIY Arcade
+Full size arcade and cabinet that I made for a friend. 
+
+https://github.com/ciwen3/Public/blob/master/Technical/DIY%20Arcade/README.md
 
 ## FUN:
 ### Art Projects I have participated in
