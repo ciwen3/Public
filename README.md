@@ -1,24 +1,23 @@
 # Cyber Security:
 ### Threat Hunts
-https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Threat%20Hunts
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Threat%20Hunts
 
 ### Vuln Reports
 https://github.com/ciwen3/Public/tree/master/Cyber%20Security/vuln-report
 
 ### Investigations
-https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Investigations
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Investigations
 
 ### KQL 
-![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) 
-  - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/README.md
-  - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/workbook
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL
 
 ### PNPT Study & Attack repo
 A collection of information I have gathered to take the PNPT exam. 
 
-https://github.com/ciwen3/PNPT
+![Screenshot](https://img.shields.io/badge/Platform-Multi-darkgreen) https://github.com/ciwen3/PNPT
 
 ### Chickenman-Alt Instructions
+
 Game to practice WiFi hacking. 
 
 https://github.com/ciwen3/Public/blob/master/Technical/ChickenmanAltInstructions/README.md
@@ -33,7 +32,7 @@ https://github.com/ciwen3/Public/tree/master/Education/Documents
 
 https://github.com/ciwen3/Public/tree/master/Education/Business%20Class%20Project
 
-https://github.com/ciwen3/Public/tree/master/Education/Cisco%20Capstone%20Project
+![Screenshot](https://img.shields.io/badge/Platform-Cisco-darkgreen) https://github.com/ciwen3/Public/tree/master/Education/Cisco%20Capstone%20Project
 
 https://github.com/ciwen3/Public/tree/master/Education/Speech%20275
 
@@ -74,7 +73,7 @@ I helped with an infection known as XCSSET. In my research of the Malware found 
 ### Rubber Ducky / Attiny85 Scripts 
 Scripts to automatically attack a system by plugging in a usb devcice that mimics a keyboard and issues commands at lightning speed. 
 
-https://github.com/ciwen3/Public/tree/master/Programming/RubberDucky
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) https://github.com/ciwen3/Public/tree/master/Programming/RubberDucky
 
 
 ### Job Search Script
@@ -89,12 +88,12 @@ I created these programs to test my theory that all prime numbers will have a re
 ### ChromeBook
 One of several Chromebook models I have turned into Linux Laptops. 
 
-https://github.com/ciwen3/Public/blob/master/Technical/Chromebook/README.md
+![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) https://github.com/ciwen3/Public/blob/master/Technical/Chromebook/README.md
 
 ### DIY Arcade
 Full size arcade and cabinet that I made for a friend. 
 
-https://github.com/ciwen3/Public/blob/master/Technical/DIY%20Arcade/README.md
+![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) https://github.com/ciwen3/Public/blob/master/Technical/DIY%20Arcade/README.md
 
 ## FUN:
 ### Art Projects I have participated in
