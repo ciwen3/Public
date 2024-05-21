@@ -7,12 +7,12 @@ Using known tactics, techniques, and procedures (TTPs) for threat actors disabli
 
 ## MITRE ATT&CK
 ### Tactics:
-• Impact https://attack.mitre.org/tactics/TA0040/
-• Defense Evasion https://attack.mitre.org/tactics/TA0005/
+- Impact https://attack.mitre.org/tactics/TA0040/
+- Defense Evasion https://attack.mitre.org/tactics/TA0005/
 
 ### Techniques:
-• Inhibit System Recovery https://attack.mitre.org/techniques/T1490/
-• Impair Defenses: Disable or Modify Tools https://attack.mitre.org/techniques/T1562/001/
+- Inhibit System Recovery https://attack.mitre.org/techniques/T1490/
+- Impair Defenses: Disable or Modify Tools https://attack.mitre.org/techniques/T1562/001/
 
 ## TECHNICAL SUMMARY
 ### OVERVIEW
