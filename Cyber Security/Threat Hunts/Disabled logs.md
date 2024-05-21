@@ -33,7 +33,7 @@ If malicious then client should start investigation into how and why this activi
 ### command to turn logging back on:
 AUDITPOL /SET /CATEGORY:* /SUCCESS:ENABLE /FAILURE:ENABLE
 
-References
+### References
 1.https://attack.mitre.org/tactics/TA0005/
 2. https://attack.mitre.org/techniques/T1070/
 3.https://attack.mitre.org/techniques/T1070/001/
