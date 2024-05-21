@@ -5,7 +5,7 @@
         b. Pry case open carefully 
         c. Remove big head silver screw (see picture below) then put housing back together
 
-![board ](https://github.com/ciwen3/Public/blob/master/Chromebook/photos/board.jpg "board")
+![board ](./photos/board.jpg "board")
 
 
     2. Boot into developer mode 
@@ -14,7 +14,7 @@
         c. Press ctrl + d  (turns on developer mode) press enter to continue
         d. System will reboot and show OS verification is OFF
 
-![os-verification ](https://github.com/ciwen3/Public/blob/master/Chromebook/photos/os-ver.jpg "os-verification")
+![os-verification ](./photos/os-ver.jpg "os-verification")
        
         e. Wait until Chromebook boots (will look like normal ChromeOS)
             i. Pressing ctrl + d will skip the wait time
@@ -27,7 +27,7 @@
         e. If write protect is enabled type: flashrom –wp-disable 
             i. then check status to make sure it has changed
 
-![wp-status ](https://github.com/ciwen3/Public/blob/master/Chromebook/photos/wp-status.jpg "wp-status")
+![wp-status ](./photos/wp-status.jpg "wp-status")
 
     4. Run John Lewis script (while still in Crosh shell)
         a. https://johnlewis.ie/custom-chromebook-firmware/rom-download/
