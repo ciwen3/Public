@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for newjob in $(cat jobsearch); do 
-	if [[ work-life-ballence -gt mental-health-needs ]] 
+	if [[ work-life-balance -gt mental-health-needs ]] 
     then
 	    if [[ pay-benefits -gt cost-of-living ]] 
         then
