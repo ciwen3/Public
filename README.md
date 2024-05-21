@@ -48,6 +48,15 @@ I created these programs to test my theory that all prime numbers will have a re
 
 
 ## Cyber Security:
+### Threat Hunts
+https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Threat%20Hunts
+
+### Vuln Reports
+https://github.com/ciwen3/Public/tree/master/Cyber%20Security/vuln-report
+
+### Investigations
+https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Investigations
+
 ### KQL 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) 
   - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/README.md
