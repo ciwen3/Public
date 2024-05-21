@@ -50,8 +50,8 @@ I created these programs to test my theory that all prime numbers will have a re
 ## Cyber Security:
 ### KQL 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) 
-  - https://github.com/ciwen3/Public/blob/master/Cyber Security/KQL/README.md
-  - https://github.com/ciwen3/Public/blob/master/Cyber Security/KQL/WorkBooks.md
+  - https://github.com/ciwen3/Public/blob/master/Cyber%20SSecurity/KQL/README.md
+  - https://github.com/ciwen3/Public/blob/master/Cyber%20SSecurity/KQL/WorkBooks.md
 
 ### PNPT Study & Attack repo
 A collection of information I have gathered to take the PNPT exam. 
