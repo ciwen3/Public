@@ -8,14 +8,14 @@ Using known tactics, techniques, and procedures (TTPs) for threat actors disabli
 
 ## MITRE ATT&CK
 ### Tactics:
-• Defense Evasion https://attack.mitre.org/tactics/TA0005/
+- Defense Evasion https://attack.mitre.org/tactics/TA0005/
 
 ### Techniques:
-• Indicator Removal https://attack.mitre.org/techniques/T1070/
-• Indicator Removal: Clear Windows Event Logs https://attack.mitre.org/techniques/T1070/001/
-• Impair Defenses https://attack.mitre.org/techniques/T1562/
-• Impair Defenses: Disable Windows Event Logging https://attack.mitre.org/techniques/T1562/002/
-• Impair Defenses: Impair Command History Logging https://attack.mitre.org/techniques/T1562/003/
+- Indicator Removal https://attack.mitre.org/techniques/T1070/
+- Indicator Removal: Clear Windows Event Logs https://attack.mitre.org/techniques/T1070/001/
+- Impair Defenses https://attack.mitre.org/techniques/T1562/
+- Impair Defenses: Disable Windows Event Logging https://attack.mitre.org/techniques/T1562/002/
+- Impair Defenses: Impair Command History Logging https://attack.mitre.org/techniques/T1562/003/
 
 ## TECHNICAL SUMMARY
 ### OVERVIEW
@@ -34,9 +34,9 @@ If malicious then client should start investigation into how and why this activi
 AUDITPOL /SET /CATEGORY:* /SUCCESS:ENABLE /FAILURE:ENABLE
 
 ### References
-1.https://attack.mitre.org/tactics/TA0005/
+1. https://attack.mitre.org/tactics/TA0005/
 2. https://attack.mitre.org/techniques/T1070/
-3.https://attack.mitre.org/techniques/T1070/001/
+3. https://attack.mitre.org/techniques/T1070/001/
 4. https://attack.mitre.org/techniques/T1562/
 5. https://attack.mitre.org/techniques/T1562/002/
 6. https://attack.mitre.org/techniques/T1562/003/
