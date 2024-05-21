@@ -1,5 +1,47 @@
-# Index: 
-## Programming:
+# Cyber Security:
+### Threat Hunts
+https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Threat%20Hunts
+
+### Vuln Reports
+https://github.com/ciwen3/Public/tree/master/Cyber%20Security/vuln-report
+
+### Investigations
+https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Investigations
+
+### KQL 
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) 
+  - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/README.md
+  - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/workbook
+
+### PNPT Study & Attack repo
+A collection of information I have gathered to take the PNPT exam. 
+
+https://github.com/ciwen3/PNPT
+
+### Chickenman-Alt Instructions
+Game to practice WiFi hacking. 
+
+https://github.com/ciwen3/Public/blob/master/Technical/ChickenmanAltInstructions/README.md
+
+### DIY Arcade
+Full size arcade and cabinet that I made for a friend. 
+
+https://github.com/ciwen3/Public/blob/master/Technical/DIY%20Arcade/README.md
+
+# Education:
+### Documents (Certifications, Degree & GED)
+https://github.com/ciwen3/Public/tree/master/Education/Documents
+
+### Class Projects
+![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-VisualBasic-blue) https://github.com/ciwen3/Public/tree/master/Education/VB%20Scripts
+
+https://github.com/ciwen3/Public/tree/master/Education/Business%20Class%20Project
+
+https://github.com/ciwen3/Public/tree/master/Education/Cisco%20Capstone%20Project
+
+https://github.com/ciwen3/Public/tree/master/Education/Speech%20275
+
+# Programming:
 ### Bedtime Scripts: 
 I wrote these script to close down my kids various computer at 10 PM on school nights.
 
@@ -46,51 +88,7 @@ I created these programs to test my theory that all prime numbers will have a re
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue) https://github.com/ciwen3/Public/tree/master/Programming/Python/Prime-Counter
 
-
-## Cyber Security:
-### Threat Hunts
-https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Threat%20Hunts
-
-### Vuln Reports
-https://github.com/ciwen3/Public/tree/master/Cyber%20Security/vuln-report
-
-### Investigations
-https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Investigations
-
-### KQL 
-![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) 
-  - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/README.md
-  - https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL/workbook
-
-### PNPT Study & Attack repo
-A collection of information I have gathered to take the PNPT exam. 
-
-https://github.com/ciwen3/PNPT
-
-### Chickenman-Alt Instructions
-Game to practice WiFi hacking. 
-
-https://github.com/ciwen3/Public/blob/master/Technical/ChickenmanAltInstructions/README.md
-
-### DIY Arcade
-Full size arcade and cabinet that I made for a friend. 
-
-https://github.com/ciwen3/Public/blob/master/Technical/DIY%20Arcade/README.md
-
-## Education:
-### Documents (Certifications, Degree & GED)
-https://github.com/ciwen3/Public/tree/master/Education/Documents
-
-### Class Projects
-![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-VisualBasic-blue) https://github.com/ciwen3/Public/tree/master/Education/VB%20Scripts
-
-https://github.com/ciwen3/Public/tree/master/Education/Business%20Class%20Project
-
-https://github.com/ciwen3/Public/tree/master/Education/Cisco%20Capstone%20Project
-
-https://github.com/ciwen3/Public/tree/master/Education/Speech%20275
-
-## Technical: 
+# Technical: 
 ### ChromeBook
 One of several Chromebook models I have turned into Linux Laptops. 
 
@@ -106,4 +104,4 @@ https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1
 
 
 
-# All of my Public projects, opinions and advice are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using any of my software or taking any of my advice.
+###### All of my Public projects, opinions and advice are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using any of my software or taking any of my advice.
