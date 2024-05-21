@@ -1,7 +1,4 @@
-# THREAT HUNT ADVISORY: 
-## Deleting or Resizing Shadow Copies by Ransomware Operations
-### Authored by: Christopher Iwen
-#### September 29, 2023 
+# Deleting or Resizing Shadow Copies by Ransomware Operations
 
 ### EXECUTIVE SUMMARY
 Ransomware operators want to make sure their victims can’t recover on their own. One way to do this is to remove all back-ups (Shadow Copies) using the command line. These techniques can be seen in recent Ransomware campaigns like the attack on MGM. 

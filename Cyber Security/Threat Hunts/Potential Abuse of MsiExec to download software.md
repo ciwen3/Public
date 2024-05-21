@@ -1,8 +1,13 @@
 # Potential Abuse of MsiExec to download software
-
+### EXECUTIVE SUMMARY
 MsiExec provides the means to install, modify, and perform operations on Windows Installer from the command line. MsiExec is the command-line utility for the Windows Installer and is thus commonly associated with executing installation packages MSI and MSP files. Msiexec.exe can also execute DLLs.
+
 Adversaries may abuse MsiExec to proxy execution of malicious payloads. MsiExec can be used to bypass application control solutions that do not account for its potential abuse. MsiExec execution may also be elevated to SYSTEM privileges if the AlwaysInstallElevated policy is enabled. MsiExec does not connect to the internet directly, so we expect to see no network calls from MsiExec.
+
 While MsiExec can only install MSI, MSP, and DLL files, it does not check the file extension. This means someone could change the file extension on a piece of MSI, MSP, or DLL malware to easily hide it from the average user. LokiBot, IcedID, Maze, QakBot, and Ragnar Locker have all used MsiExec to install their malware in the past. 
+
+### Hypothesis
+Using known tactics, techniques, and procedures (TTPs) for threat actors we can look for commands that initiate network connections from MsiExec. 
 
 ## MITRE ATT&CK 
 ### Tactics:
@@ -11,9 +16,34 @@ While MsiExec can only install MSI, MSP, and DLL files, it does not check the fi
 ### Techniques:
 • System Binary Proxy Execution: MsiExec https://attack.mitre.org/techniques/T1218/007/
 
+## TECHNICAL SUMMARY
+### Overview
+When functioning properly, MsiExec exhibits the following behavior:
+    • Single instance – There is typically only one msiexec.exe process running.
+    • Temporary processes – It starts up temporarily to handle installer packages and then shuts down.
+    • Child processes – May spawn msiexec.exe child processes when handling nested packages.
+    • Low resource usage – Requires little CPU or memory itself. High usage indicates an issue.
+    • No network calls – msiexec.exe does not connect to the internet directly.
+
 Location: C:\Windows\System32\msiexec.exe, C:\Windows\SysWOW64\msiexec.exe
 Default name: msiexec.exe
 Digitally signed by: Microsoft Corporation
+
+Using this information, we can hunt for MsiExec use outside of this context and alert on it as potentially malicious activity.
+
+### Red Flags
+    1. external internet connection (add internal IP chart for reference)
+        a. check IP or URl on OSINT tools like VT and AbuseIPdb.
+        b. Internal IP addresses can be ignored. 
+                • NOTE: there will be occasional false positives like the example below. 
+            "msiexec.exe" /qb /i 5.10.3.406.msi  <== this is not an IP  address. This is the name of the file. It took me a minute to figure that out. Thankfully that is not a valid IP address (the last octet is 406 and shouldn't go above 255) so there was no doubt. If you are unsure then check it using OSINT tools to verify.  
+    2. MsiExec being used to install formats other than .msi, .msp and .dll. MsiExec will only install .msi, .msp and .dll files but a hacker can easily rename the file so that the extension appears as .png or anything else and MsiExec will still run the file. This is because MsiExec doesn't check file extensions and will attempt to install anything it is told to.
+    3. When in doubt check with the client. 
+
+Using this information, we can hunt for MsiExec use outside of this context and alert on it as potentially malicious activity.
+
+### Threat Description 
+Hackers can abuse MsiExec to help them install malware and potentially bypass security controls. There is a large variation of commands that can accomplish this activity. The main thing that the malicious use of MsiExec have in common is using the tool to install a file from the internet rather than a local or intranet location. Using Regex and KQL we are able to look for this MsiExec internet commands. 
 
 ### PREVENTION RECOMMENDATIONS
 • Disable or Remove Feature or Program - Consider disabling the AlwaysInstallElevated policy to prevent elevated execution of Windows Installer packages. This can be done in the registry. for more information see: https://learn.microsoft.com/en-us/windows/win32/msi/alwaysinstallelevated

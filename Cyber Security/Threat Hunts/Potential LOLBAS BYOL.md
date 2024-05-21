@@ -1,4 +1,30 @@
 # Potential LOLBAS BYOL (Bring-Your-Own-Land)
+### EXECUTIVE SUMMARY
+Living Off the Land Binaries And Scripts (LOLBAS) have become an important set of tools for Advanced Persistent Threats (APTs) and other sophisticated hackers to use. This is because the tools are already in place, trusted, and have public shared knowledge on how to abuse those tools. An extension of this is Bring Your Own Land (BYOL), where the threat actor brings their own copy of the Microsoft approved and signed binary to hide malicious activity and bypass restrictions in place on the system.  The big indicator of this activity is that they exist in a place they are not expected to be. 
+
+### Hypothesis
+Using the data on https://lolbas-project.github.io/api/lolbas.csv we can craft queries to find malicious activity related to BYOL.  We will use these queries in Sentinels Log Analytics to hunt for possible malicious activity going back 90 days from the date on this document. If any possible malicious activity is found, we will follow up with an investigation.
+
+## MITRE ATT&CK
+There are no direct Bring Your Own Land Mitre Att&ck methods, but below are the kinds of activity it could be used for. 
+    • Privilege Escalation
+        ◦ Exploitation for Privilege Escalation
+    • Defense Evasion
+        ◦ Impair Defenses: Downgrade Attack
+
+### Mitigation Recommendations
+If Malicious activity is identified, an Incident Response Analyst should proceed to review the related activity and files to better understand the scope of what happened. For BYOL you would want to find out why the software is in an unexpected location and how it got there. You should also identify any commands that were run with the software in question. This can be done by searching the logs. 
+
+### References 
+    1. https://lolbas-project.github.io/api/lolbas.csv
+    2. https://lolbas-project.github.io/
+    3. https://attack.mitre.org/tactics/TA0004/
+    4. https://attack.mitre.org/techniques/T1068/
+    5. https://attack.mitre.org/tactics/TA0005/
+    6. https://attack.mitre.org/techniques/T1562/010/
+
+
+## Notes
 Living Off the Land Binaries And Scripts are a type of activity that misuses tools and executables that are already there because they are part of the operating system. In this case, Certutil.exe is being run from the wrong location. This can be an indication of BYOL (Bringing Your Own Land), where a malicious actor installs approved binaries in unauthorized locations to bypass security protocols. This uses an updated list of LOLBAS from "https://lolbas-project.github.io/api/lolbas.csv" to determine if something that is known to be abused is running from the wrong location. 
 
 ### How to handle: 
