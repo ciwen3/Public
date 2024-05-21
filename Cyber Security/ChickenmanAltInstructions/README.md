@@ -68,12 +68,11 @@ Try accessing the Wi-Fi access point of the Chicken with the cracked password. I
 Open the Chicken's webserver in a browser, and (if you are the red team) click the "Red Team" button to turn the LED of the game piece to your team's color.
 
 ## The Commands:
-
-List network adapters - ifconfig
-Put adapter in monitor mode (changes wlan0 to wlan0mon) - airmon-ng start wlan0
-Watch traffic on all channels (MUST BE IN MONITOR MODE FIRST) - airodump-ng wlan0mon
-Capture handshake on a channel - airodump-ng -w capturefile -c [channel number] wlan0mon
-Crack the handshake - aircrack-ng -w [password list] [capture file].cap
+- List network adapters - ifconfig
+- Put adapter in monitor mode (changes wlan0 to wlan0mon) - airmon-ng start wlan0
+- Watch traffic on all channels (MUST BE IN MONITOR MODE FIRST) - airodump-ng wlan0mon
+- Capture handshake on a channel - airodump-ng -w capturefile -c [channel number] wlan0mon
+- Crack the handshake - aircrack-ng -w [password list] [capture file].cap
 
 
 #### Verify that airmon-ng has no issues:
