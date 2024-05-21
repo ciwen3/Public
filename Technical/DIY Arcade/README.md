@@ -44,45 +44,45 @@ https://retropie.org.uk/download/
 
 
 ## Pictures: 
-![Drilled unpainted control panel ](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/1.jpg "Drilled unpainted control panel ")
+![Drilled unpainted control panel ](./photos/1.jpg "Drilled unpainted control panel ")
 
-![Unpainted frame](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/2.jpg "Unpainted frame")
+![Unpainted frame](./photos/2.jpg "Unpainted frame")
 
-![Unpainted frame](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/3.jpg "Unpainted frame")
+![Unpainted frame](./photos/3.jpg "Unpainted frame")
 
-![Unpainted frame](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/4.jpg "Unpainted frame")
+![Unpainted frame](./photos/4.jpg "Unpainted frame")
 
-![Top view of controls](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/5.jpg "Top view of controls")
+![Top view of controls](./photos/5.jpg "Top view of controls")
 
-![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/6.jpg "Wiring inside")
+![Wiring inside](./photos/6.jpg "Wiring inside")
 
-![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/7.jpg "Wiring inside")
+![Wiring inside](./photos/7.jpg "Wiring inside")
 
-![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/8.jpg "Wiring inside")
+![Wiring inside](./photos/8.jpg "Wiring inside")
 
-![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/9.jpg "Wiring inside")
+![Wiring inside](./photos/9.jpg "Wiring inside")
 
-![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/17.jpg "Wiring inside")
+![Wiring inside](./photos/17.jpg "Wiring inside")
 
-![Wiring inside](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/18.jpg "Wiring inside")
+![Wiring inside](./photos/18.jpg "Wiring inside")
 
-![Front door and lock in stalled](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/10.jpg "Front door and lock in stalled")
+![Front door and lock in stalled](./photos/10.jpg "Front door and lock in stalled")
 
-![Front door and lock in stalled](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/11.jpg "Front door and lock in stalled")
+![Front door and lock in stalled](./photos/11.jpg "Front door and lock in stalled")
 
-![Finished in Garage](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/12.jpg "Finished in Garage")
+![Finished in Garage](./photos/12.jpg "Finished in Garage")
 
-![Finished in Garage](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/13.jpg "Finished in Garage")
+![Finished in Garage](./photos/13.jpg "Finished in Garage")
 
-![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/14.jpg "Finished setup")
+![Finished setup](./photos/14.jpg "Finished setup")
 
-![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/15.jpg "Finished setup")
+![Finished setup](./photos/15.jpg "Finished setup")
 
-![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/16.jpg "Finished setup")
+![Finished setup](./photos/16.jpg "Finished setup")
 
-![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/19.jpg "Finished setup")
+![Finished setup](./photos/19.jpg "Finished setup")
 
-![Finished setup](https://github.com/ciwen3/Public/blob/master/DIY%20Arcade/photos/20.jpg "Finished setup")
+![Finished setup](./photos/20.jpg "Finished setup")
 
 ## References:
 ### I haven't looked at any of these in a long time I just copied them from an old email I sent myself when doing research. I take no responibility if the matterial has changed or is NSFW. 
