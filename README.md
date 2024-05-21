@@ -14,9 +14,9 @@ Created to hide ascii characters in pictures for retrieval by the same tool. Doe
 ### Ceasar Cypher 
 Implementation of a very old encryption cypher. It only works on letters of the alphabet. This means numbers and punctuation will not be encrypted. this is easy to add by changing the alphabet variables. 
 
-![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/Programming/python/ceasar/ceasar2.py
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/Programming/Python/ceasar/ceasar2.py
 ### CyptoPal Challenges
-![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/Programming/python/CryptoPals
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/Programming/Python/CryptoPals
 
 ### Find Unquoted Path Vulnerabilties
 Created to automate the process of finding unquoted path calls that could allow a  attacker to run malicious code for persistance or to elevate priviledges.
@@ -44,7 +44,7 @@ https://github.com/ciwen3/Public/tree/master/Programming/RubberDucky
 ## Prime Numbers: 
 I created these programs to test my theory that all prime numbers will have a remainder of 1 or 5 when divided by 6 (except 2 or 3, which are used derive the value of 6 in the equation).
 
-![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue) https://github.com/ciwen3/Public/tree/master/Programming/python/Prime-Counter
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue) https://github.com/ciwen3/Public/tree/master/Programming/Python/Prime-Counter
 
 
 ## Cyber Security:
