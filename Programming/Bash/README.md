@@ -2,7 +2,7 @@
 ![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 
-https://github.com/ciwen3/Public/tree/master/Bash/bedtime
+https://github.com/ciwen3/Public/tree/master/Programming/Bash/bedtime
 
 used to power down my kids Linux computers at a set time. the files can be installed anywhere so long as your kids don't have sudo access and you use the chattr command to make the scripts immutable.
 
@@ -10,7 +10,7 @@ used to power down my kids Linux computers at a set time. the files can be insta
 ![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 
-https://github.com/ciwen3/Public/blob/master/Bash/BurnItAll/BurnItAll.sh
+https://github.com/ciwen3/Public/blob/master/Programming/Bash/BurnItAll/BurnItAll.sh
 
 I helped a company with an infection, we figured out it was known as XCSSET. In my research of the Malware we found and the information online I put together a script to systematically download each version of the Malware from each server they have check its SHA256 hash against a list of already downloaded malware and if it is unique (to me) upload it to virus total. 
 
@@ -18,7 +18,7 @@ I helped a company with an infection, we figured out it was known as XCSSET. In 
 ![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 
-https://github.com/ciwen3/Public/blob/master/Bash/job-search.sh
+https://github.com/ciwen3/Public/blob/master/Programming/Bash/job-search.sh
 
 A fake script I wrote as a joke when looking for jobs. 
 
@@ -26,14 +26,14 @@ A fake script I wrote as a joke when looking for jobs.
 ![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 ## !!!DANGER!!! for educational purposes only! do not run ever. 
-https://github.com/ciwen3/Public/tree/master/Bash/NoiseMaker
+https://github.com/ciwen3/Public/tree/master/Programming/Bash/NoiseMaker
 
 
 # Tools
 ![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
 ![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
 
-- Awk https://github.com/ciwen3/Public/blob/master/Bash/Tools/AWK.md
-- Bash https://github.com/ciwen3/Public/blob/master/Bash/Tools/Bash.md
-- Sed https://github.com/ciwen3/Public/blob/master/Bash/Tools/SED.md
-- Wget https://github.com/ciwen3/Public/blob/master/Bash/Tools/wget-clonesite.md
+- Awk https://github.com/ciwen3/Public/blob/master/Programming/Bash/Tools/AWK.md
+- Bash https://github.com/ciwen3/Public/blob/master/Programming/Bash/Tools/Bash.md
+- Sed https://github.com/ciwen3/Public/blob/master/Programming/Bash/Tools/SED.md
+- Wget https://github.com/ciwen3/Public/blob/master/Programming/Bash/Tools/wget-clonesite.md
