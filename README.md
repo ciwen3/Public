@@ -20,7 +20,7 @@ A collection of information I have gathered to take the PNPT exam.
 
 Game to practice WiFi hacking. 
 
-https://github.com/ciwen3/Public/blob/master/Technical/ChickenmanAltInstructions/README.md
+![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) https://github.com/ciwen3/Public/blob/master/Technical/ChickenmanAltInstructions/README.md
 
 
 # Education:
