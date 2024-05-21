@@ -1,8 +1,8 @@
 # Office products spawning WMIC
 This analytic will look for Potential WMIC Abuse. Windows Management Instrumentation Command retrieves a huge range of information about local or remote computers. Makes configuration changes to multiple remote machines. The WMIC is a deprecated tool as of 2021. While it is unlikely to stop working for a few years, no new features will be added and it may eventually be removed. WMIC is a Feature on Demand (FoD) that's preinstalled by default in Windows 11. 
 
-For decoding a command see: https://gchq.github.io/CyberChef/
-For better understanding of the WMIC command see: https://ss64.com/nt/wmic.html
+- For decoding a command see: https://gchq.github.io/CyberChef/
+- For better understanding of the WMIC command see: https://ss64.com/nt/wmic.html
 
 ### Things of Note: 
     - /NODE: which is used to connect to remote devices. this can show up in any of the scenarios. 
