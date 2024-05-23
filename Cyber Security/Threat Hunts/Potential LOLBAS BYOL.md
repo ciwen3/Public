@@ -7,10 +7,10 @@ Using the data on https://lolbas-project.github.io/api/lolbas.csv we can craft q
 
 ## MITRE ATT&CK
 There are no direct Bring Your Own Land Mitre Att&ck methods, but below are the kinds of activity it could be used for. 
-    • Privilege Escalation
-        ◦ Exploitation for Privilege Escalation
-    • Defense Evasion
-        ◦ Impair Defenses: Downgrade Attack
+ - Privilege Escalation
+    - Exploitation for Privilege Escalation
+ - Defense Evasion
+    - Impair Defenses: Downgrade Attack
 
 ### Mitigation Recommendations
 If Malicious activity is identified, an Incident Response Analyst should proceed to review the related activity and files to better understand the scope of what happened. For BYOL you would want to find out why the software is in an unexpected location and how it got there. You should also identify any commands that were run with the software in question. This can be done by searching the logs. 
