@@ -46,6 +46,7 @@ References:
 13. https://gtfobins.github.io/
 14. https://lolbas-project.github.io/
 15. https://redcanary.com/threat-detection-report/
+16. https://wtfbins.wtf/
 
 
 
