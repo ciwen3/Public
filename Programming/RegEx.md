@@ -99,10 +99,14 @@ heck
 /\A[a-zA-Z0-9.!\#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+\z/
 ```
 
-
+# web requests
+HTTP, HTTPS, FTP, IPv4
+```regex
+(((http|https|ftp):\/\/)|((\d{1,3}\.){3}\d{1,3}))
+```
 
 
 
 # References:
 1. https://support.google.com/a/answer/1371417?hl=en#Match-Any-Email-Address-from-a-Spec
-2. 
+2. regex101.com
