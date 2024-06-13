@@ -32,23 +32,24 @@
 
 References: 
 1. https://arno0x0x.wordpress.com/2017/11/20/windows-oneliners-to-download-remote-payload-and-execute-arbitrary-code/
-2. https://ss64.com/
-3. https://www.reliaquest.com/blog/double-extortion-attack-analysis/
-4. https://www.cyborgsecurity.com/blog/50-threat-hunting-hypothesis-examples/
-5. https://attack.mitre.org/tactics/enterprise/
-6. https://attack.mitre.org/techniques/enterprise/
-7. https://research.splunk.com/detections/#endpoint
-8. https://hijacklibs.net/
-9. https://www.wicar.org/
-10. https://www.kqlsearch.com/
-11. https://github.com/infosecB/LOOBins
-12. https://www.loobins.io/
-13. https://gtfobins.github.io/
-14. https://lolbas-project.github.io/
-15. https://redcanary.com/threat-detection-report/
-16. https://wtfbins.wtf/
-17. https://research.splunk.com/stories/living_off_the_land/
-18. https://research.splunk.com/stories/
+2. https://www.eicar.org/download-anti-malware-testfile/
+3. https://ss64.com/
+4. https://www.reliaquest.com/blog/double-extortion-attack-analysis/
+5. https://www.cyborgsecurity.com/blog/50-threat-hunting-hypothesis-examples/
+6. https://attack.mitre.org/tactics/enterprise/
+7. https://attack.mitre.org/techniques/enterprise/
+8. https://research.splunk.com/detections/#endpoint
+9. https://hijacklibs.net/
+10. https://www.wicar.org/
+11. https://www.kqlsearch.com/
+12. https://github.com/infosecB/LOOBins
+13. https://www.loobins.io/
+14. https://gtfobins.github.io/
+15. https://lolbas-project.github.io/
+16. https://redcanary.com/threat-detection-report/
+17. https://wtfbins.wtf/
+18. https://research.splunk.com/stories/living_off_the_land/
+19. https://research.splunk.com/stories/
 
 
 
