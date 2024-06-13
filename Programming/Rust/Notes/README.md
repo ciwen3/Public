@@ -12,9 +12,19 @@
  - https://www.youtube.com/watch?v=tPs1uRqOnlk
  - https://www.youtube.com/watch?v=RyY01fRyGhM
 
-## Compile Rust Code
+## Manually Compile Rust Code
 ```bash
 rustc main.rs
+```
+
+## Compile with Cargo
+just bulild and test the code is not breaking any Rust rules. 
+```bash
+cargo build
+```
+OR bulild and test the code is not breaking any Rust rules and then run the compiled program. 
+```bash
+cargo run
 ```
 
 # Anatomy of a Rust Program
