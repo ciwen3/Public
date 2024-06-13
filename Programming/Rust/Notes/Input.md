@@ -22,3 +22,12 @@ io::stdin().read_line(&mut guess).expect("Failed to read line");
 ```
  - often wise to introduce a newline and other whitespace to help break up long lines when you call a method with the .method_name() syntax. 
  - read_line puts whatever the user enters into the string we pass to it, but it also returns a Result value.
+
+
+
+## Arguments
+On executing the program as main.exe 1 2 3 4, the output will be −
+```
+No of elements in arguments is :5
+```
+
