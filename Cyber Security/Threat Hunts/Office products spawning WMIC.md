@@ -18,9 +18,6 @@ Office apps shouldn't run WMIC commands. This should be reported right away. if 
 2. obfuscated code (base64, rot13, etc)
 3. any kind of encryption taking place on the device
 
-### Reference:
-https://services-na.insight.com/now/nav/ui/classic/params/target/kb_view.do%3Fsys_kb_id%3D0376e53593014a50cf8730384dba10bd%26sysparm_rank%3D1%26sysparm_tsqueryId%3Dfc40941293ed4a1050873bba6aba105c
-
 # KQL:
 ```kql
 //Office products spawning WMI
