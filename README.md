@@ -8,8 +8,6 @@ https://github.com/ciwen3/Public/tree/master/Cyber%20Security/vuln-report
 ### Investigations
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Investigations
 
-### KQL 
-![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) https://github.com/ciwen3/Public/blob/master/Cyber%20Security/KQL
 
 ### PNPT Study & Attack repo
 A collection of information I have gathered to take the PNPT exam. 
@@ -24,7 +22,7 @@ Game to practice WiFi hacking.
 
 
 # Education:
-### Documents (Certifications, Degree & GED)
+### Documents 
 https://github.com/ciwen3/Public/tree/master/Education/Documents
 
 ### Class Projects
@@ -49,10 +47,13 @@ Created to hide ascii characters in pictures for retrieval by the same tool. Doe
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python3-blue)  https://github.com/ciwen3/Public/tree/master/Programming/Python/Steganography
 
-### Ceasar Cypher 
-Implementation of a very old encryption cypher. It only works on letters of the alphabet. This means numbers and punctuation will not be encrypted. this is easy to add by changing the alphabet variables. 
+### Ceasar Cipher 
+Implementation of a very old encryption cipher. It only works on letters of the alphabet. This means numbers and punctuation and spacing will be removed. this is easy to add by changing the alphabet variables, and adding anything you would like to keep. 
+
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Rust-blue) https://github.com/ciwen3/Public/tree/master/Programming/Rust/Projects/caesar_cipher
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) https://github.com/ciwen3/Public/blob/master/Programming/Python/CeasarCipher/ceasar2.py
+
 ### CyptoPal Challenges
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-PythonMixed-blue) https://github.com/ciwen3/Public/tree/master/Programming/Python/CryptoPals
 
@@ -62,10 +63,7 @@ Created to automate the process of finding unquoted path calls that could allow 
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) https://github.com/ciwen3/Public/blob/master/Programming/C%2B%2B/Unquoted-Path-Vuln
 
 ### Burn It All
-![Screenshot](https://img.shields.io/badge/Language-Bash-blue)
-![Screenshot](https://img.shields.io/badge/Platform-Linux-brightgreen)
-
-https://github.com/ciwen3/Public/blob/master/Programming/Bash/BurnItAll/BurnItAll.sh
+![Screenshot](https://img.shields.io/badge/Platform-Linux-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Bash-blue) https://github.com/ciwen3/Public/blob/master/Programming/Bash/BurnItAll/BurnItAll.sh
 
 I helped with an infection known as XCSSET. In my research of the Malware found and the information online, I put together a script to systematically download each version of the Malware from each server they have check its SHA256 hash against a list of already downloaded malware and if it is unique (to me) upload it to virus total. 
 
