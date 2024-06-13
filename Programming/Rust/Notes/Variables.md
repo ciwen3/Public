@@ -46,3 +46,13 @@ fn main() {
     let mut spaces = "   ";
     spaces = spaces.len();
 ```
+
+# convert variable type
+```
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+Rust allows us to shadow the previous value of guess with a new one. Shadowing lets us reuse the guess variable name rather than forcing us to create two unique variables
+
+ - ```trim()``` method on a String instance will eliminate any whitespace at the beginning and end
+ - ```parse()``` method on strings converts a string to another type
+ - ```let guess: u32``` The colon (:) after guess tells Rust we’ll annotate the variable’s type
