@@ -2,6 +2,8 @@
  - https://www.rust-lang.org/learn
  - https://doc.rust-lang.org/rust-by-example/
  - https://www.youtube.com/watch?v=RU7BYxmSBNg
+ - https://rust-classes.com/
+ - https://www.tutorialspoint.com/rust/index.htm
 
 ## Writing Linux Kernel Modules in Rust
  - https://www.linuxfoundation.org/webinars/writing-linux-kernel-modules-in-rust
