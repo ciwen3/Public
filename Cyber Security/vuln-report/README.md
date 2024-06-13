@@ -10,8 +10,8 @@
 usually found using google dorks and related to .pem .key or api keys
 
 1. Weathernews Inc (wni.co.jp): May 13, 2021 - Sensitive data exposure, found private keys on several publicly accessable (no login required and google searchable) servers.
-2. [Redacted] Resorts: June 12, 2024 - Sensitive data exposure, found private key
-3. [Redacted] Customs: June 12, 2024 - Sensitive data exposure, found private keys
+2. [Redacted]Resorts.com: June 12, 2024 - Sensitive data exposure, found private key
+3. [Redacted]Custom.com: June 12, 2024 - Sensitive data exposure, found private keys
 
 ##### Examples:
 - intitle:"index of" "*.cert.pem" | "*.key.pem"
