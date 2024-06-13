@@ -32,14 +32,7 @@ For instance, https://github.com/monosoul/MS-Deployment-toolkit-scripts/blob/mas
 
 # KQL:
 ```kql
-let suppression = SecurityAlert // Insight Suppression
-    | where TimeGenerated >= ago(14d) // Insight Suppression
-    | where AlertName == "Deleting or Resizing Shadow Copies - Insight Custom Threat Hunt" // Insight Suppression
-    | mv-expand parse_json(Entities) // Insight Suppression
-   | extend HostName_ = tostring(Entities.HostName)
-    | where isnotempty(HostName_) // Inisght Suppression
-    | distinct HostName_; // Inisght Suppression;
-    let DeleteShadow1 = @'(?i)(.*)(vssadmin|wbadmin)(.+)(delete|resize)+(.?)(shadowstorage|shadows|catalog)(.+)'
+let DeleteShadow1 = @'(?i)(.*)(vssadmin|wbadmin)(.+)(delete|resize)+(.?)(shadowstorage|shadows|catalog)(.+)'
 ;
 let DeleteShadow2 = @'(?i)(.*)(wmic|Get-WmiObject)(.+)(shadowcopy)(.+)(delete)?'
 ; 
