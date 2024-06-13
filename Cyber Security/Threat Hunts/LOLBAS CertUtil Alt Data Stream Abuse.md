@@ -6,14 +6,13 @@ To view the hidden data streams in CMD run the following command in the folder t
 CMD: "dir /r"
 
 ### References: 
-https://infosecwriteups.com/alternate-data-streams-ads-54b144a831f1
-https://lolbas-project.github.io/lolbas/Binaries/Certutil/
-https://www.sentinelone.com/blog/malware-living-off-land-with-certutil/
-https://www.bleepingcomputer.com/forums/t/674836/locking-down-certutil/
+ - https://infosecwriteups.com/alternate-data-streams-ads-54b144a831f1
+ - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+ - https://www.sentinelone.com/blog/malware-living-off-land-with-certutil/
+ - https://www.bleepingcomputer.com/forums/t/674836/locking-down-certutil/
 
 # KQL:
 ```kql
-//Created by Christopher Iwen for Insight on 08/28/2023
 let CertutilAltDataStream = @'(?i)(.*)(certutil)(.+)(\s([a-z]\:\\)?\w+(\:)\w+\s)'
 ; 
 let SEvent = SecurityEvent
