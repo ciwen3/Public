@@ -661,3 +661,9 @@ On executing the program as main.exe 1 2 3 4, the output will be −
 No of elements in arguments is :5
 sum is 10
 ```
+
+
+
+
+# isuing commands
+https://fitech101.aalto.fi/programming-languages/rust/8-interaction-input-and-os/
