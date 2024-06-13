@@ -48,6 +48,7 @@ References:
 15. https://redcanary.com/threat-detection-report/
 16. https://wtfbins.wtf/
 17. https://research.splunk.com/stories/living_off_the_land/
+18. https://research.splunk.com/stories/
 
 
 
