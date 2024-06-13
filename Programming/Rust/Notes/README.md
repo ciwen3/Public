@@ -667,5 +667,5 @@ sum is 10
 
 
 
-# isuing commands
+# Issuing commands
 https://fitech101.aalto.fi/programming-languages/rust/8-interaction-input-and-os/
