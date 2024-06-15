@@ -102,5 +102,62 @@ This Rust program reads a line of input from the standard input, prints the numb
 
 
 
+
+
+
+
+
+
+## Example #3
+To issue a command using the operating system's terminal in Rust, you can use the `std::process::Command` module. Here's a basic example of how you can execute a command from a Rust program:
+
+```rust
+use std::process::Command;
+
+fn main() {
+    // Command to execute (example: list files in current directory)
+    let command = "ls";
+
+    // Execute the command
+    let output = Command::new(command)
+        .output()
+        .expect("Failed to execute command");
+
+    // Check if the command was successful
+    if output.status.success() {
+        // Convert the output to a string (assuming UTF-8)
+        let stdout = String::from_utf8_lossy(&output.stdout);
+        println!("Command output:\n{}", stdout);
+    } else {
+        // Print any error messages
+        let stderr = String::from_utf8_lossy(&output.stderr);
+        eprintln!("Error executing command: {}", stderr);
+    }
+}
+```
+
+### Explanation:
+
+1. **Importing `Command`**: `use std::process::Command;` brings the `Command` struct into scope, which allows you to construct and execute commands.
+2. **Defining the Command**: `let command = "ls";` specifies the command you want to execute. Replace `"ls"` with any command you would like to run.
+3. **Executing the Command**: `Command::new(command)` creates a new command instance. Additional methods like `.arg("argument")` can be chained to specify command-line arguments if needed.
+4. **Handling Output**: `.output()` method executes the command and waits for it to complete. It returns a `std::process::Output` struct.
+5. **Checking Success**: `output.status.success()` checks if the command was executed successfully.
+6. **Accessing Output**: `output.stdout` and `output.stderr` contain the standard output and standard error streams of the command, respectively. They are returned as `Vec<u8>` buffers, which you can convert to strings using `String::from_utf8_lossy()`.
+7. **Printing Results**: Depending on whether the command succeeded or failed, you can print the output or error messages accordingly.
+
+### Additional Notes:
+- Make sure to handle errors properly, as shown in the example (`expect` and checking `success()`).
+- Depending on your operating system and the command you want to execute, you may need to adjust the command syntax and arguments.
+- For more complex scenarios, such as streaming input to a process or handling interactive commands, Rust provides additional capabilities in its `process` module.
+
+This example demonstrates the basic framework for executing commands within a Rust program and capturing their output. Adjustments can be made based on specific requirements or additional functionality needed.
+
+
+
+
+
+
+
 ### Reference:
 https://fitech101.aalto.fi/programming-languages/rust/8-interaction-input-and-os/
