@@ -16,8 +16,10 @@ fn main(){
 }
 ```
 
-The program will generate a file main.exe once compiled. Multiple command line parameters should be separated by space. Execute main.exe from the terminal as main.exe hello tutorialspoint.
-
+The program will generate a file main.exe once compiled. Multiple command line parameters should be separated by space. Execute main.exe from the terminal as 
+```bash
+main.exe hello tutorialspoint.
+```
 NOTE − hello and tutorialspoint are commandline arguments.
 
 Output:
