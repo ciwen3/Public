@@ -119,7 +119,10 @@ else {
 This is more Powershell code
 1. Set-StrictMode -Version 2: When Strict Mode is enabled, violating the set programming rules will produce terminating errors in our scripts. Strict Mode to Version 2.0 will prohibit you from referencing variables that have not been initialized.
  And will also prohibit you from referencing initialized variables, in addition to prohibiting references to non-existent properties on objects, function calls using the syntax for calling methods, and variables without names.
-2. 
+2. $DoIt: declaring a variable that is equal to everything between the 'at' signs '@'
+3. function func_get_proc_address: 
+4. function func_get_delegate_type:
+5. 
 
 
 
