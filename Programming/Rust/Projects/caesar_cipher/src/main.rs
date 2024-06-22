@@ -14,6 +14,7 @@ fn main() {
 
 //===========declare variables===========
     let mut message_offset = String::new();
+//    let mut real_offset: i32 = 0;
     let mut original_message = String::new();
     let mut hidden_message = String::new();
     let mut encoding = String::new();
@@ -61,73 +62,51 @@ fn main() {
         .read_line(&mut encoding)
         .expect("Failed to read line");
     // pull the first char, make upper case, and check it
-//    let mut coding: &str = encoding.trim().expect("Please type Encrypt or Decrypt.");
     println!("{}", encoding);
 
     for character in encoding.chars() {
         println!("{}", character);
-        if character.to_ascii_uppercase() == 'E' {
-            println!("Encrypting");
-            //===========loop through each character in original message===========
-                    for input_character in original_message.chars() {
-    
-            //===========loop through each index===========
-                        for index in 0..26 {
-                            //check each character versus the array
-                            if alpha_array[index] == input_character.to_ascii_uppercase() {
-                                //if array character is equal to input character
-                                //add offset to index and return character at that index
-                                let new_index = index + (message_offset as usize);
-                                if new_index > 26 {
-                                    let new_index = new_index - 26; 
-                                    let new_str = alpha_array[new_index].to_string();
-                                    hidden_message.push_str(&new_str);
-                                    //exit loop to save time. 
-                                    break;
-                                } //end if new_index
-                                //next few lines should be a function cause it gets used more than once
-                                let new_str = alpha_array[new_index].to_string();
-                                hidden_message.push_str(&new_str);
-                                //exit loop to save time. 
-                                break;
-                            } //end if alpha_array[index]
-                        } //end for index
-                    } //end for input_character
-            break;
-        } else  if character.to_ascii_uppercase() == 'D' {
-            println!("Decrypting");
-            //===========loop through each character in original message===========
-                    for input_character in original_message.chars() {
-    
-            //===========loop through each index===========
-                        for index in 0..26 {
-                            //check each character versus the array
-                            if alpha_array[index] == input_character.to_ascii_uppercase() {
-                                //if array character is equal to input character
-                                //add offset to index and return character at that index
-                                let new_index = index + (26 - message_offset as usize);
-                                if new_index > 26 {
-                                    let new_index = new_index - 26; 
-                                    let new_str = alpha_array[new_index].to_string();
-                                    hidden_message.push_str(&new_str);
-                                    //exit loop to save time. 
-                                    break;
-                                } //end if new_index
-                                //next few lines should be a function cause it gets used more than once
-                                let new_str = alpha_array[new_index].to_string();
-                                hidden_message.push_str(&new_str);
-                                //exit loop to save time. 
-                                break;
-                            } //end if alpha_array[index]
-                        } //end for index
-                    } //end for input_character
-            break;
+        let mut real_offset: i32 = if character.to_ascii_uppercase() == 'D' {
+            26 - message_offset
+//            println!("Decrypting");
+//            break;
+        } else if character.to_ascii_uppercase() == 'E' {
+            message_offset
+//            println!("Encrypting");
+//            break;
         } else {
             println!("Please try again and enter 'Encrypt' or 'Decrypt'");
             process::exit(0);
-        }
-
+        };
+        break real_offset;
     }
+
+
+//===========loop through each character in original message===========
+    for input_character in original_message.chars() {
+
+//===========loop through each index===========
+        for index in 0..26 {
+            //check each character versus the array
+            if alpha_array[index] == input_character.to_ascii_uppercase() {
+                //if array character is equal to input character
+                //add offset to index and return character at that index
+                let new_index = index + (real_offset as usize);
+                if new_index > 26 {
+                    let new_index = new_index - 26; 
+                    let new_str = alpha_array[new_index].to_string();
+                    hidden_message.push_str(&new_str);
+                    //exit loop to save time. 
+                    break;
+                } //end if new_index
+                //next few lines should be a function cause it gets used more than once
+                let new_str = alpha_array[new_index].to_string();
+                hidden_message.push_str(&new_str);
+                //exit loop to save time. 
+                break;
+            } //end if alpha_array[index]
+        } //end for index
+    } //end for input_character
 
 
 

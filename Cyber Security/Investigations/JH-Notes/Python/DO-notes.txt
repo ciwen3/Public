@@ -1,0 +1,133 @@
+ Python module that can determine how many items need to be replaced and what to replace them with in a given string, you can use a combination of string manipulation and regular expressions.
+
+also removes concatenation
+
+```
+import re
+
+def parse_format_string(s):
+    # Find all occurrences of {} in the string
+    placeholders = re.findall(r'{}', s)
+    # Determine the number of placeholders
+    num_placeholders = len(placeholders)
+    # Split the string on the placeholders
+    parts = s.split('{}')
+    # Return the number of placeholders and the parts of the string
+    return num_placeholders, parts
+
+def format_string(s, values):
+    num_placeholders, parts = parse_format_string(s)
+    # Check that the number of values matches the number of placeholders
+    if len(values) != num_placeholders:
+        raise ValueError('Number of values does not match number of placeholders')
+    # Zip the values and parts together and join them with the values
+    formatted_string = ''.join([val + part for val, part in zip(values, parts)])
+    return formatted_string
+
+def print_formatted_string(s, values):
+    formatted_string = format_string(s, values)
+    print(formatted_string)
+
+```
+
+You can then use this module to format and print a string as follows:
+
+```
+s = '{}nabl{}Sc{}i{}ptlockLogging'
+values = ('pt', 'r', 'e', 'E')
+print_formatted_string(s, values)
+```
+
+This will output the formatted string 'EnableScripting'.
+
+Note that this example assumes that the placeholders in the format string are represented by {}. If the placeholders are represented by {n}, where n is a number, you can use the format() method of strings instead of regular expressions to parse the format string and substitute the values.
+
+
+
+
+
+
+
+```
+import re
+
+def parse_format_string(s):
+    # Find all occurrences of {} in the string
+    placeholders = re.findall(r'{}', s)
+    # Determine the number of placeholders
+    num_placeholders = len(placeholders)
+    # Split the string on the placeholders
+    parts = s.split('{}')
+    # Return the number of placeholders and the parts of the string
+    return num_placeholders, parts
+
+def format_string(s, values):
+    num_placeholders, parts = parse_format_string(s)
+    # Check that the number of values matches the number of placeholders
+    if len(values) != num_placeholders:
+        raise ValueError('Number of values does not match number of placeholders')
+    # Zip the values and parts together and join them with the values
+    formatted_string = ''.join([val + part for val, part in zip(values, parts)])
+    return formatted_string
+
+def print_formatted_string(s, values):
+    formatted_string = format_string(s, values)
+    print(f"gwcY='{formatted_string}'")
+
+# Test the program
+s = '{}nabl{}Sc{}i{}ptlockLogging'
+values = ('pt', 'r', 'e', 'E')
+print_formatted_string(s, values)
+
+```
+
+
+
+
+```
+import re
+
+def parse_format_string(s):
+    # Find all occurrences of {} in the string
+    placeholders = re.findall(r'{(\d+)}', s)
+    # Determine the number of placeholders
+    num_placeholders = len(placeholders)
+    # Split the string on the placeholders
+    parts = re.split(r'{(\d+)}', s)
+    # Return the number of placeholders and the parts of the string
+    return num_placeholders, parts
+
+def format_string(s, values):
+    num_placeholders, parts = parse_format_string(s)
+    # Check that the number of values matches the number of placeholders
+    if len(values) != num_placeholders:
+        raise ValueError('Number of values does not match number of placeholders')
+    # Zip the values and parts together and join them with the values
+    formatted_string = ''.join([parts[i] + values[int(parts[i+1])] for i in range(0, len(parts), 2)])
+    return formatted_string
+
+def print_formatted_string(s, values):
+    formatted_string = format_string(s, values)
+    print(f"gwcY='{formatted_string}'")
+
+# Take input from a human
+s = input("Enter the format string: ")
+values = input("Enter the values as a comma-separated list: ").split(',')
+print_formatted_string(s, values)
+```
+
+This revised program will prompt the user to enter the format string and the values as a comma-separated list, and then it will print the formatted string.
+
+For example, if the user inputs the following:
+
+```
+Enter the format string: '{3}nabl{2}Sc{1}i{0}ptlockL{4}gging'
+Enter the values as a comma-separated list: 'pt', 'r', 'e', 'E', 'o'
+```
+
+The program will output:
+
+```
+gwcY='EnableScriptBlockLogging'
+```
+

