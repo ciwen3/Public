@@ -176,6 +176,10 @@ for ($x = 0; $x -lt $var_code.Count; $x++) {
 write-host $var_code
 '@
 ```
+### Execute modified code:
+```powershell
+iex $DoIt
+```
 
 ### Output:
 ```
