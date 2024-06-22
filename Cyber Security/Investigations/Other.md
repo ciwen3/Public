@@ -1,8 +1,9 @@
 You find the following malicious PowerShell command during your investigation. What does it do? 
 
 # Summary:
-This code is obfuscated multiple times in various ways. it uses BASE64 3 times to hide the code in multiple nested layers of abstraction. ultimately it runs some shell code. Below is a step by step break down of what is going on. 
+This code is obfuscated multiple times in various ways. it uses BASE64 3 times to hide the code in multiple nested layers of abstraction. ultimately it runs some shell code that contains a lot of ASCII symbols. This code contains some human readable parts. These include "User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; BOIE9;PTBR)" and url to "bad[.]modepush[.]io". This subdomain doesnt't exist anymore. the domain modepush[.]io is owned by a cyber security company and is not listed as a threat on any OSINT tools. 
 
+Below is a step by step break down of what is going on. 
 
 ## Original Command: 
 ```cmd
