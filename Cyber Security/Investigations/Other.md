@@ -185,4 +185,4 @@ This has a lot of ASCII symbols included.
 
 ### Readable Strings
 1. User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; BOIE9;PTBR)
-2. bad.modepush.io
+2. bad[.]modepush[.]io
