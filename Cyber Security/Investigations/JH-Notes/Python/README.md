@@ -276,7 +276,8 @@ print(replaced_code)
 
 
 
-
+### references: 
+https://isc.sans.edu/diary/Did+You+Spot+InvokeExpression/26762
 
 
 
