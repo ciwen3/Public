@@ -32,3 +32,7 @@ python $FileName
 - could I load contents directly into ram? 
 
 
+
+
+### references: 
+https://isc.sans.edu/diary/Did+You+Spot+InvokeExpression/26762
