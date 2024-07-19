@@ -86,20 +86,15 @@ https://retropie.org.uk/download/
 
 ## References:
 ### I haven't looked at any of these in a long time I just copied them from an old email I sent myself when doing research. I take no responibility if the matterial has changed or is NSFW. 
-http://www.mts.net/~coyne/images/050526_003.jpg
-
-http://nfgcontrols.com/grafx/HoriRAPV3.jpg
-
-http://www.herzberg.net/mame/images/Mamepanel.gif
-
-http://www.slagcoin.com/joystick/layout/cluster36_s.png
-
-http://blog.petrockblock.com/2014/12/29/controlblock-power-switch-and-io-for-the-raspberry-pi/
-
-http://www.mameroom.com/webstore.asp?productid=UAIIKIT&category=136
-
-http://www.mameroom.com/manuals/UAIIKit_Manual.pdf
-
-http://shop.xgaming.com/products/artwork-for-x-arcade-machine
-
-http://buildahomearcade.com/planning-and-design/planning-the-control-panel
+1. http://www.mts.net/~coyne/images/050526_003.jpg
+2. http://nfgcontrols.com/grafx/HoriRAPV3.jpg
+3. http://www.herzberg.net/mame/images/Mamepanel.gif
+4. http://www.slagcoin.com/joystick/layout/cluster36_s.png
+5. http://blog.petrockblock.com/2014/12/29/controlblock-power-switch-and-io-for-the-raspberry-pi/
+6. http://www.mameroom.com/webstore.asp?productid=UAIIKIT&category=136
+7. http://www.mameroom.com/manuals/UAIIKit_Manual.pdf
+8. http://shop.xgaming.com/products/artwork-for-x-arcade-machine
+9. http://buildahomearcade.com/planning-and-design/planning-the-control-panel
+10. https://pdroms.de/
+11. https://www.zophar.net/pdroms.html
+12. https://www.mamedev.org/roms/
