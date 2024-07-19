@@ -3,7 +3,7 @@
 ![Screenshot](https://img.shields.io/badge/Platform-Windows-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Kusto--Query--Language-blue) https://github.com/ciwen3/Public/tree/master/Cyber%20Security/Threat%20Hunts
 
 ### Cybersecurity Bootcamp Videos
-https://github.com/ciwen3/Public/blob/master/Cyber%20Security/BootCamp/BootCampRecordingLinks2023-2024.csv
+![Screenshot](https://img.shields.io/badge/Platform-Zoom-darkgreen) ![Screenshot](https://img.shields.io/badge/Content-Videos-blue) https://github.com/ciwen3/Public/blob/master/Cyber%20Security/BootCamp/BootCampRecordingLinks2023-2024.csv
 
 ### Vuln Reports
 https://github.com/ciwen3/Public/tree/master/Cyber%20Security/vuln-report
