@@ -28,11 +28,11 @@ This information is here in case an investigation is needed on the breached comp
 2. Queue Manager Artefacts Aka State Files - C:\ProgramData\Microsoft\Network\Downloader\qmgr1.dat  
 3. Windows Event Logs - C:\Windows\System32\Winevt\Logs\Microsoft-Windows-Bits-ClientOperational.evtx 
 
-Event ID 3: information about the job creation 
-Event ID 59: information about the start of the service, "Bytes Transferred" value is zero. 
-Event ID 60: status of the job 
-Event ID 61: download failed. 
-Event ID 4: completion of the job, "Bytes Transferred" value is downloaded file size. 
+- Event ID 3: information about the job creation 
+- Event ID 59: information about the start of the service, "Bytes Transferred" value is zero. 
+- Event ID 60: status of the job 
+- Event ID 61: download failed. 
+- Event ID 4: completion of the job, "Bytes Transferred" value is downloaded file size. 
 
 If you don't know what the file name and download location is, then you can use these logs to get file size and time of file creation and use that to search for the file in question. 
 
