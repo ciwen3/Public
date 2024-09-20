@@ -81,9 +81,9 @@ https://github.com/ciwen3/Public/tree/master/Programming/Python/Steganography
 ### Ceasar Cipher 
 Implementation of a very old encryption cipher. It only works on letters of the alphabet. This means numbers and punctuation and spacing will be removed. this is easy to add by changing the alphabet variables, and adding anything you would like to keep. 
 
-![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Rust-blue) 
+![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-C++-blue) 
 
-https://github.com/ciwen3/Public/tree/master/Programming/Rust/Projects/caesar_cipher
+[https://github.com/ciwen3/Public/tree/master/Programming/Rust/Projects/caesar_cipher](https://github.com/ciwen3/Public/tree/master/Programming/C%2B%2B/CaesarCipher)
 
 ![Screenshot](https://img.shields.io/badge/Platform-Universal-darkgreen) ![Screenshot](https://img.shields.io/badge/Language-Python2-blue) 
 
