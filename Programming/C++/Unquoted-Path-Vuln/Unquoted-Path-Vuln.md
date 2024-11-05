@@ -41,4 +41,5 @@ C:\WINDOWS\system32>
 3. https://ss64.com/nt/icacls.html
 
 ## how to fix:
-https://www.commonexploits.com/unquoted-service-paths/
+1. https://www.commonexploits.com/unquoted-service-paths/
+2. https://web.archive.org/web/20210421085608/https://www.commonexploits.com/unquoted-service-paths/
