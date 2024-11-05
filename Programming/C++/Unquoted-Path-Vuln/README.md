@@ -100,6 +100,11 @@ C:\Program Files (x86)\Some Program\run.exe
 By placing my program in C:\Program.exe the vulnerable program will cause my program to run and give you the name of the user it was run as, what privileges the user has, what command was used to start Program.exe, the Process ID for that Command, and the location of the application that ran the command. 
 
 ## Alternate Searchs:
+one liner script that would just list me the services that are set to auto start and were unquoted that I could just run without uploading any binary files or exploiting
+```
+wmic service get name,displayname,pathname,startmode |findstr /i "auto" |findstr /i /v "c:\windows\\" |findstr /i /v """
+```
+
 ```
 wmic service get name, pathname, displayname, startmode | findstr /i /v "C:\Windows\\" | findstr /i /v """
 wmic service get name, pathname, displayname, startmode | findstr /i "Auto" | findstr /i /v "C:\Windows\\" | findstr /i /v """
@@ -111,4 +116,13 @@ sc qc <service-name>
 1. add loop to check for multiple pids
 2. other commands to check for installed unquoted path vulnerability
 3. add timestamp
-4. write all information to a log file 
+4. write all information to a log file
+
+## References:
+1. https://isc.sans.edu/forums/diary/Help+eliminate+unquoted+path+vulnerabilities/14464/
+2. https://medium.com/@SumitVerma101/windows-privilege-escalation-part-1-unquoted-service-path-c7a011a8d8ae
+3. https://ss64.com/nt/icacls.html
+
+## how to fix:
+1. https://www.commonexploits.com/unquoted-service-paths/
+2. https://web.archive.org/web/20210421085608/https://www.commonexploits.com/unquoted-service-paths/
