@@ -45,3 +45,12 @@ Remove-Item -Path $env:TEMP -Recurse -Force -ErrorAction SilentlyContinue
 
 
 ```
+
+
+```Powershell
+# Clear temp files
+Get-ChildItem "$env:TEMP", "$env:TMP", "$env:SystemDrive\Windows\Temp", "$env:SystemDrive\Temp" -Recurse -Force -ErrorAction SilentlyContinue | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+
+# Clear recycling bin
+Clear-RecycleBin -Force -ErrorAction SilentlyContinue
+```
