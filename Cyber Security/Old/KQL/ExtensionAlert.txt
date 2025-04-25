@@ -1,0 +1,50 @@
+let extinfo = datatable (extfile: string, extname: string)
+[
+    "pgbcplleclmbnnkaddpnijckhfoheaoc", "testingextensionlookup",
+    "nnpnnpemnckcfdebeekibpiijlicmpom", "VPNCity",
+    "kkodiihpgodmdankclfibbiphjkfdenh", "Parrot Talks",
+    "oaikpkmjciadfpddlpjjdapglcihgdle", "Uvoice",
+    "dpggmcodlahmljkhlmpgpdcffdaoccni", "Internxt VPN",
+    "acmfnomgphggonodopogfbmkneepfgnh", "Bookmark Favicon Changer",
+    "mnhffkhmpnefgklngfmlndmkimimbphc", "Castorus",
+    "cedgndijpacnfbdggppddacngjfdkaca", "Wayin AI",
+    "bbdnohkpnbkdkmnkddobeafboooinpla", "Search Copilot AI Assistant for Chrome",
+    "egmennebgadmncfjafcemlecimkepcle", "VidHelper - Video Downloader",
+    "bibjgkidgpfbblifamdlkdlhgihmfohh", "AI Assistant - ChatGPT and Gemini for Chrome",
+    "befflofjcniongenjmbkgkoljhgliihe", "TinaMind - The GPT-4o-powered AI Assistant!",
+    "pkgciiiancapdlpcbppfkmeaieppikkk", "Bard AI chat",
+    "llimhhconnjiflfimocjggfjdlmlhblm", "Reader Mode",
+    "oeiomhmbaapihbilkfkhmlajkeegnjhe", "Primus (prev. PADO)",
+    "ekpkdmohpdnebfedjjfklhpefgpgaaji", "Tackker - online keylogger tool",
+    "epikoohpebngmakjinphfiagogjcnddm", "AI Shop Buddy",
+    "miglaibdlgminlepgeifekifakochlka", "Sort by Oldest",
+    "eanofdhdfbcalhflpbdipkjjkoimeeod", "Rewards Search Automator",
+    "ogbhbgkiojdollpjbhbamafmedkeockb", "Earny - Up to 20% Cash Back",
+    "bgejafhieobnfpjlpcjjggoboebonfcg", "ChatGPT Assistant - Smart Search",
+    "igbodamhgjohafcenbcljfegbipdfjpk", "Keyboard History Recorder",
+    "mbindhfolmpijhodmgkloeeppmkhpmhc", "Email Hunter",
+    "hodiladlefdpcbemnbbcpclbmknkiaem", "Visual Effects for Google Meet",
+    "pajkjnmeojmbapicmbpliphjmcekeaac", "Cyberhaven security extension V3",
+    "ndlbedplllcgconngcnfmkadhokfaaln", "GraphQL Network Inspector",
+    "epdjhgbipjpbbhoccdeipghoihibnfja", "GPT 4 Summary with OpenAI",
+    "cplhlgabfijoiabgkigdafklbhhdkahj", "Vidnoz Flex - Video recorder & Video share",
+    "jiofmdifioeejeilfkpegipdjiopiekl", "YesCaptcha assistant",
+    "hihblcmlaaademjlakdpicchbjnnnkbo", "Proxy SwitchyOmega (V3)",
+    "lbneaaedflankmgmfbmaplggbmjjmbae", "ChatGPT App",
+    "eaijffijbobmnonfhilihbejadplhddo", "Web Mirror",
+    "hmiaoahjllhfgebflooeeefeiafpkfde", "Hi AI"
+];
+DeviceFileEvents
+| where FolderPath has_any (
+    @"/Library/Application Support/Google/Chrome/",
+    @"Library/Application Support/Microsoft/Microsoft Edge/",
+    @"AppData\Local\Google\Chrome\",
+    @"AppData\Local\Microsoft\Edge"
+)
+| where FolderPath has "Extensions" or FolderPath has "Webstore Downloads"
+| where ActionType == "FileCreated"
+| extend file = tostring(split(FileName, "_", 0))
+| extend extfile = trim_end(@'\"\]', trim_start(@'\[\"', file))
+| where extfile has_any (extinfo)
+| join extinfo on extfile
+ 
