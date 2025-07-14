@@ -1,0 +1,104 @@
+1. check $PATH variables 
+	- echo $PATH
+	- look for unexpected or hidden files listed at the front of this variable
+
+2. Look for Processes with the Binary Deleted
+	- ls -alR /proc/*/exe 2> /dev/null | grep deleted
+	- sudo find /proc -maxdepth 2 -path '/proc/[0-9]*/exe' -lname '*(deleted)' 2>/dev/null
+
+	- Recover a Deleted Binary
+		- cp /proc/<PID>/exe /tmp/recovered_bin
+		- https://sandflysecurity.com/blog/how-to-recover-a-deleted-binary-from-active-linux-malware
+
+	- Look for Hidden Copies of Recovered Binary
+		- sha256sum /path/to/file
+		- target_hash="your_sha256_hash_here"
+		  find / -type f -exec sha256sum {} + 2>/dev/null | awk -v hash="$target_hash" '$1 == hash {print $2}'
+
+3. Detect masquerading processes
+	- for pid in $(ls /proc | grep '^[0-9]\+$'); do 
+	    exe=$(readlink /proc/$pid/exe 2>/dev/null)
+	    cmd=$(tr '\0' ' ' </proc/$pid/cmdline 2>/dev/null)
+	    [[ "$exe" != "${cmd%% *}" ]] && echo "PID $pid: Mismatch - EXE: $exe vs CMD: $cmd"
+	  done
+
+4. Find Processes with Empty Environment Variables
+	- sudo find /proc -maxdepth 2 -path '/proc/[0-9]*/environ' \( -size 0 -o ! -readable \) -exec sh -c '
+		for envfile; do
+		pid=${envfile#/proc/}
+		pid=${pid%/environ}
+		if [ -s "/proc/${pid}/cmdline" ]; then
+			echo "Suspicious process: PID $pid"
+			echo -n "Command: "; tr "\0" " " < "/proc/${pid}/cmdline"
+			echo -e "\n--------------------------------------------------"
+		fi
+	  done
+
+5. Look for Process Stack Trace Involved with Packet Capture
+	- grep packet_recvmsg /proc/*/stack
+	- grep wait_for_more_packets /proc/*/stack
+
+6. Look for Suspicious Cron Jobs
+	- cat /etc/crontab/
+	- cat /etc/cron.d/
+	- cat /etc/cron.*/
+
+7. check /etc/profile
+	- sets default environment variables like PATH
+
+8. check ~/.profile 
+	- sets up the environment during user login
+
+9. check `/.bashrc
+	- look for aliases
+	- look other out of place stuff. maybe do a diff with a backed up copy of the file if it exists. 
+
+10. check tools before using them
+	- which <tool-name>
+	- if tool is running from somewhere other than expected it might be a rootkit meant to hide malicious activity
+
+	- alias
+	- shows all alias in the current shell, could show hidden or unexpected command changes
+
+	- stats . 
+	- to check current folder directory links against what ls shows. 
+
+11. Searching for Incorrect Byte Counts
+	- ls -al /etc/modules
+	- cat /etc/modules | wc -c
+
+
+
+
+
+
+Notes: 
+======
+rootkit will often target the following files to load its module on boot:
+/etc/modules
+/etc/ld.so.conf
+
+Critical system directories like below can also contain malicious insertion code:
+/etc/modules-load.d
+/etc/init.d
+/etc/rc*.d
+/etc/hosts
+
+concern for hiding LKM modules and malicious libraries are the following:
+/etc/modules 
+/etc/ld.so.conf
+/etc/modules-load.d (all files in this directory)
+/etc/init.d (all files in this directory)
+/etc/systemd (all files in this directory)
+/etc/rc*.d (all files in these directories)
+
+
+
+Rootkit detection tools: 
+========================
+chkrootkit and rkhunter: These rootkit detection tools are invaluable in identifying known rootkit signatures and anomalies. Execute chkrootkit -q or rkhunter -c for a system-wide scan.
+
+AIDE (Advanced Intrusion Detection Environment): AIDE performs integrity checks on system files and directories. Run aide --check to verify file integrity.
+
+https://www.ossec.net/
+
