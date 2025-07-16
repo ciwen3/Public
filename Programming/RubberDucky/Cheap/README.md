@@ -6,6 +6,12 @@ For making USB Rubber Ducky, you just need this stuff:
 ### Setup the environment [Linux]
 
 Download and Install the latest Arduino software at https://www.arduino.cc/en/software. For this project, I use Arduino IDE 1.8.19 for Linux 64 bits. And In this tutorial, I will skip for installation of the Aduino IDE.
+```bash
+tar -xvf ./arduino-1.8.19-linux64.tar.xz 
+cd arduino-1.8.19
+sudo ./install.sh
+./arduino
+```
 
 ### Arduino IDE download page
 - Run Arduino IDE and go to File menu, and select Preferences. 
