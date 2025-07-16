@@ -53,4 +53,6 @@ Verify the code, and if it’s okay click the upload button at the right side of
 And Then plug in your Digispark.
 
 # References:
-https://infosecwriteups.com/make-usb-rubber-ducky-with-less-than-3-fa72dac9e4de
+- https://infosecwriteups.com/make-usb-rubber-ducky-with-less-than-3-fa72dac9e4de
+- https://web.archive.org/web/20220306215955/https://digistump.com/wiki/digispark/tutorials/linuxtroubleshooting
+- https://rootsaid.com/digispark-hid-digikeyboard-commands/
