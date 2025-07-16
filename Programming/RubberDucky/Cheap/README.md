@@ -18,6 +18,12 @@ sudo ./install.sh
 - Then in the Additional Boards Manager Urls, put this link ``` http://digistump.com/package_digistump_index.json ```
 - And click ok.
 
+```
+NOTE: the link http://digistump.com/package_digistump_index.json no longer works.
+you can get a copy of the json from https://web.archive.org/web/20220530184059/https://raw.githubusercontent.com/digistump/arduino-boards-index/master/package_digistump_index.json  
+then use the file:///<location of the file> in place of a URL
+you can use any browser to figure out the specific 'URL'
+```
 
 ### Preference window
 Go to Tools menu, then the Boards submenu, select Board Manager. In the Type field, select Contributed and install Digistump AVR Boards.
