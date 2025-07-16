@@ -92,11 +92,79 @@ sendKeyPress(): Sends the current modifier and key values set by setModifier and
 releaseKey(): Releases any pressed keys. It’s good practice to use this after sending a keypress to avoid the key being held down indefinitely.
 ```
 
+
+From: https://github.com/digistump/DigisparkArduinoIntegration/blob/master/libraries/DigisparkKeyboard/DigiKeyboard.h
+```
+MOD_CONTROL_LEFT
+MOD_SHIFT_LEFT
+MOD_ALT_LEFT
+MOD_GUI_LEFT
+MOD_CONTROL_RIGHT
+MOD_SHIFT_RIGHT
+MOD_ALT_RIGHT
+MOD_GUI_RIGHT
+
+KEY_A
+KEY_B
+KEY_C
+KEY_D
+KEY_E
+KEY_F
+KEY_G
+KEY_H
+KEY_I
+KEY_J
+KEY_K
+KEY_L
+KEY_M
+KEY_N
+KEY_O
+KEY_P
+KEY_Q
+KEY_R
+KEY_S
+KEY_T
+KEY_U
+KEY_V
+KEY_W
+KEY_X
+KEY_Y
+KEY_Z
+KEY_1
+KEY_2
+KEY_3
+KEY_4
+KEY_5
+KEY_6
+KEY_7
+KEY_8
+KEY_9
+KEY_0
+
+KEY_ENTER
+
+KEY_SPACE
+
+KEY_F1
+KEY_F2
+KEY_F3
+KEY_F4
+KEY_F5
+KEY_F6
+KEY_F7
+KEY_F8
+KEY_F9
+KEY_F10
+KEY_F11
+KEY_F12
+
+KEY_ARROW_LEFT
+```
+
 ### Digikeyboard Command List and Keystrokes
 The DigiKeyboard library, a part of the DigiSpark Arduino package, provides various keystrokes that can be used to emulate a USB keyboard. These keystrokes correspond to different keys on a standard keyboard and are used in conjunction with the sendKeyStroke function in the DigiKeyboard library.
 
 Here’s a list of common keystrokes that are typically available in the DigiKeyboard library:
-
 ### Standard Keys
 ```
 KEY_A, KEY_B, KEY_C, …, KEY_Z: Representing the alphabet keys.
