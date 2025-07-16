@@ -160,12 +160,18 @@ KEYPAD_MULTIPLY
 KEYPAD_MINUS
 KEYPAD_PLUS
 KEYPAD_ENTER
-Special Keys
+```
+
+### Special Keys
+```
 KEY_PRINTSCREEN
 KEY_SCROLLLOCK
 KEY_PAUSE
 KEY_NUM_LOCK
-Media Playback Controls
+```
+
+### Media Playback Controls
+```
 MEDIA_PLAY_PAUSE: Toggles play/pause of the media player.
 MEDIA_STOP_CD: Stops playback.
 MEDIA_PREVIOUS_TRACK: Goes to the previous track.
@@ -179,11 +185,17 @@ MEDIA_FAST_FORWARD: Fast forwards the current track.
 MEDIA_VOLUME_UP: Increases the system volume.
 MEDIA_VOLUME_DOWN: Decreases the system volume.
 MEDIA_VOLUME_MUTE: Mutes/unmutes the system volume.
-Additional Media Functions
+```
+
+### Additional Media Functions
+```
 MEDIA_EJECT_CD: Ejects the CD or DVD (if applicable).
 MEDIA_PLAY: Starts playback (may be different from play/pause toggle).
 MEDIA_PAUSE: Pauses playback (may be different from play/pause toggle).
-Web and Application Controls
+```
+
+### Web and Application Controls
+```
 MEDIA_WWW: Opens the default web browser.
 MEDIA_CALCULATOR: Opens the calculator application.
 MEDIA_EMAIL: Opens the default email application.
