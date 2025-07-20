@@ -33,7 +33,7 @@ Usage: duckencode -i [file ..]      encode specified file
 # Download the Duck Encoder
 In order to begin creating our own Rubber Ducky payloads, we need to have the duck encoder installed. This is a program that takes our ducky script (more on that in a minute) and converts it into a cross-platform inject.bin file that the keyboard adapter will use to deliver our keystroke payload.
 
-While there are a number of different formats for accessing the duck encoder, including a web interface https://ducktoolkit.com/encoder/ , if you’re comfortable with the command line, I’d recommend using the downloadable .jar java program since it allows you to compile the payload and copy it to the microSD card in one step.
+While there are a number of different formats for accessing the duck encoder, including a web interface https://ducktoolkit.com/encoder/ now at https://payloadstudio.com/community/ , if you’re comfortable with the command line, I’d recommend using the downloadable .jar java program since it allows you to compile the payload and copy it to the microSD card in one step.
 
 When I first started testing the device, I used the link on the Rubber Ducky wiki https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Downloads and ended up downloading a very old version of the encoder from 2013 (1.2) which had trouble creating payloads for running keystrokes on newer operating systems https://github.com/hak5darren/USB-Rubber-Ducky/issues/79 .
 
