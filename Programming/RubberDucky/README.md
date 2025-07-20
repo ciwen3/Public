@@ -51,3 +51,9 @@ downloading the latest version (2.6.3, as of this writing) directly from the git
 
 ## All my projects are offered “as-is”, without warranty, and disclaiming liability for damages resulting from using this project. use at your own risk. 
 
+
+# Payloads:
+- https://github.com/dronus4x4/rubberducky/tree/master/payloads
+- https://github.com/Koploseus/RubberDuckyScript
+- https://github.com/Webby420/hak5rubberducky
+- https://github.com/dsymbol/ducky-payloads/tree/main
