@@ -9,3 +9,16 @@
 10. https://x.com/cyb3rops/status/1523227511551033349
 11. https://www.trendmicro.com/vinfo/us/security/news/threat-landscape/how-bpf-enabled-malware-works-bracing-for-emerging-threats
 12. https://gist.github.com/EgeBalci
+
+
+
+
+```
+DRM Free Audio Book downloads:
+“Little Brother” by Cory Doctorow (https://craphound.com): Hacker Peiter 'Mudge' Zatko stated that the book is now used as training material for new NSA recruits in order to give them a different point of view. https://www.youtube.com/watch?v=h9wXq6oRBnI&t=2117
+https://transactions.sendowl.com/orders/17527413/download/232670b37b27b08fa20bf218b72b5ab6
+“Homeland” by Cory Doctorow:
+https://transactions.sendowl.com/orders/17527209/download/de492618387b62eb4fd2d9cd2bb6bc7c
+"Attack Surface" by Cory Doctorow:
+https://transactions.sendowl.com/orders/73408010/download/65e6ccfb4581eea13eefb1efd3d1208b
+```
